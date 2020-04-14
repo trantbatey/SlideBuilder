@@ -1,0 +1,46 @@
+<file name = "ConsoleInput" title="Getting Input from the Console" toc="ConsoleTOC">
+	<bullet>
+		<td><img-s src = "resource/images/SteeringWheel.jpg"/></td>
+		<td>
+			<h2>Creating the Steering Wheel</h2>
+			Getting control of the car.
+		</td>
+	</bullet>
+	<bullet id = "Scanner">
+		<td>The Scanner class allows us to get data input that the user enters into the console.</td>
+	</bullet>
+	<bullet>
+		<td>
+			<strong id = "ImportStatements">Import Statements</strong><br/>
+			<bullet>
+				<td>Before we can use the Scanner class, we'll need to import it.</td>
+			</bullet>
+			<bullet>
+				<td>import java.util.Scanner;</td>
+			</bullet>
+			<bullet>
+				<td>Automated Imports</td>
+			</bullet>
+		</td>
+	</bullet>
+	<bullet id = "Scanner">
+		<td>Demo Time!</td>
+	</bullet>
+	<bullet>
+		<td>
+			<strong>Import Statements</strong><br/>
+			<bullet>
+				<td>Every individual entry to the scanner is called a token, and, by default,
+					tokens are separated by any whitespace.</td>
+			</bullet>
+			<bullet>
+				<td>Every individual entry to the scanner is called a token, and, by default, tokens are
+					separated by any whitespace. In addition to nextLine, there are several other methods
+					that will return the user input as a different type, for example, nextInt will return
+					the user input as type int.</td>
+			</bullet>
+		</td>
+	</bullet>
+</file>
+
+

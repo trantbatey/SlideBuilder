@@ -6,7 +6,7 @@
 			Getting control of the car.
 		</td>
 	</bullet>
-	<bullet id = "Scanner">
+	<bullet>
 		<td>The Scanner class allows us to get data input that the user enters into the console.</td>
 	</bullet>
 	<bullet>
@@ -23,12 +23,12 @@
 			</bullet>
 		</td>
 	</bullet>
-	<bullet id = "Scanner">
+	<bullet>
 		<td>Demo Time!</td>
 	</bullet>
 	<bullet>
 		<td>
-			<strong>Import Statements</strong><br/>
+			<strong id = "Scanner">Using the <em>Scanner</em> class</strong><br/>
 			<bullet>
 				<td>Every individual entry to the scanner is called a token, and, by default,
 					tokens are separated by any whitespace.</td>

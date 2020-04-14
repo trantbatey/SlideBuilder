@@ -3,8 +3,8 @@
     <li name="ConsolePrinting" title="Printing Data To The Console"></li>
     <li name="ConsoleInput" title="Getting Input From The Console">
         <nav>
-            <li name="Scanner" title="Using the Scanner class"></li>
             <li name="ImportStatements" title="Import Statements"></li>
+            <li name="Scanner" title="Using the Scanner class"></li>
         </nav>
     </li>
     <li name="ConsoleReview" title="Console Review"></li>

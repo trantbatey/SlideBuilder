@@ -7,8 +7,6 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.*;
 import java.io.*;
 import java.util.Iterator;
-
-import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class XMLHandler {
@@ -55,7 +53,6 @@ public class XMLHandler {
     public void startElement(StartElement startElement) throws IOException {
         String qName = startElement.getName().getLocalPart();
         if (qName.equalsIgnoreCase("file")) {
-            OutputDataManager.createOutputFileStructure();
             String name = getAttribute("name", startElement);
             String title = getAttribute("title", startElement);
             String toc = getAttribute("toc", startElement);
@@ -103,6 +100,10 @@ public class XMLHandler {
             src = getAttribute("src", startElement);
             output = new StringBuilder(indention + "<img class=\"sm-img\" src=\"" + src + "\">\n");
             write(output);
+        } else if (qName.equalsIgnoreCase("img-m")) {
+            src = getAttribute("src", startElement);
+            output = new StringBuilder(indention + "<img class=\"md-img\" src=\"" + src + "\">\n");
+            write(output);
         } else if (qName.equalsIgnoreCase("h1")) {
             writeSimpleElement("h1", startElement);
         } else if (qName.equalsIgnoreCase("h2")) {
@@ -111,6 +112,11 @@ public class XMLHandler {
             writeSimpleElement("h3", startElement);
         } else if (qName.equalsIgnoreCase("strong")) {
             writeSimpleElement("strong", startElement);
+        } else if (qName.equalsIgnoreCase("span")) {
+            writeSimpleElement("span", startElement);
+        } else if (qName.equalsIgnoreCase("em")) {
+            output = new StringBuilder("<em>");
+            write(output);
         } else if (qName.equalsIgnoreCase("br")) {
             output = new StringBuilder(indention + "<br>\n");
             write(output);
@@ -145,6 +151,13 @@ public class XMLHandler {
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("h3")) {
             indention = indention.substring(0, indention.length() - 4);
             String output = indention + "</h3>\n";
+            write(output);
+        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("span")) {
+            indention = indention.substring(0, indention.length() - 4);
+            String output = indention + "</span>\n";
+            write(output);
+        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("em")) {
+            String output = "</em>";
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("strong")) {
             indention = indention.substring(0, indention.length() - 4);

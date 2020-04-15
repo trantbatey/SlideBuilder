@@ -94,6 +94,14 @@ public class XMLHandler {
                     indention + "                <table cellpadding=\"4\">\n", bulletCount, bulletCount));
             indention += "                    ";
             write(output);
+        } else if (qName.equalsIgnoreCase("text")) {
+            output = new StringBuilder(String.format("" +
+                    indention + "<table>\n" +
+                    indention + "    <tr>\n" +
+                    indention + "        <td>\n" +
+                    indention + "            <span class=\"horizontal-scroll\">\n"));
+            indention += "                ";
+            write(output);
         } else if (qName.equalsIgnoreCase("td")) {
             writeSimpleElement("td", startElement);
         } else if (qName.equalsIgnoreCase("img-s")) {
@@ -115,8 +123,7 @@ public class XMLHandler {
         } else if (qName.equalsIgnoreCase("span")) {
             writeSimpleElement("span", startElement);
         } else if (qName.equalsIgnoreCase("em")) {
-            output = new StringBuilder("<em>");
-            write(output);
+            writeSimpleElement("em", startElement);
         } else if (qName.equalsIgnoreCase("br")) {
             output = new StringBuilder(indention + "<br>\n");
             write(output);
@@ -125,8 +132,20 @@ public class XMLHandler {
 
     public void endElement(EndElement endElement) {
         if (endElement.getName().getLocalPart().equalsIgnoreCase("bullet")) {
+            output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
-            output = new StringBuilder(indention + "</table>\n");
+            output.append(indention + "</table>\n");
+            indention = indention.substring(0, indention.length() - 4);
+            output.append(indention + "</span>\n");
+            indention = indention.substring(0, indention.length() - 4);
+            output.append(indention + "</td>\n");
+            indention = indention.substring(0, indention.length() - 4);
+            output.append(indention + "</tr>\n");
+            indention = indention.substring(0, indention.length() - 4);
+            output.append(indention + "</table>\n");
+            write(output);
+        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("text")) {
+            output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
             output.append(indention + "</span>\n");
             indention = indention.substring(0, indention.length() - 4);
@@ -157,7 +176,8 @@ public class XMLHandler {
             String output = indention + "</span>\n";
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("em")) {
-            String output = "</em>";
+            indention = indention.substring(0, indention.length() - 4);
+            String output = indention + "</em>\n";
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("strong")) {
             indention = indention.substring(0, indention.length() - 4);
@@ -177,7 +197,7 @@ public class XMLHandler {
 
     public void characters(Characters characters) {
         if (characters == null) return;
-        String chars = new String(characters.getData().replace("[\t|\n]", "").trim());
+        String chars = characters.getData().trim().replaceAll("\\s+", " ");
         if (chars.length() != 0) write(indention + chars + "\n");
     }
 
@@ -210,7 +230,6 @@ public class XMLHandler {
         }
         return attribitueString;
     }
-
 
     protected static void write(String output) {
         pw.print(output);

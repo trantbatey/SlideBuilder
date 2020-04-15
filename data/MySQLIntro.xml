@@ -1,0 +1,49 @@
+<file name = "MySQLIntro" title="MySQL" toc="MySQLTOC">
+    <img-m src = "resource/images/MySQL.png"/><br/>
+    In this module, we will learn about databases and how to work with them.<br/>
+    <text>
+        Bad programmers worry about the code. Good programmers worry <br/>
+        about data structures and their relationships.
+        <br/><br/>
+        - Linus Torvalds
+    </text>
+    <bullet>
+        <td><strong>By the end of this module, you should be able to:</strong></td>
+    </bullet>
+    <bullet>
+        <td>
+            <strong id = "ImportStatements">Import Statements</strong><br/>
+            <bullet>
+                <td>Before we can use the Scanner class, we'll need to import it.</td>
+            </bullet>
+            <bullet>
+                <td>import java.util.Scanner;</td>
+            </bullet>
+            <bullet>
+                <td>Automated Imports</td>
+            </bullet>
+        </td>
+    </bullet>
+    <bullet>
+        <td>Demo Time!</td>
+    </bullet>
+    <bullet>
+        <td>
+            <strong id = "Scanner">Using the <em>Scanner</em> class</strong><br/>
+            <bullet>
+                <td>
+                    Every individual entry to the scanner is called a token, and, by default,
+                    tokens are separated by any whitespace.
+                </td>
+            </bullet>
+            <bullet>
+                <td>
+                    Every individual entry to the scanner is called a token, and, by default, tokens are
+                    separated by any whitespace. In addition to nextLine, there are several other methods
+                    that will return the user input as a different type, for example, nextInt will return
+                    the user input as type int.
+                </td>
+            </bullet>
+        </td>
+    </bullet>
+</file>

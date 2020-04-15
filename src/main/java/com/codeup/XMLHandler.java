@@ -78,11 +78,12 @@ public class XMLHandler {
             indention = "        ";
             write(output);
         } else if (qName.equalsIgnoreCase("bullet")) {
+            String indent = getAttribute("indent", startElement);
             bulletCount++;
             output = new StringBuilder(String.format("" +
                     indention + "<table cellpadding=\"10\" class=\"slide_table\">\n" +
                     indention + "    <tr>\n" +
-                    indention + "        <td>\n" +
+                    indention + "        <td class=\"bullet-star " + indent + "\">\n" +
                     indention + "            <button type=\"button\" class=\"btn btn-info\"\n" +
                     indention + "                        onclick=\"showText%02d()\">\n" +
                     indention + "                <span class=\"glyphicon glyphicon-next\"></span>\n" +
@@ -104,14 +105,8 @@ public class XMLHandler {
             write(output);
         } else if (qName.equalsIgnoreCase("td")) {
             writeSimpleElement("td", startElement);
-        } else if (qName.equalsIgnoreCase("img-s")) {
-            src = getAttribute("src", startElement);
-            output = new StringBuilder(indention + "<img class=\"sm-img\" src=\"" + src + "\">\n");
-            write(output);
-        } else if (qName.equalsIgnoreCase("img-m")) {
-            src = getAttribute("src", startElement);
-            output = new StringBuilder(indention + "<img class=\"md-img\" src=\"" + src + "\">\n");
-            write(output);
+        } else if (qName.equalsIgnoreCase("img")) {
+            writeSimpleElement("img", startElement);
         } else if (qName.equalsIgnoreCase("h1")) {
             writeSimpleElement("h1", startElement);
         } else if (qName.equalsIgnoreCase("h2")) {
@@ -175,6 +170,10 @@ public class XMLHandler {
             indention = indention.substring(0, indention.length() - 4);
             String output = indention + "</span>\n";
             write(output);
+        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("img")) {
+            indention = indention.substring(0, indention.length() - 4);
+            String output = indention + "</img>\n";
+            write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("em")) {
             indention = indention.substring(0, indention.length() - 4);
             String output = indention + "</em>\n";
@@ -208,6 +207,7 @@ public class XMLHandler {
             Attribute attribute = attributes.next();
             if (attribute.getName().getLocalPart().equals(attributeName)) {
                 attributeValue = attribute.getValue();
+                attributes.remove();
                 break;
             }
         }

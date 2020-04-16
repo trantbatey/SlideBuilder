@@ -6,7 +6,11 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
+
 import static java.lang.System.out;
 
 public class XMLHandler {
@@ -15,7 +19,15 @@ public class XMLHandler {
     protected String indention = "";
     protected StringBuilder output;
     protected static PrintWriter pw;
+    boolean textField = false;
     int bulletCount;
+
+    final static List<String> EMPTY_BODY_ELEMENTS = Collections.unmodifiableList(
+            new ArrayList<>() {{
+                add("br");
+                add("img");
+                add("span");
+            }});
 
     public static void parseXMLFile(XMLHandler XMLHandler, String inputFilename) {
 
@@ -81,21 +93,24 @@ public class XMLHandler {
             String indent = getAttribute("indent", startElement);
             bulletCount++;
             output = new StringBuilder(String.format("" +
-                    indention + "<table cellpadding=\"10\" class=\"slide_table\">\n" +
+                    indention + "<table class=\"slide_table\">\n" +
                     indention + "    <tr>\n" +
                     indention + "        <td class=\"bullet-star " + indent + "\">\n" +
                     indention + "            <button type=\"button\" class=\"btn btn-info\"\n" +
                     indention + "                        onclick=\"showText%02d()\">\n" +
                     indention + "                <span class=\"glyphicon glyphicon-next\"></span>\n" +
-                    indention + "                <h3 style=\"display: inline;\">*</h3>\n" +
+                    indention + "                <strong class=\"star\">*</strong>\n" +
                     indention + "            </button>\n" +
                     indention + "        </td>\n" +
                     indention + "        <td class=\"bullet-subpoint\"" + getPassThroughAttributes(startElement) + ">\n" +
-                    indention + "            <span id=\"text%02d\">\n" +
-                    indention + "                <table cellpadding=\"4\">\n", bulletCount, bulletCount));
-            indention += "                    ";
+                    indention + "            <table id=\"text%02d\">\n" +
+                    indention + "                <tr>\n" +
+                    indention + "                    <td>\n",
+                    bulletCount, bulletCount));
+            indention += "                        ";
             write(output);
         } else if (qName.equalsIgnoreCase("text")) {
+            textField = true;
             output = new StringBuilder(String.format("" +
                     indention + "<table>\n" +
                     indention + "    <tr>\n" +
@@ -103,25 +118,10 @@ public class XMLHandler {
                     indention + "            <span class=\"horizontal-scroll\">\n"));
             indention += "                ";
             write(output);
-        } else if (qName.equalsIgnoreCase("td")) {
-            writeSimpleElement("td", startElement);
-        } else if (qName.equalsIgnoreCase("img")) {
-            writeSimpleElement("img", startElement);
-        } else if (qName.equalsIgnoreCase("h1")) {
-            writeSimpleElement("h1", startElement);
-        } else if (qName.equalsIgnoreCase("h2")) {
-            writeSimpleElement("h2", startElement);
-        } else if (qName.equalsIgnoreCase("h3")) {
-            writeSimpleElement("h3", startElement);
-        } else if (qName.equalsIgnoreCase("strong")) {
-            writeSimpleElement("strong", startElement);
-        } else if (qName.equalsIgnoreCase("span")) {
-            writeSimpleElement("span", startElement);
-        } else if (qName.equalsIgnoreCase("em")) {
-            writeSimpleElement("em", startElement);
-        } else if (qName.equalsIgnoreCase("br")) {
-            output = new StringBuilder(indention + "<br>\n");
-            write(output);
+        } else if (EMPTY_BODY_ELEMENTS.contains(qName.toLowerCase())) {
+            openInlineElement(qName.toLowerCase(), startElement);
+        } else {
+            openSimpleElement(qName, startElement);
         }
     }
 
@@ -129,9 +129,11 @@ public class XMLHandler {
         if (endElement.getName().getLocalPart().equalsIgnoreCase("bullet")) {
             output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</table>\n");
+            output.append(indention + "</td>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</span>\n");
+            output.append(indention + "</tr>\n");
+            indention = indention.substring(0, indention.length() - 4);
+            output.append(indention + "</table>\n");
             indention = indention.substring(0, indention.length() - 4);
             output.append(indention + "</td>\n");
             indention = indention.substring(0, indention.length() - 4);
@@ -140,6 +142,7 @@ public class XMLHandler {
             output.append(indention + "</table>\n");
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("text")) {
+            textField = false;
             output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
             output.append(indention + "</span>\n");
@@ -149,38 +152,6 @@ public class XMLHandler {
             output.append(indention + "</tr>\n");
             indention = indention.substring(0, indention.length() - 4);
             output.append(indention + "</table>\n");
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("td")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</td>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("h1")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</h1>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("h2")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</h2>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("h3")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</h3>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("span")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</span>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("img")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</img>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("em")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</em>\n";
-            write(output);
-        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("strong")) {
-            indention = indention.substring(0, indention.length() - 4);
-            String output = indention + "</strong>\n";
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("file")) {
             output = new StringBuilder("" +
@@ -191,13 +162,22 @@ public class XMLHandler {
                     "</html>");
             write(output);
             pw.close();
+        } else if (EMPTY_BODY_ELEMENTS.contains(endElement.getName().getLocalPart().toLowerCase())) {
+            closeInlineElement(endElement.getName().getLocalPart().toLowerCase());
+        } else {
+            closeSimpleElement(endElement.getName().getLocalPart());
         }
     }
 
     public void characters(Characters characters) {
         if (characters == null) return;
-        String chars = characters.getData().trim().replaceAll("\\s+", " ");
-        if (chars.length() != 0) write(indention + chars + "\n");
+        String chars = characters.getData();
+        if (textField) {
+            chars = chars.trim().replaceAll("\n+", "<br/>") + "<br>\n";
+        } else {
+            chars = chars.trim().replaceAll("\\s+", " ") + "\n";
+        }
+        if (chars.length() != 0 && !chars.equals("\n")) write(indention + chars);
     }
 
     protected String getAttribute(String attributeName, StartElement startElement) {
@@ -207,17 +187,41 @@ public class XMLHandler {
             Attribute attribute = attributes.next();
             if (attribute.getName().getLocalPart().equals(attributeName)) {
                 attributeValue = attribute.getValue();
-                attributes.remove();
                 break;
             }
         }
         return attributeValue;
     }
 
-    protected void writeSimpleElement(String type, StartElement startElement) {
-        String element = "<" + type + getPassThroughAttributes(startElement) + ">\n";
-        output = new StringBuilder(indention + element);
+    protected void openSimpleElement(String element, StartElement startElement) {
+        String elementAndAttributes = "<" + element + getPassThroughAttributes(startElement) + ">\n";
+        output = new StringBuilder(indention + elementAndAttributes);
         indention += "    ";
+        write(output);
+    }
+
+    protected void closeSimpleElement(String element) {
+        indention = indention.substring(0, indention.length() - 4);
+        String output = indention + "</" + element + ">\n";
+        write(output);
+    }
+
+    protected void openInlineElement(String element, StartElement startElement) {
+        String elementAndAttributes;
+        if (element.equals("br") || element.equals("img")) {
+            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(startElement) + "/>\n";
+        } else {
+            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(startElement) + ">\n";
+        }
+        output = new StringBuilder(elementAndAttributes);
+        write(output);
+    }
+
+    protected void closeInlineElement(String element) {
+        String output = "";
+        if (!(element.equals("br") || element.equals("img"))) {
+            output = "</" + element + ">";
+        }
         write(output);
     }
 

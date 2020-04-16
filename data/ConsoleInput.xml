@@ -1,44 +1,44 @@
 <file name = "ConsoleInput" title="Getting Input from the Console" toc="ConsoleTOC">
 	<bullet>
-		<td><img-s src = "resource/images/SteeringWheel.jpg"/></td>
-		<td>
-			<h2>Creating the Steering Wheel</h2>
-			Getting control of the car.
-		</td>
+		<table>
+			<tr>
+				<td><img src = "resource/images/SteeringWheel.jpg" class="sm-img" alt=""/></td>
+				<td>
+					<h2>Creating the Steering Wheel</h2>
+					Getting control of the car.
+				</td>
+			</tr>
+		</table>
 	</bullet>
 	<bullet>
-		<td>The Scanner class allows us to get data input that the user enters into the console.</td>
+		The Scanner class allows us to get data input that the user enters into the console.
 	</bullet>
 	<bullet>
-		<td>
 			<strong id = "ImportStatements">Import Statements</strong><br/>
 			<bullet>
-				<td>Before we can use the Scanner class, we'll need to import it.</td>
+				Before we can use the Scanner class, we'll need to import it.
 			</bullet>
 			<bullet>
-				<td>import java.util.Scanner;</td>
+				import java.util.Scanner;
 			</bullet>
 			<bullet>
-				<td>Automated Imports</td>
+				Automated Imports
 			</bullet>
-		</td>
 	</bullet>
 	<bullet>
-		<td>Demo Time!</td>
+		Demo Time!
 	</bullet>
 	<bullet>
-		<td>
 			<strong id = "Scanner">Using the <em>Scanner</em> class</strong><br/>
 			<bullet>
-				<td>Every individual entry to the scanner is called a token, and, by default,
-					tokens are separated by any whitespace.</td>
+				Every individual entry to the scanner is called a token, and, by default,
+				tokens are separated by any whitespace.
 			</bullet>
 			<bullet>
-				<td>Every individual entry to the scanner is called a token, and, by default, tokens are
-					separated by any whitespace. In addition to nextLine, there are several other methods
-					that will return the user input as a different type, for example, nextInt will return
-					the user input as type int.</td>
+				Every individual entry to the scanner is called a token, and, by default, tokens are
+				separated by any whitespace. In addition to nextLine, there are several other methods
+				that will return the user input as a different type, for example, nextInt will return
+				the user input as type int.
 			</bullet>
-		</td>
 	</bullet>
 </file>

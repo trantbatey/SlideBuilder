@@ -16,6 +16,14 @@ body {
     border: 4px solid black;
 }
 
+.star {
+    font-size: 1.5rem;
+}
+
+td {
+    padding: 10px;
+}
+
 .slide_table {
     padding-top: 1rem;
     padding-left: 2rem;

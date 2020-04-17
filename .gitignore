@@ -1,6 +1,7 @@
 HELP.md
 target/
-output/
+output/*.html
+output/*.js
 out/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**

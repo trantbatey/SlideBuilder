@@ -1,10 +1,10 @@
-<file name = "MySQLOverview" title="MySQL" toc="MySQLTOC">
+<file name = "MySQLOverview" title="MySQL" toc="MySQLIntroTOC">
     <img class="lg-img" src="resource/images/MySQL.png"/><br/>
     In this module, we will learn about databases and how to work with them.<br/>
     <text>
-        Bad programmers worry about the code. Good programmers worry <br/>
+        Bad programmers worry about the code. Good programmers worry
         about data structures and their relationships.
-        <br/><br/>
+        <br/>
         - Linus Torvalds
     </text>
     <bullet>
@@ -37,4 +37,7 @@
     <bullet indent="indent-star">
         <td>How and when to use a sub-query</td>
     </bullet>
+    <br/>
+    <strong>Next:</strong> <a href="./MySQLIntro.html" class="btn btn-info" >Introduction to MySQL</a>
+
 </file>

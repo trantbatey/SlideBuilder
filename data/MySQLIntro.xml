@@ -1,4 +1,4 @@
-<file name="MySQLIntro" title="Introduction to MySQL" toc="MySQLTOC">
+<file name="MySQLIntro" title="Introduction to MySQL" toc="MySQLIntroTOC">
     <img class="lg-img" src="resource/images/MySQL.png" alt=""/>
     <br/>
 
@@ -44,7 +44,7 @@
         RDBM's can manage far more data than spreadsheets.
     </bullet>
     <bullet>
-        <strong>Queries</strong>
+        <strong id="queries">Queries</strong>
     </bullet>
     <bullet>
         What are queries?
@@ -77,7 +77,7 @@
         Our focus for now will be on DDL and DCL
     </bullet>
     <bullet>
-        <strong>Working with MySQL, dudes</strong>
+        <strong id="working">Working with MySQL, dudes</strong>
     </bullet>
     <bullet>
         From now through the rest of the course we will be working with databases.
@@ -112,7 +112,7 @@
         should do is make sure the MySQL server is running.
     </bullet>
     <bullet>
-        <strong>Using the MySQL Command Line</strong>
+        <strong id="using">Using the MySQL Command Line</strong>
     </bullet>
     <bullet>
         MySQL stores information in a series of files, but we will virtually never look
@@ -121,23 +121,23 @@
     <bullet>
         How are we going to access this data?
     </bullet>
-    <bullet indent="ident-star">
+    <bullet indent="indent-star">
         We are going to use queries and mysql command line tool.
     </bullet>
     <bullet>
         There are actually two parts to MySQL we will be using.
     </bullet>
-    <bullet indent="ident-star">
+    <bullet indent="indent-star">
         The <strong>server</strong> and the
         <strong>client</strong>
     </bullet>
-    <bullet indent="ident-star">
+    <bullet indent="indent-star">
         <strong>The Server</strong>
         <br/>
         Understands Structured Query Language (SQL) commands, stores and organizes the data on disk, and users that
         can connect and manipulate the data.
     </bullet>
-    <bullet indent="ident-star">
+    <bullet indent="indent-star">
         <strong>The Client</strong>
         <br/>
         Connects to the server for us; sends our commands to the server; and, displays the data on screen.
@@ -249,6 +249,57 @@
             Utility
         </text>
     </bullet>
-
-
+    <bullet>
+        Most of our output from MySQL will be formatted in a table. Something similar to:<br/>
+        <text>
+            +----+----------+----------+----------+
+            | id | Column 1 | Column 2 | Column 3 |
+            +---------------+----------+----------+
+            |  1 | Value A  | Value B  | Value C  |
+            |  2 | Value D  | Value E  | Value F  |
+            |  3 | Value G  | Value H  | Value I  |
+            |  4 | Value J  | Value K  | Value L  |
+            +----+----------+----------+----------+
+        </text>
+    </bullet>
+    <bullet>
+        This is the default layout, but it is not always the best.
+    </bullet>
+    <bullet>
+        Usually SQL statments end with <em>;</em>, but you can use other line terminators to get other output formats.
+    </bullet>
+    <bullet>
+        If you use <em>\G</em> The output would look like this.<br/>
+        <text>
+            *************************** 1. row ***************************
+            id: 1
+            Column 1: Value A
+            Column 2: Value B
+            Column 3: Value C
+            *************************** 2. row ***************************
+            id: 2
+            Column 1: Value D
+            Column 2: Value E
+            Column 3: Value F
+            *************************** 3. row ***************************
+            id: 3
+            Column 1: Value G
+            Column 2: Value H
+            Column 3: Value I
+            *************************** 4. row ***************************
+            id: 4
+            Column 1: Value J
+            Column 2: Value K
+            Column 3: Value L
+        </text>
+    </bullet>
+    <bullet>
+        Finally, we need some way to leave the MySQL client. Thankfully, it's simply running <em>exit;</em>
+    </bullet>
+    <bullet>
+        At this point, you should be back out in your shell. Now you know how to start the MySQL client, issue
+        commands, and tweak the output. Next up, we will discuss creating users.
+    </bullet>
+    <br/>
+    <strong>Next:</strong> <a href="https://java.codeup.com/mysql/introduction/#exercises" class="btn btn-info" >Exercises</a>
 </file>

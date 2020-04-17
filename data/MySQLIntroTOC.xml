@@ -1,0 +1,11 @@
+<file name="MySQLIntroTOC" title="MySQL Introduction TOC" home="MySQLOverview">
+    <li name="MySQLOverview" title="MySQL Overview"></li>
+    <li name="MySQLIntro" title="Introduction to MySQL">
+        <nav>
+            <li name="queries" title="Queries"></li>
+            <li name="working" title="Working With MySQL"></li>
+            <li name="using" title="Using the MySQL Command Line"></li>
+        </nav>
+    </li>
+    <ali url="https://java.codeup.com/mysql/introduction/#exercises" label="EXERCISES"/>
+</file>

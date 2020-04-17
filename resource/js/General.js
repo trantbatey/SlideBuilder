@@ -274,5 +274,123 @@ function showText69() {
     document.getElementById("text69").style.visibility = "visible";
 }
 
+function showText70() {
+    document.getElementById("text70").style.visibility = "visible";
+}
 
+function showText71() {
+    document.getElementById("text71").style.visibility = "visible";
+}
+
+function showText72() {
+    document.getElementById("text72").style.visibility = "visible";
+}
+
+function showText73() {
+    document.getElementById("text73").style.visibility = "visible";
+}
+
+function showText74() {
+    document.getElementById("text74").style.visibility = "visible";
+}
+
+function showText75() {
+    document.getElementById("text75").style.visibility = "visible";
+}
+
+function showText76() {
+    document.getElementById("text76").style.visibility = "visible";
+}
+
+function showText77() {
+    document.getElementById("text77").style.visibility = "visible";
+}
+
+function showText78() {
+    document.getElementById("text78").style.visibility = "visible";
+}
+
+function showText79() {
+    document.getElementById("text79").style.visibility = "visible";
+}
+
+function showText80() {
+    document.getElementById("text80").style.visibility = "visible";
+}
+
+function showText81() {
+    document.getElementById("text81").style.visibility = "visible";
+}
+
+function showText82() {
+    document.getElementById("text82").style.visibility = "visible";
+}
+
+function showText83() {
+    document.getElementById("text83").style.visibility = "visible";
+}
+
+function showText84() {
+    document.getElementById("text84").style.visibility = "visible";
+}
+
+function showText85() {
+    document.getElementById("text85").style.visibility = "visible";
+}
+
+function showText86() {
+    document.getElementById("text86").style.visibility = "visible";
+}
+
+function showText87() {
+    document.getElementById("text87").style.visibility = "visible";
+}
+
+function showText88() {
+    document.getElementById("text88").style.visibility = "visible";
+}
+
+function showText89() {
+    document.getElementById("text89").style.visibility = "visible";
+}
+
+function showText90() {
+    document.getElementById("text90").style.visibility = "visible";
+}
+
+function showText91() {
+    document.getElementById("text91").style.visibility = "visible";
+}
+
+function showText92() {
+    document.getElementById("text92").style.visibility = "visible";
+}
+
+function showText93() {
+    document.getElementById("text93").style.visibility = "visible";
+}
+
+function showText94() {
+    document.getElementById("text94").style.visibility = "visible";
+}
+
+function showText95() {
+    document.getElementById("text95").style.visibility = "visible";
+}
+
+function showText96() {
+    document.getElementById("text96").style.visibility = "visible";
+}
+
+function showText97() {
+    document.getElementById("text97").style.visibility = "visible";
+}
+
+function showText98() {
+    document.getElementById("text98").style.visibility = "visible";
+}
+
+function showText99() {
+    document.getElementById("text99").style.visibility = "visible";
+}
 

@@ -54,6 +54,14 @@ public class TOCHandler extends XMLHandler {
             output.append(indention + "    </a>\n");
             indention += "    ";
             write(output);
+        } else if (qName.equalsIgnoreCase("ali")) {
+            String url = attributes.remove("url");
+            String label = attributes.remove("label");
+            output = new StringBuilder(indention + "<li>\n");
+            output.append(indention + "    <a href=\"" + url + "\" target=\"_blank\">" + label + "</a>\n");
+            output.append(indention + "</li>\n");
+            indention += "    ";
+            write(output);
         } else if (qName.equalsIgnoreCase("nav")) {
             output = new StringBuilder(indention + "<nav>\n");
             output.append(indention + "    <ul>\n");

@@ -85,19 +85,19 @@ public class XMLHandler {
             String indent = attributes.remove("indent");
             bulletCount++;
             output = new StringBuilder(String.format("" +
-                    indention + "<table class=\"slide_table\">\n" +
-                    indention + "    <tr>\n" +
-                    indention + "        <td class=\"bullet-star " + indent + "\">\n" +
-                    indention + "            <button type=\"button\" class=\"btn btn-info\"\n" +
-                    indention + "                        onclick=\"showText%02d()\">\n" +
-                    indention + "                <span class=\"glyphicon glyphicon-next\"></span>\n" +
-                    indention + "                <strong class=\"star\">*</strong>\n" +
-                    indention + "            </button>\n" +
-                    indention + "        </td>\n" +
-                    indention + "        <td class=\"bullet-subpoint\"" + getPassThroughAttributes(attributes) + ">\n" +
-                    indention + "            <table id=\"text%02d\">\n" +
-                    indention + "                <tr>\n" +
-                    indention + "                    <td>\n",
+                            indention + "<table class=\"slide_table\">\n" +
+                            indention + "    <tr>\n" +
+                            indention + "        <td class=\"bullet-star " + indent + "\">\n" +
+                            indention + "            <button type=\"button\" class=\"btn btn-info\"\n" +
+                            indention + "                        onclick=\"showText%02d()\">\n" +
+                            indention + "                <span class=\"glyphicon glyphicon-next\"></span>\n" +
+                            indention + "                <strong class=\"star\">*</strong>\n" +
+                            indention + "            </button>\n" +
+                            indention + "        </td>\n" +
+                            indention + "        <td class=\"bullet-subpoint\"" + getPassThroughAttributes(attributes) + ">\n" +
+                            indention + "            <table id=\"text%02d\">\n" +
+                            indention + "                <tr>\n" +
+                            indention + "                    <td>\n",
                     bulletCount, bulletCount));
             indention += "                        ";
             write(output);
@@ -105,9 +105,9 @@ public class XMLHandler {
             textField = true;
             output = new StringBuilder(
                     indention + "<table>\n" +
-                    indention + "    <tr>\n" +
-                    indention + "        <td>\n" +
-                    indention + "            <span class=\"horizontal-scroll\">\n");
+                            indention + "    <tr>\n" +
+                            indention + "        <td>\n" +
+                            indention + "            <span class=\"horizontal-scroll\">\n");
             indention += "                ";
             write(output);
         } else if (EMPTY_BODY_ELEMENTS.contains(qName.toLowerCase())) {
@@ -165,7 +165,13 @@ public class XMLHandler {
         if (characters == null) return;
         String chars = characters.getData();
         if (textField) {
-            chars = chars.trim().replaceAll("\n+", "<br/>") + "<br>\n";
+            String replacementMarker = "@@@Codeup@@@";
+            String replacementString = "<br>\n" + indention;
+            chars = chars.trim().replaceAll("\n", replacementMarker);
+            chars = chars.replaceAll("\\s+", " ");
+            chars = chars.replaceAll(replacementMarker + " ", replacementMarker);
+            if (chars.length() != 0)
+                chars = chars.replaceAll(replacementMarker, replacementString) + "<br>\n";
         } else {
             chars = chars.trim().replaceAll("\\s+", " ") + "\n";
         }
@@ -216,7 +222,7 @@ public class XMLHandler {
 
     protected String getPassThroughAttributes(Map<String, String> attributes) {
         StringBuilder attributeString = new StringBuilder();
-        for (String key: attributes.keySet()) {
+        for (String key : attributes.keySet()) {
             attributeString.append(" ").append(key).append("=\"").append(attributes.get(key)).append("\"");
         }
         return attributeString.toString();

@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import static java.lang.System.out;
 
@@ -21,16 +22,17 @@ public class TOCHandler extends XMLHandler {
 
     @Override
     public void startElement(StartElement startElement) throws IOException {
+        Map<String, String> attributes = convertAttributesToMap(startElement);
         String qName = startElement.getName().getLocalPart();
         if (qName.equalsIgnoreCase("file")) {
-            String name = getAttribute("name", startElement);
+            String name = attributes.remove("name");
             try {
                 pw = new PrintWriter(new FileOutputStream("output/" + name + ".js"));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            String title = getAttribute("title", startElement);
-            String home = getAttribute("title", startElement);
+            String title = attributes.remove("title");
+            String home = attributes.remove("title");
             output = new StringBuilder("document.write(`\n");
             output.append("    <div class=\"sidenav\">\n");
             output.append("        <label><strong>Table of contents</strong></label>\n");
@@ -38,8 +40,8 @@ public class TOCHandler extends XMLHandler {
             indention = "            ";
             write(output);
         } else if (qName.equalsIgnoreCase("li")) {
-            name = getAttribute("name", startElement);
-            String title = getAttribute("title", startElement);
+            name = attributes.remove("name");
+            String title = attributes.remove("title");
             String url = "";
             if (navName.length() != 0) {
                 url = navName + ".html#"+ name + "\"";

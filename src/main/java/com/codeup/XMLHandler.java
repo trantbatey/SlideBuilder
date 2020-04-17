@@ -6,10 +6,7 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.*;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.System.out;
 
@@ -63,11 +60,12 @@ public class XMLHandler {
     }
 
     public void startElement(StartElement startElement) throws IOException {
+        Map<String, String> attributes = convertAttributesToMap(startElement);
         String qName = startElement.getName().getLocalPart();
         if (qName.equalsIgnoreCase("file")) {
-            String name = getAttribute("name", startElement);
-            String title = getAttribute("title", startElement);
-            String toc = getAttribute("toc", startElement);
+            String name = attributes.remove("name");
+            String title = attributes.remove("title");
+            String toc = attributes.remove("toc");
             try {
                 pw = new PrintWriter(new FileOutputStream("output/" + name + ".html"));
             } catch (FileNotFoundException e) {
@@ -90,7 +88,7 @@ public class XMLHandler {
             indention = "        ";
             write(output);
         } else if (qName.equalsIgnoreCase("bullet")) {
-            String indent = getAttribute("indent", startElement);
+            String indent = attributes.remove("indent");
             bulletCount++;
             output = new StringBuilder(String.format("" +
                     indention + "<table class=\"slide_table\">\n" +
@@ -102,7 +100,7 @@ public class XMLHandler {
                     indention + "                <strong class=\"star\">*</strong>\n" +
                     indention + "            </button>\n" +
                     indention + "        </td>\n" +
-                    indention + "        <td class=\"bullet-subpoint\"" + getPassThroughAttributes(startElement) + ">\n" +
+                    indention + "        <td class=\"bullet-subpoint\"" + getPassThroughAttributes(attributes) + ">\n" +
                     indention + "            <table id=\"text%02d\">\n" +
                     indention + "                <tr>\n" +
                     indention + "                    <td>\n",
@@ -119,9 +117,9 @@ public class XMLHandler {
             indention += "                ";
             write(output);
         } else if (EMPTY_BODY_ELEMENTS.contains(qName.toLowerCase())) {
-            openInlineElement(qName.toLowerCase(), startElement);
+            openInlineElement(qName.toLowerCase(), attributes);
         } else {
-            openSimpleElement(qName, startElement);
+            openSimpleElement(qName, attributes);
         }
     }
 
@@ -180,21 +178,8 @@ public class XMLHandler {
         if (chars.length() != 0 && !chars.equals("\n")) write(indention + chars);
     }
 
-    protected String getAttribute(String attributeName, StartElement startElement) {
-        String attributeValue = "";
-        Iterator<Attribute> attributes = startElement.getAttributes();
-        while (attributes.hasNext()) {
-            Attribute attribute = attributes.next();
-            if (attribute.getName().getLocalPart().equals(attributeName)) {
-                attributeValue = attribute.getValue();
-                break;
-            }
-        }
-        return attributeValue;
-    }
-
-    protected void openSimpleElement(String element, StartElement startElement) {
-        String elementAndAttributes = "<" + element + getPassThroughAttributes(startElement) + ">\n";
+    protected void openSimpleElement(String element, Map<String, String> attributes) {
+        String elementAndAttributes = "<" + element + getPassThroughAttributes(attributes) + ">\n";
         output = new StringBuilder(indention + elementAndAttributes);
         indention += "    ";
         write(output);
@@ -206,12 +191,12 @@ public class XMLHandler {
         write(output);
     }
 
-    protected void openInlineElement(String element, StartElement startElement) {
+    protected void openInlineElement(String element, Map<String, String> attributes) {
         String elementAndAttributes;
         if (element.equals("br") || element.equals("img")) {
-            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(startElement) + "/>\n";
+            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(attributes) + "/>\n";
         } else {
-            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(startElement) + ">\n";
+            elementAndAttributes = indention + "<" + element + getPassThroughAttributes(attributes) + ">\n";
         }
         output = new StringBuilder(elementAndAttributes);
         write(output);
@@ -225,12 +210,20 @@ public class XMLHandler {
         write(output);
     }
 
-    protected String getPassThroughAttributes(StartElement startElement) {
+    protected Map<String, String> convertAttributesToMap(StartElement startElement) {
+        Map<String, String> attributes = new HashMap<>();
+        Iterator<Attribute> iterator = startElement.getAttributes();
+        while (iterator.hasNext()) {
+            Attribute entry = iterator.next();
+            attributes.put(entry.getName().getLocalPart(), entry.getValue());
+        }
+        return attributes;
+    }
+
+    protected String getPassThroughAttributes(Map<String, String> attributes) {
         String attribitueString = "";
-        Iterator<Attribute> attributes = startElement.getAttributes();
-        while (attributes.hasNext()) {
-            Attribute attribute = attributes.next();
-            attribitueString += " " + attribute.getName() + "=\"" + attribute.getValue() + "\"";
+        for (String key: attributes.keySet()) {
+            attribitueString += " " + key + "=\"" + attributes.get(key) + "\"";
         }
         return attribitueString;
     }

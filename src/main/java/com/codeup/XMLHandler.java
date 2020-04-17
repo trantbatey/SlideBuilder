@@ -12,19 +12,13 @@ import static java.lang.System.out;
 
 public class XMLHandler {
 
-    protected String src;
     protected String indention = "";
     protected StringBuilder output;
     protected static PrintWriter pw;
     boolean textField = false;
     int bulletCount;
 
-    final static List<String> EMPTY_BODY_ELEMENTS = Collections.unmodifiableList(
-            new ArrayList<>() {{
-                add("br");
-                add("img");
-                add("span");
-            }});
+    final static List<String> EMPTY_BODY_ELEMENTS = List.of("br", "img", "span");
 
     public static void parseXMLFile(XMLHandler XMLHandler, String inputFilename) {
 
@@ -109,11 +103,11 @@ public class XMLHandler {
             write(output);
         } else if (qName.equalsIgnoreCase("text")) {
             textField = true;
-            output = new StringBuilder(String.format("" +
+            output = new StringBuilder(
                     indention + "<table>\n" +
                     indention + "    <tr>\n" +
                     indention + "        <td>\n" +
-                    indention + "            <span class=\"horizontal-scroll\">\n"));
+                    indention + "            <span class=\"horizontal-scroll\">\n");
             indention += "                ";
             write(output);
         } else if (EMPTY_BODY_ELEMENTS.contains(qName.toLowerCase())) {
@@ -127,29 +121,29 @@ public class XMLHandler {
         if (endElement.getName().getLocalPart().equalsIgnoreCase("bullet")) {
             output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</td>\n");
+            output.append(indention).append("</td>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</tr>\n");
+            output.append(indention).append("</tr>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</table>\n");
+            output.append(indention).append("</table>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</td>\n");
+            output.append(indention).append("</td>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</tr>\n");
+            output.append(indention).append("</tr>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</table>\n");
+            output.append(indention).append("</table>\n");
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("text")) {
             textField = false;
             output = new StringBuilder();
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</span>\n");
+            output.append(indention).append("</span>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</td>\n");
+            output.append(indention).append("</td>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</tr>\n");
+            output.append(indention).append("</tr>\n");
             indention = indention.substring(0, indention.length() - 4);
-            output.append(indention + "</table>\n");
+            output.append(indention).append("</table>\n");
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("file")) {
             output = new StringBuilder("" +
@@ -221,11 +215,11 @@ public class XMLHandler {
     }
 
     protected String getPassThroughAttributes(Map<String, String> attributes) {
-        String attribitueString = "";
+        StringBuilder attributeString = new StringBuilder();
         for (String key: attributes.keySet()) {
-            attribitueString += " " + key + "=\"" + attributes.get(key) + "\"";
+            attributeString.append(" ").append(key).append("=\"").append(attributes.get(key)).append("\"");
         }
-        return attribitueString;
+        return attributeString.toString();
     }
 
     protected static void write(String output) {

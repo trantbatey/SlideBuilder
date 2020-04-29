@@ -1,0 +1,69 @@
+<file name="UserInput04CrossSiteScripting" title="Cross Site Scripting" toc="UserInputTOC">
+
+    <h1>Cross Site Scripting</h1>
+    <bullet>
+        What is a Cross Site Scripting attack?
+    </bullet>
+    <bullet indent="indent-star">
+        A Cross Site Scripting, or XSS, attack is one in which malicious JavaScript is inflicted on your users. This
+        type of vulnerability can occur if we carelessly display user input on our pages.
+    </bullet>
+    <bullet>
+        Consider a search results page:
+        <br/>
+        <text>
+            |||+h1>Product Search Results|||+/h1|||-
+            |||+h2|||-Showing Results for ${searchTerm}|||+/h2|||- |||+%--|||+-- note this line --%|||-
+            |||+c:forEach var="product" items="${searchResults}"|||-
+            |||_|||+h3|||-
+            |||_|||_${product.name}
+            |||_|||_|||+small|||-${product.price}|||+/small|||-
+            |||_|||+/h3|||-
+            |||+/c:forEach|||-
+        </text>
+    </bullet>
+    <bullet>
+        What if a user searches for
+        <text>"|||+script|||-alert('xss!')|||+/script|||-"?</text>
+    </bullet>
+    <bullet>
+        <strong>Demo by creating a user</strong>
+    </bullet>
+    <bullet>
+        A more dedicated, determined, and malicious individual could write some JavaScript that does much worse
+        things, like stealing usernames and passwords, or hijacking sessions.
+    </bullet>
+    <bullet>
+        Any time you display user entered data on the screen you have to watch out for XSS attacks.
+    </bullet>
+    <bullet indent="indent-star">
+        We defined the query with a placeholder, a ? to indicate where the value will go.
+    </bullet>
+    <bullet>
+        How can we protect against these attacks?
+    </bullet>
+    <bullet>
+        We can use the JSTL library's c:out tag for this. In general, whenever we are displaying a value that comes
+        from the user, we should display it this way.
+    </bullet>
+    <bullet>
+        The example can be fixed like this:
+        <text>
+            |||+h1|||-Product Search Results|||+/h1|||-
+            |||+h2|||-Showing Results for |||+c:out value="${searchTerm}"/|||-|||+/h2|||-
+            |||+c:forEach var="product" items="${searchResults}"|||-
+            |||_|||+h3|||-
+            |||_|||_|||+c:out value="${product.name}"/|||-
+            |||_|||_|||+small|||-|||+c:out value="${product.price}"/|||-|||+/small|||-
+            |||_|||+/h3|||-
+            |||+/c:forEach|||-
+        </text>
+    </bullet>
+    <bullet>
+        Lets look at a demonstration in the code.
+    </bullet>
+    <strong>Next:</strong>
+    <a href="./UserInput05Review.html" class="btn btn-info">
+        Review
+    </a>
+</file>

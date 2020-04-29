@@ -1,0 +1,69 @@
+<file name="UserInput05Review" title="Review" toc="UserInputTOC">
+
+    <h1>User Input Review</h1>
+    <bullet>
+        What does connection.prepareStatement(sql) do?
+    </bullet>
+    <bullet indent="indent-star">
+        Create the prepared statement object, when used with INSERT, Statement.RETURN_GENERATED_KEYS can be added.
+    </bullet>
+    <bullet>
+        What does statement.setXXX(idx, value) do?
+    </bullet>
+    <bullet indent="indent-star">
+        XXX is the type of the value, and idx is the number of the placeholder -- Bind a value to the statement.
+    </bullet>
+    <bullet>
+        What does statement.executeQuery() do?
+    </bullet>
+    <bullet indent="indent-star">
+        Execute the prepared SELECT query.
+    </bullet>
+    <bullet>
+        What does statement.executeUpdate() do?
+    </bullet>
+    <bullet indent="indent-star">
+        Execute an INSERT or UPDATE query.
+    </bullet>
+    <bullet>
+        What does statement.getResultSet do?
+    </bullet>
+    <bullet indent="indent-star">
+        Get the results of a SELECT query.
+    </bullet>
+    <bullet>
+        What does statement.getGeneratedKeys do?
+    </bullet>
+    <bullet indent="indent-star">
+        Get the generated ids from an INSERT query
+    </bullet>
+    <bullet>
+        What is XSS?
+    </bullet>
+    <bullet indent="indent-star">
+        A Cross Site Scripting, or XSS, attack is one in which malicious JavaScript is inflicted on your users.
+    </bullet>
+    <bullet>
+        When do they occur?
+    </bullet>
+    <bullet indent="indent-star">
+        This type of vulnerability can occur if we carelessly display user input on our pages.
+    </bullet>
+    <bullet>
+        How can we protect against these attacks?
+    </bullet>
+    <bullet indent="indent-star">
+        We can use the JSTL library's c:out tag for this.
+    </bullet>
+    <bullet>
+        What might an experienced hacker try to do with an XSS attack?
+    </bullet>
+    <bullet indent="indent-star">
+        A dedicated, determined, and malicious individual could write some JavaScript to steal usernames and passwords,
+        or hijacking sessions.
+    </bullet>
+    <strong>Next:</strong>
+    <a href="https://java.codeup.com/java-iii/user-input/#exercises" class="btn btn-info">
+        Exercise
+    </a>
+</file>

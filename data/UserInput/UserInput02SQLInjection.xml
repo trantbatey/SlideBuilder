@@ -1,0 +1,34 @@
+<file name="UserInput02SQLInjection" title="SQL Injection Attack" toc="UserInputTOC">
+
+    <h1>SQL Injection Attack</h1>
+    <bullet>
+        What is an SQL Injection Attack?
+    </bullet>
+    <bullet indent="indent-star">
+        An SQL Injection Attack is when a hacker uses a user input to alter the SQL command that is run on the
+        server.
+    </bullet>
+    <bullet indent="indent-star">
+        <h2>EXAMPLE:</h2>
+        <text>
+            "select * from user where username = ' " + username + " ' ";
+        </text>
+        The user enters:
+        <text>jayesh'; delete from user where id='1</text>
+        So the final query run against your database is:<br/>
+        <text>
+            select * from user where username = 'jayesh'; delete from user where id='1’;
+        </text>
+    </bullet>
+    <bullet>
+        Lets demo and example using the user-input-demo branch.
+    </bullet>
+    <bullet>
+        <img class="lg-img" src="resource/images/BobbyTables.png" alt=""/>
+    </bullet>
+    <br/>
+    <strong>Next:</strong>
+    <a href="./UserInput03PreparedStatements.html" class="btn btn-info">
+        Prepared Statement
+    </a>
+</file>

@@ -18,6 +18,6 @@ public class TOCBuilderApplication {
 
     public static void main(String[] args) {
         XMLHandler XMLHandler = new TOCHandler();
-        XMLHandler.parseXMLFile(XMLHandler, "data/MySQLIntroTOC.xml");
+        XMLHandler.parseXMLFile(XMLHandler, "data/UserInput/UserInputTOC.xml");
     }
 }

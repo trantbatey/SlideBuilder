@@ -1,0 +1,21 @@
+<file name="UserInput01Intro" title="User Inputs" toc="UserInputTOC">
+    <img class="lg-img" src="resource/images/TrojanHorse.png" alt=""/>
+    <br/>
+
+    <h1>The Trojan Horse</h1>
+    <bullet indent="indent-star">
+        A "Trojan Horse" is something designed to be attractive to you, so you will take it inside of your defenses.
+        Once inside, it attacks you from within the perimeter.
+    </bullet>
+    <bullet>
+        Two types of attacks
+    </bullet>
+    <bullet indent="indent-star">
+        SQL Injection Attack
+    </bullet>
+    <bullet indent="indent-star">
+        XSS: Cross Site Scripting Attack
+    </bullet>
+    <br/>
+    <strong>Next:</strong> <a href="./UserInput02SQLInjection.html" class="btn btn-info" >SQL Injection Attack</a>
+</file>

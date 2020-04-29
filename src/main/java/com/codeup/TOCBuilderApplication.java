@@ -18,6 +18,6 @@ public class TOCBuilderApplication {
 
     public static void main(String[] args) {
         XMLHandler XMLHandler = new TOCHandler();
-        XMLHandler.parseXMLFile(XMLHandler, "data/UserInput/UserInputTOC.xml");
+        XMLHandler.parseXMLFile(XMLHandler, "data/JavaIII/07_Passwords/PasswordsTOC.xml");
     }
 }

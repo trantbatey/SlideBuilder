@@ -1,0 +1,40 @@
+<file name="Collections01Intro" title="Collections" toc="CollectionsTOC">
+    <img class="md-img" src="resource/images/Collection01.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection02Guitar.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection03.jpeg" alt=""/>
+    <br/>
+
+    <bullet>
+        <p style="font-size: 5rem; text-align: center">
+            <strong>Vintage Guitars</strong>
+            <img class="lg-img" src="resource/images/Collection04.jpeg" alt=""/>
+        </p>
+    </bullet>
+    <bullet>
+        Out preformed the stock market.
+    </bullet>
+    <bullet>
+        <h1>Collections</h1>
+    </bullet>
+    <bullet>
+        In this lesson, we'll talk about some of the collections.
+    </bullet>
+    <bullet>
+        What are some things you might want to do with a collection.
+    </bullet>
+    <bullet>
+        Why do we need Collections?
+    </bullet>
+    <bullet indent="indent-star">
+        Regardless of what you are sorting, searching, or categorizing the steps (algorithm) are always the same.
+    </bullet>
+    <bullet>
+        What are Java Collections?
+    </bullet>
+    <bullet indent="indent-star">
+        Collections are implementations of data structures in Java.
+    </bullet>
+    <br/>
+    <strong>Next:</strong>
+    <a href="./Collections02Implementations.html" class="btn btn-info" >Sample Implementations</a>
+</file>

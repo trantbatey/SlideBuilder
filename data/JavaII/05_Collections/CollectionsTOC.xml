@@ -1,0 +1,9 @@
+<file name="CollectionsTOC" title="Collections TOC" home="Collections01Intro">
+    <li name="Collections01Intro" title="Collections Introduction"></li>
+    <li name="Collections02Implementations" title="Implementations"></li>
+    <li name="Collections03ArrayList" title="ArrayList"></li>
+    <li name="Collections04HashMap" title="HashMap"></li>
+    <li name="Collections05Review" title="Review"></li>
+    <ali url="https://www.w3resource.com/java-exercises/collection/index.php#arraylist" label="ArrayList Exercises"/>
+    <ali url="https://www.w3resource.com/java-exercises/collection/index.php#hashmap" label="HasMap Exercises"/>
+</file>

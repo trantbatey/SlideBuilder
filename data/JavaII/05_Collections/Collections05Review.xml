@@ -1,0 +1,64 @@
+<file name="Collections05Review" title="Review" toc="CollectionsTOC">
+    <img class="md-img" src="resource/images/Collection01.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection02Guitar.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection03.jpeg" alt=""/>
+    <br/>
+
+    <h1>Review</h1>
+    <bullet>
+        Why do you need collections?
+    </bullet>
+    <bullet indent="indent-star">
+        Regardless of what you are sorting, searching, or categorizing the steps (algorithm) are always the same.
+    </bullet>
+    <bullet>
+        What some of the Java Collections?
+    </bullet>
+    <bullet indent="indent-star">
+        ArrayList, LinkedList, HashMap, HashSet, TreeMap, TreeSet.
+    </bullet>
+    <bullet>
+        How do you specify the data type of an ArrayList?
+    </bullet>
+    <bullet indent="indent-star">
+        Using angle brackets.
+    </bullet>
+    <bullet>
+        Can you create an ArrayList of doubles?
+    </bullet>
+    <bullet indent="indent-star">
+        No, ArrayList can only be created for classes.
+    </bullet>
+    <bullet>
+        How do you get the size of an ArrayList?
+    </bullet>
+    <bullet indent="indent-star">
+        By using the method size().
+    </bullet>
+    <bullet>
+        If you use System.out.println() to print an Arraylist will you get the reference of the list?
+    </bullet>
+    <bullet indent="indent-star">
+        No, you will get human readable output because Java collections implement a toString() method that prints
+        the entire collection in a readable form.
+    </bullet>
+    <bullet>
+        Do the Key and Value field of a HashMap have to have the same data type?
+    </bullet>
+    <bullet indent="indent-star">
+        No.
+    </bullet>
+    <bullet>
+        Do all of the keys have to have the same type?
+    </bullet>
+    <bullet indent="indent-star">
+        Excluding polymorphism, yes.
+    </bullet>
+    <br/>
+    <strong>Exercise Set 1:</strong>
+    <a href="https://www.w3resource.com/java-exercises/collection/index.php#arraylist"
+       class="btn btn-info" target="_blank">ArrayList Exercises</a>
+    <strong>Exercise Set 2:</strong>
+    <a href="https://www.w3resource.com/java-exercises/collection/index.php#hashmap"
+       class="btn btn-info" target="_blank">HashMap Exercises</a>
+</file>

@@ -1,0 +1,53 @@
+<file name="Collections04HashMap" title="HashMap" toc="CollectionsTOC">
+    <img class="md-img" src="resource/images/Collection01.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection02Guitar.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection03.jpeg" alt=""/>
+    <br/>
+
+    <h1>HashMap in Java</h1>
+    <bullet>
+        What is an HashMap?
+    </bullet>
+    <bullet indent="indent-star">
+        A hash map is a data structure for key-value pairs.
+    </bullet>
+    <bullet indent="indent-star">
+        Very fast access to elements because the key goes straight to the element.
+    </bullet>
+    <bullet indent="indent-star">
+        All of the keys in the hash map must be of the same type.
+    </bullet>
+    <bullet indent="indent-star">
+        All of the values must be of the same type.
+    </bullet>
+    <bullet indent="indent-star">
+        The Keys and the values do not have to be the same type.
+    </bullet>
+    <bullet indent="indent-star">
+        <img class="lg-img" src="resource/images/Collection09.png" alt=""/>
+    </bullet>
+    <bullet indent="indent-star">
+        <h2>Demo these methods</h2>
+    </bullet>
+    <bullet>
+        Here are some more commonly used methods.
+    </bullet>
+    <bullet indent="indent-star">
+        <img class="lg-img" src="resource/images/Collection10.png" alt=""/>
+    </bullet>
+    <bullet indent="indent-star">
+        <h2>Demo these methods</h2>
+    </bullet>
+    <bullet>
+        Notes
+    </bullet>
+    <bullet indent="indent-star">
+        Like ArrayLists, we must define the type of the keys and values when the hash map is created.
+    </bullet>
+    <bullet indent="indent-star">
+        Hash maps also have a nice string representation.
+    </bullet>
+    <br/>
+    <strong>Next:</strong>
+    <a href="./Collections05Review.html" class="btn btn-info" >Review</a>
+</file>

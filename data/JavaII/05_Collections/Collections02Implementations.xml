@@ -1,0 +1,20 @@
+<file name="Collections02Implementations" title="Implementation" toc="CollectionsTOC">
+    <img class="md-img" src="resource/images/Collection01.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection02Guitar.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection03.jpeg" alt=""/>
+    <br/>
+
+    <h1>Data Structures Implemented by Java</h1>
+    <bullet>
+        <img class="lg-img" src="resource/images/Collection05.png" alt=""/>
+    </bullet>
+    <bullet>
+        <h2>Class Hierarchy</h2>
+    </bullet>
+    <bullet>
+        <img class="lg-img" src="resource/images/Collection06.png" alt=""/>
+    </bullet>
+    <br/>
+    <strong>Next:</strong>
+    <a href="./Collections03ArrayList.html" class="btn btn-info" >ArrayList</a>
+</file>

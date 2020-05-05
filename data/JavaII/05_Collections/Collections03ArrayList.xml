@@ -1,0 +1,67 @@
+<file name="Collections03ArrayList" title="ArrayList" toc="CollectionsTOC">
+    <img class="md-img" src="resource/images/Collection01.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection02Guitar.jpeg" alt=""/>
+    <img class="md-img" src="resource/images/Collection03.jpeg" alt=""/>
+    <br/>
+
+    <h1>ArrayList in Java</h1>
+    <bullet>
+        What is an ArrayList?
+    </bullet>
+    <bullet indent="indent-star">
+        A representation of an array that can change sizes.
+    </bullet>
+    <bullet indent="indent-star">
+        Can be thought of as a wrapper around an array, that can change size.
+    </bullet>
+    <bullet indent="indent-star">
+        Elements must be an object. (can add primitives through Autoboxing)
+    </bullet>
+    <bullet indent="indent-star">
+        Elements must be of same type.
+    </bullet>
+    <bullet>
+        ArrayList handle data a little differently from arrays. They have methods that handle common operations.
+    </bullet>
+    <bullet indent="indent-star">
+        <img class="lg-img" src="resource/images/Collection07.png" alt=""/>
+    </bullet>
+    <bullet  indent="indent-star">
+        <h2>Demo these methods</h2>
+    </bullet>
+    <bullet>
+        Here are some more commonly used methods.
+    </bullet>
+    <bullet indent="indent-star">
+        <img class="lg-img" src="resource/images/Collection07.png" alt=""/>
+    </bullet>
+    <bullet  indent="indent-star">
+        <h2>Demo these methods</h2>
+    </bullet>
+    <bullet>
+        Notes
+    </bullet>
+    <bullet indent="indent-star">
+        Use angle brackets to specify type |||+|||-
+    </bullet>
+    <bullet indent="indent-star">
+        Specify class Integer instead primitive int.
+    </bullet>
+    <bullet indent="indent-star">
+        The add method is overloaded.
+    </bullet>
+    <bullet indent="indent-star">
+        ArrayLists use method "size()" instead of property length.
+    </bullet>
+    <bullet indent="indent-star">
+        Unlike native Java arrays, we can use System.out.println to show the contents.
+    </bullet>
+    <bullet indent="indent-star">
+        Note that the return value of .remove depends on how it is invoked. <br/>
+        * When an index is passed, the removed element is returned. <br/>
+        * When an object is passed, a boolean indicating whether or not an item was removed is returned. <br/>
+    </bullet>
+    <br/>
+    <strong>Next:</strong>
+    <a href="./Collections04HashMap.html" class="btn btn-info" >HashMap</a>
+</file>

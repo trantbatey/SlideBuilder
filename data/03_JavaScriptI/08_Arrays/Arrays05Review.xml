@@ -1,0 +1,86 @@
+<file name="Arrays05Review" title="Review Arrays" toc="ArraysTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        What is an Array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        a list of things<br/>
+        JavaScript arrays are used to store multiple values in a single variable.<br/>
+        Each slot in a JavaScript array can hold any type of data.
+    </bullet>
+
+    <bullet>
+        What denotes an Array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        In JavaScript, arrays are denoted by square brackets, <em>[ ]</em>.
+        The items in an array are called elements, and are separated by commas.
+    </bullet>
+
+    <bullet>
+        How do you find out how many items are in an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        use the <em>length</em> property.<br/>
+        <text>shapes.length</text>
+    </bullet>
+
+    <bullet>
+        What is the index of the first position of an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        0 (zero)
+    </bullet>
+
+    <bullet>
+        What happens when we try to access an index in the array that does not exist?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We get a value of <em>undefined</em>.
+    </bullet>
+
+    <bullet>
+        What does <strong>iterate</strong> mean?
+    </bullet>
+
+    <bullet indent="indent-star">
+        To iterate means to repeat a process to achieve a desired result.
+    </bullet>
+
+    <bullet>
+        How de we iterate through an array using an index?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use a <strong>For</strong> loop.
+    </bullet>
+
+    <bullet>
+        How de we iterate through each element of an array, calling a function?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use a <strong>For-Each</strong> loop.
+    </bullet>
+
+    <bullet>
+        Why would we use a named function rather that an inline function?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use named functions because they make it easier to read and understand the code; and,
+        because they make it possible to reuse the code.
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="https://java.codeup.com/javascript-i/arrays/#exercises" class="btn btn-info" >Exercise</a>
+</file>

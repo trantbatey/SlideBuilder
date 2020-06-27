@@ -1,0 +1,21 @@
+<file name="ArraysManTOC" title="Arrays Manipulation TOC" home="Arrays06Elements">
+    <li name="Arrays06Elements" title="Array Elements"></li>
+        <nav>
+            <li name="adding" title="Adding Elements"></li>
+            <li name="removing" title="Removing Elements"></li>
+            <li name="locating" title="Locating Elements"></li>
+        </nav>
+    <li name="Arrays07Slicing" title="Array Slicing"></li>
+    <li name="Arrays08Reversing" title="Reversing"></li>
+    <li name="Arrays09Sorting" title="Sorting"></li>
+    <li name="Arrays10Conversion" title="String Conversion"></li>
+    <nav>
+        <li name="spliting" title="Spliting"></li>
+        <li name="joining" title="Joining"></li>
+    </nav>
+    <li name="Arrays11Review" title="Array Manipulation Review"></li>
+    <ali url="https://java.codeup.com/javascript-i/arrays/manipulating/#further-reading"
+         label="Array Manipulation Reading"/>
+    <ali url="https://java.codeup.com/javascript-i/arrays/manipulating/#exercises"
+         label="Array Manipulation Exercises"/>
+</file>

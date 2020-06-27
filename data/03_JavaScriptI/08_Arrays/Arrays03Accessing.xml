@@ -1,0 +1,62 @@
+<file name="Arrays03Accessing" title="Accessing Array Elements" toc="ArraysTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        Once you have an array of values, you will probably want to use the data inside the array for something.
+        Arrays are zero-indexed, which means the first slot in an array is actually 0.<br/>
+        <img class="lg-img" src="resource/images/Array05.png" alt="Fifth Array Image"/>
+    </bullet>
+
+    <bullet>
+        Array elements are accessed by adding an opening and closing square bracket with the index of the item to be
+        accessed inside the brackets. Here are some examples:
+    </bullet>
+
+    <bullet>
+        <text>
+            var numbers = [1, 2, 3, 4];
+            console.log(numbers[0]); // 1
+            console.log(numbers[1]); // 2
+            console.log(numbers[2]); // 3
+            console.log(numbers[3]); // 4
+        </text>
+    </bullet>
+
+    <bullet>
+        Given the code below, how would you write "Mars" to the console.
+        <text>
+            var numbers = [7, "Mars", 18, true];
+        </text>
+    </bullet>
+
+    <bullet>
+        <text>
+            console.log(numbers[1]);
+        </text>
+    </bullet>
+
+    <bullet>
+        Given a 4 element array:<br/>
+        <text>var shapes = ['square', 'rectangle', 'circle', 'triangle'];</text>
+        When we try to access an index in the array that does not exist, as in that of the fifth shape,
+        <em>console.log(shapes[4]);</em>, we get a value of <strong>undefined</strong>.
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        Given the code below, what would be written in the alert console.<br/>
+        <text>
+            var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+            var notice = 'The shape at index 1 is: ' + shapes[1] + "\n";
+            notice = notice + 'The shape at index 4 is: ' + shapes[4];
+            alert(notice);
+        </text>
+        Enter the code into an HTML script section and verify the result.
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./Arrays04Iterating.html" class="btn btn-info" >Iterating Arrays</a>
+</file>

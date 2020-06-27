@@ -1,0 +1,55 @@
+<file name="Arrays07Slicing" title="Slicing Arrays" toc="ArraysManTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        The <strong>.slice</strong> method allows us to copy a portion of an array.
+    </bullet>
+
+    <bullet>
+        The slice method optionally takes two arguments to define where the portion we want starts and stops.
+    </bullet>
+
+    <bullet>
+        <strong>.slice</strong> will not modify the original array; it will return a new array.
+    </bullet>
+
+    <bullet>
+        <h3>Example</h3>
+        <text>
+            var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+            var slice = colors.slice(2, 4);<br/>
+
+            console.log(colors); // colors is unchanged
+            // ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']<br/>
+
+            console.log(slice); // ['yellow', 'green']<br/>
+
+            slice = colors.slice(3);
+            console.log(slice); // ['green', 'blue', 'indigo', 'violet']<br/>
+        </text>
+    </bullet>
+
+    <bullet>
+        The second argument is the index to stop at, that is, the array returned will have the elements up to,
+        but not including, the stop index.
+    </bullet>
+
+    <bullet>
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Given: <em>fruits = ["Banana", "Orange", "Apple", "Mango"];</em></li>
+            <li>Slice out 'Orange' and 'Apple' into another array.</li>
+            <li>Write the second array values to the console.</li>
+        </ul>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./Arrays08Reversing.html" class="btn btn-info" >Reversing an Array</a>
+</file>

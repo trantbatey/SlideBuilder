@@ -1,0 +1,151 @@
+<file name="Arrays04Iterating" title="Iterating Arrays" toc="ArraysTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <h2>To <strong>iterate</strong> means to repeat a process to achieve a desired result.</h2>
+    <bullet>
+        When you iterate over an array, it means that you cycle/traverse through the indices and elements
+        of the array. We can use the looping statements we learned earlier to iterate through arrays in JavaScript.
+    </bullet>
+
+    <bullet id="forloop">
+        <h2>For Loop</h2>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Example:</h3>
+        <text>
+            var shapes = ['square', 'rectangle', 'circle', 'triangle'];<br/>
+
+            // loop through the array and log the values
+            for (var i = 0; i |||_ shapes.length; i++) {
+            |||+console.log('The shape at index ' + i + ' is: ' + shapes[i]);
+            }
+        </text>
+        Here we are constructing a <strong>for</strong> loop that starts at zero (this index of the first element
+        in any array), and ends at the length of the array minus one (the index of the last element in any array).
+        We can then use <strong>i</strong> to index our array and refer to every element sequentially.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+    <h2>MINI LAB</h2>
+        Use a For loop to print each element and index of this array to the console log.<br/>
+        <text>
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
+        </text>
+    </bullet>
+
+    <bullet id="foreach">
+        <h2>For-Each Loop</h2>
+    </bullet>
+
+    <bullet indent="indent-star">
+        JavaScript arrays have a <strong>forEach</strong> method that can be used as an alternative to a
+        <strong>For</strong> loop.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The For-Each loop is very unusual in how it works. For each element in the array it calls a function.<br/>
+        <text>
+            someArray.forEach(function(element, index, array) { ...
+            }
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The For-Each function can have 1, 2, or 3 arguments.<br/>
+        The first argument is always the <em>element</em>.<br/>
+        If it is there, the second argument is the <em>index</em><br/>
+        If the third element is there, it is the <em>array</em> itself.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Examples:</strong><br/>
+        given the array:<br/>
+        <text>
+            var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+        </text>
+        One argument: The element<br/>
+        <text>
+            shapes.forEach(function(shape) {
+            |||+console.log('The shape is: ' + shape + '.');
+            });
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Two arguments: The index<br/>
+        <text>
+            shapes.forEach(function(shape, index) {
+            |||+console.log('the shape at index ' + index + ' is ' + shape + '.');
+            });
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Three arguments: The entire array<br/>
+        <text>
+            shapes.forEach(function(shape, index, theArray) {
+            |||+console.log('at index ' + index + ' of a ' + theArray.length + ' element array the shape is ' + shape + '.');
+            });
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        Use a For-Each loop to print each element and index of this array to the console log.<br/>
+        <text>
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        You can also use a named function in the For-Each loop<br/>
+        <text>
+            var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+            shapes.forEach(myTwoParamFunction);<br/>
+
+            function myTwoParamFunction(shape, index) {
+            |||+console.log('the shape at index ' + index + ' is ' + shape + '.');
+            }
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use named functions because they make it easier to read and understand the code; and,
+        because they make it possible to reuse the code.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        Use a named function and a For-Each loop to print each element of this array to the console log.<br/>
+        <text>
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
+        </text>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./Arrays05Review.html" class="btn btn-info" >Review</a>
+</file>

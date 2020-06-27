@@ -1,0 +1,99 @@
+<file name="Arrays11Review" title="Review Manipulating Arrays" toc="ArraysManTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        What is the Array method to add an element to the front of the array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.unshift</em> adds an item to the beginning of an array
+    </bullet>
+
+    <bullet>
+        What is the Array method to add an element to the end of the array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.push</em> adds an item to the end of an array
+    </bullet>
+
+    <bullet>
+        What is the Array method to remove an element from the front of the array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.shift</em> removes an item from the beginning of an array
+    </bullet>
+
+    <bullet>
+        What is the Array method to remove an element from the end of the array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.pop</em> removes an item to the end of an array
+    </bullet>
+
+    <bullet>
+        What is the Array method to find the first occurrence of a value in an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.indexOf</em> starts searching from the beginning of an array and will return the first
+        occurrence of the search value.
+    </bullet>
+
+    <bullet>
+        What is the Array method to find the last occurrence of a value in an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.lastIndexOf</em> starts at the end of the array and works backwards.
+    </bullet>
+
+    <bullet>
+        What is the Array method that allows us to copy a portion of an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.slice</em> allows us to copy a portion of an array.
+    </bullet>
+
+    <bullet>
+        What is the Array method to allows us to reverse the order of an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.reverse</em> reverses the order of the array.
+    </bullet>
+
+    <bullet>
+        What is the Array method to allows us to sort an array?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.sort</em> sorts the order of the array.
+    </bullet>
+
+    <bullet>
+        What is the Array method splits a delimited string into array elements?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.split</em> breaks up a delimited string into array elements.
+    </bullet>
+
+    <bullet>
+        What is the Array method joins array elements into a delimited string?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <em>.join</em> joins array elements into a delimited string.
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="https://java.codeup.com/javascript-i/arrays/manipulating/#exercises" target="blank"
+       class="btn btn-info" >Exercise</a>
+</file>

@@ -1,0 +1,74 @@
+<file name="Arrays02Declaring" title="Declaring an Array" toc="ArraysTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        In JavaScript, arrays are denoted by square brackets, <em>[ ]</em>. The items in an array are called
+        <em>elements</em>, and are separated by commas.
+    </bullet>
+
+    <bullet>
+        <strong>Syntax:</strong><br/>
+        <text>var array_name = [item1, item2, ...]; </text>
+    </bullet>
+    <bullet>
+        <strong>Examples:</strong><br/>
+        <text>
+            [] // an empty array<br/>
+
+            [1] // an array with one element,<br/>
+
+            [1, 2, 3, 4, 5] // an array with 5 elements<br/>
+
+            ["one", 42, [8, 9, 10]]
+            // an array with 3 elements all of different types
+            // notice that the array above does *not* have 5 elements, rather the last
+            // element is itself an array with 3 elements in it
+        </text>
+    </bullet>
+
+    <h2 id="counting">Counting Array Items</h2>
+    <bullet>
+        Spaces and line breaks are not important. A declaration can span multiple lines:<br/>
+        <text>
+            var cars = [
+            |||+"Saab",
+            |||+"Volvo",
+            |||+"BMW"
+            ];
+        </text>
+    </bullet>
+
+    <bullet>
+        Like the other data types we have seen, arrays can be stored in variables.<br/>
+        <text>var shapes = ['square', 'rectangle', 'circle', 'triangle'];</text>
+    </bullet>
+    <bullet>
+        While there are other methods, the use of square brackets is the most common way to create an array in
+        JavaScript.
+    </bullet>
+
+    <bullet>
+        To find out how many items are in an array, you can use the <em>length</em> property. Here is an
+        example:<br/>
+        <text>
+            var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+            console.log(shapes.length); // 4
+        </text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create an Array with 2 strings, 1 number, and an array as elements.</li>
+            <li>Store the array in a variable.</li>
+            <li>Print the variable contents on the screen.</li>
+            <li>Print the array size on the screen.</li>
+        </ul>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./Arrays03Accessing.html" class="btn btn-info" >Accessing Array Elements</a>
+</file>

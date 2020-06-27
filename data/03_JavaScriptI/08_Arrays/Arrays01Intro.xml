@@ -1,0 +1,49 @@
+<file name="Arrays01Intro" title="Arrays" toc="ArraysTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <h2>What is an Array</h2>
+    <bullet>
+            <strong>an impressive display or range of a particular type of thing.</strong><br/>
+            <em>A bright array of city lights.</em><br/>
+            <img class="lg-img" src="resource/images/Array04.jpeg" alt=""/>
+    </bullet>
+    <bullet>
+        an ordered series or arrangement.
+    </bullet>
+    <bullet>
+       <h4>a list of things</h4>
+    </bullet>
+    <bullet indent="indent-star">
+        <text>var cars = ["Saab", "Volvo", "BMW"];</text>
+    </bullet>
+    <bullet indent="indent-star">
+        <strong>DEMO:</strong><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array"
+                                 class="btn btn-info" target="blank">Sample Implementations</a>
+    </bullet>
+    <bullet>
+        Array: Fun Facts
+    </bullet>
+    <bullet indent="indent-star">
+        An array is a special variable, which can hold more than one value at a time.
+    </bullet>
+    <bullet indent="indent-star">
+        Said another way: JavaScript arrays are used to store multiple values in a single variable.
+    </bullet>
+    <bullet indent="indent-star">
+        Each slot in a JavaScript array can hold any type of data.
+    </bullet>
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a boilerplate HTML file</li>
+            <li>Add a script section</li>
+            <li>In the script section, Create an Array with three values</li>
+            <li>Use the array and <em>document.getElementById</em> to list the values on the page.</li>
+        </ul>
+    </bullet>
+    <strong>Next:</strong>
+    <a href="./Arrays02Declaring.html" class="btn btn-info" >Declaring an Array</a>
+</file>

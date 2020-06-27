@@ -1,0 +1,15 @@
+<file name="ArraysTOC" title="Arrays TOC" home="Arrays01Intro">
+    <li name="Arrays01Intro" title="Arrays Introduction"></li>
+    <li name="Arrays02Declaring" title="Declaring an Array"></li>
+        <nav>
+            <li name="counting" title="Counting Array Items"></li>
+        </nav>
+    <li name="Arrays03Accessing" title="Accessing Array Elements"></li>
+    <li name="Arrays04Iterating" title="Iterating Through an Array"></li>
+        <nav>
+            <li name="forloop" title="For Loop"></li>
+            <li name="foreach" title="For-Each Loop"></li>
+        </nav>
+    <li name="Arrays05Review" title="Array Into Review"></li>
+    <ali url="https://java.codeup.com/javascript-i/arrays/#exercises" label="Array Into Exercises"/>
+</file>

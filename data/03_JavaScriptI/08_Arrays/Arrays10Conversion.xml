@@ -1,0 +1,86 @@
+<file name="Arrays10Conversion" title="Converting between strings and arrays" toc="ArraysManTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    The <strong>.split</strong> method on strings and the <strong>.join</strong> method on arrays allow
+    us to transform strings to arrays, and arrays to strings.
+
+    <bullet id="splitting">
+        <h3>Splitting</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Splitting will take a string and turn it into an array. String splitting uses a delimiter to decide
+        where the splitting should occur. To split a string, call the <strong>.split</strong> method passing
+        the delimiter as a parameter.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Example</h3>
+        <text>
+            var namesString = "Joe,Bob,Sally";<br/>
+
+            console.log(namesString);
+            // Joe,Bob,Sally<br/>
+
+            var namesArray = namesString.split(',');<br/>
+
+            console.log(namesArray);
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Given: <em>var fruitStrings = "Banana,Orange,Apple,Mango";</em></li>
+            <li>Convert the String to an array.</li>
+            <li>Use a For-Each loop to write each element of the array to the console log.</li>
+        </ul>
+    </bullet>
+
+    <bullet id="joining">
+        <h3>Joining</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Joining will take an array and convert it to a string with the delimiter of your choice.
+        The <strong>.join</strong> method is available on an array and it takes a delimiter as a parameter.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Reverse the previous example</h3>
+        <text>
+            var namesArray = ['Joe', 'Bob', 'Sally'];<br/>
+
+            console.log(namesArray);
+            // ['Joe', 'Bob', 'Sally']<br/>
+
+            var namesString = namesArray.join(',');<br/>
+
+            console.log(namesString);
+            // Joe,Bob,Sally
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Given: <em>var fruitsArray = ["Banana", "Orange", "Apple", "Mango"];</em></li>
+            <li>Convert the Array to a String.</li>
+            <li>Write the string to the console log.</li>
+        </ul>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./Arrays11Review.html" class="btn btn-info" >Review Manipulating Arrays</a>
+</file>

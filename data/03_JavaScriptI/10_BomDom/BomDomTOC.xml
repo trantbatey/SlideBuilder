@@ -1,0 +1,18 @@
+<file name="BomDomTOC" title="Bom and Dom TOC" home="BomDom01Intro">
+    <li name="BomDom01Intro" title="BOM and DOM Introduction"></li>
+    <li name="BomDom02BomWindow" title="The BOM"></li>
+    <nav>
+        <li name="window" title="Bom Window"></li>
+        <li name="dialogs" title="System Dialogs"></li>
+        <li name="intervals" title="Intervals and Timeouts"></li>
+        <li name="setinterval" title="setInterval()"></li>
+        <li name="settimeout" title="setTimeOut()"></li>
+    </nav>
+    <li name="BomDom03BomLocation" title="Location"></li>
+    <li name="BomDom04Redirect" title="Redirect and Reload"></li>
+    <li name="BomDom04History" title="Browser History"></li>
+    <li name="BomDom04BomReview" title="BOM Review"></li>
+    <li name="BomDom04BomExercise" title="BOM Exercise"></li>
+    <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom/#exercises" label="DOM Exercises"/>
+    <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom-events/#exercises" label="DOM Events Exercises"/>
+</file>

@@ -1,0 +1,223 @@
+<file name="BomDom02BomWindow" title="Bowser Object Model Window" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
+    <br/>
+
+    The Browser Object Model (BOM) allows JavaScript to interact with the web browser.
+    <br/>
+
+    <h2 id="window">The BOM Window</h2>
+
+    <bullet indent="indent-star">
+        The <strong>window</strong> object is the core of the Browser Object Model. It represents an instance of the
+        web browser.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Through the window object, we can control the browsers:
+    </bullet>
+
+    <ul>
+        <li>
+            <bullet indent="indent-star">
+                <em>Size and Position</em>
+            </bullet>
+        </li>
+
+        <li>
+            <bullet indent="indent-star">
+                <em>Pop-up Windows</em>
+            </bullet>
+        </li>
+
+        <li>
+            <bullet indent="indent-star">
+                <em>Display System Dialogs</em>
+            </bullet>
+        </li>
+
+        <li>
+            <bullet indent="indent-star">
+                <em>Interval Based Processing</em>
+            </bullet>
+        </li>
+    </ul>
+
+    <bullet indent="indent-star">
+        The <strong>window</strong> object represents the JavaScript Global object. This means that any
+        variables or functions declared in the global scope become part of the <strong>window</strong> object.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>The MDN Window Documentation</strong>
+        <br/>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
+            https://developer.mozilla.org/en-US/docs/Web/API/Window
+        </a>
+    </bullet>
+
+    <h3 id="dialogs">System Dialogs</h3>
+
+    <bullet indent="indent-star">
+        In an earlier lesson, we covered <strong>alert()</strong>, <strong>confirm()</strong>, and
+        <strong>prompt()</strong>. All of these dialogs are provided by the browser and are made available
+        through the <stron>window</stron> object.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Since the <strong>window</strong> object represents the global JavaScript object, the methods
+        can be called directly without mentioning the <strong>window</strong> object.
+    </bullet>
+
+    <h3 id="intervals">Intervals and Timeouts</h3>
+
+    <bullet indent="indent-star">
+        Sometimes, it is useful to execute code either at a set interval of time, or after a certain
+        time interval has passed. The <strong>window</strong> object provides two methods for these purposes.
+    </bullet>
+
+    <h3 id="setinterval">setInterval()</h3>
+
+    <bullet indent="indent-star">
+        The <strong>setInterval(f, i)</strong> method specifies a function to be called at a given time
+        interval.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <strong>setInterval(myFunc(), interval)</strong> has two arguments, the function and the interval.
+        <br/>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The specified function will continue executing at the given interval until the method
+        <strong>clearInterval()</strong>
+        is called.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The function can be either a named function or an unnamed function.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Unnamed Function Example:</strong>
+        <br/>
+        <text>
+            'use strict';
+            <br/>
+
+            // this code will produce a console log every second
+            // when count >= max, the interval is cancelled, and the logging will stop
+            <br/>
+
+            var count = 0;
+            var max = 10;
+            var interval = 1000; // interval time in milliseconds
+            <br/>
+
+            var intervalId = setInterval(function () {
+            |||+if (count >= max) {
+            |||+|||+clearInterval(intervalId);
+            |||+|||+console.log('All done');
+            |||+} else {
+            |||+|||+count++;
+            |||+|||+console.log('Repeating this line ' + count);
+            |||+}
+            }, interval);
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Named Function Example:</strong>
+        <br/>
+        <text>
+            'use strict';
+            <br/>
+
+            // this code will produce a console log every second
+            // when count >= max, the interval is cancelled, and the logging will stop
+            <br/>
+
+            var count = 0;
+            var max = 10;
+            var interval = 1000; // interval time in milliseconds
+            var intervalId = setInterval(myFunc, interval);<br/>
+
+            function myFunc() {
+            |||+if (count >= max) {
+            |||+|||+clearInterval(intervalId);
+            |||+|||+console.log('All done');
+            |||+} else {
+            |||+|||+count++;
+            |||+|||+console.log('Repeating this line ' + count);
+            |||+}
+            }
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+        <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_newlines" target="blank">
+            https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_newlines</a>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        Write code to print some alert every 2 seconds. Stop the alerts after 10 seconds.
+        <br/>
+    </bullet>
+
+    <h3 id="settimeout">setTimeout()</h3>
+
+    <bullet indent="indent-star">
+        The <strong>setTimeout(f, i)</strong>  method delays the execution of as function for a specified time
+        interval.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <strong>setTimeout(myFunc(), interval)</strong> has two arguments, the function and the interval.
+        <br/>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The function can be either a named function or an unnamed function.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The timeout code execution can be cancelled by calling <strong>clearTimeout()</strong> method.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong>
+        <br/>
+        <text>
+            'use strict';
+            <br/>
+
+            var delay = 5000; // delay time in milliseconds
+            <br/>
+
+            var timeoutId = setTimeout(function () {
+            |||+alert('Here is a delayed hello!');
+            }, delay);
+            <br/>
+
+            // to cancel the timeout, you can call
+            // clearTimeout(timeoutId);
+            // prior to the delay expiring
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        Write code to print some alert after 3 seconds.
+        <br/>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./BomDom03BomLocation.html" class="btn btn-info">The Location Object</a>
+</file>

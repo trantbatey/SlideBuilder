@@ -15,7 +15,7 @@
     </bullet>
 
     <bullet indent="indent-star">
-        Through the window object, we can control the browsers:
+        Through the <strong>window</strong> object, we can control the browsers:
     </bullet>
 
     <ul>

@@ -2,9 +2,8 @@
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
-    <br/>
 
-    <h2>To <strong>iterate</strong> means to repeat a process to achieve a desired result.</h2>
+    <h2 class="subTitle">To <strong>iterate</strong> means to repeat a process to achieve a desired result.</h2>
     <bullet>
         When you iterate over an array, it means that you cycle/traverse through the indices and elements
         of the array. We can use the looping statements we learned earlier to iterate through arrays in JavaScript.

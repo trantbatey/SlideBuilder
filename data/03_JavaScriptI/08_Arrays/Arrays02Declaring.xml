@@ -29,7 +29,6 @@
         </text>
     </bullet>
 
-    <h2 id="counting">Counting Array Items</h2>
     <bullet>
         Spaces and line breaks are not important. A declaration can span multiple lines:<br/>
         <text>
@@ -49,6 +48,9 @@
         While there are other methods, the use of square brackets is the most common way to create an array in
         JavaScript.
     </bullet>
+
+    <bookmark id="counting"></bookmark>
+    <h2>Counting Array Items</h2>
 
     <bullet>
         To find out how many items are in an array, you can use the <em>length</em> property. Here is an

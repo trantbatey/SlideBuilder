@@ -1,0 +1,93 @@
+<file name="BomDom03BomLocation" title="The Location Object" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
+    <br/>
+
+    <h2>The Location Object</h2>
+
+    <bullet>
+        The <strong>location</strong> object is a very useful feature of the BOM.<br/>
+        It is accessible though both the <em>window</em> object, and also the <em>document</em>.
+    </bullet>
+
+    <bullet>
+        The <strong>location</strong> object is aware of the currently loaded document and provides detailed URL
+        information.
+    </bullet>
+
+    <bullet>
+        The <strong>location</strong> object can also be used to redirect the browser to a new location.
+    </bullet>
+
+    <bullet>
+        <strong>The MDN Location Documentation</strong>
+        <br/>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window.location">
+            https://developer.mozilla.org/en-US/docs/Web/API/Window.location
+        </a>
+    </bullet>
+
+    <h3 id="redirect">Redirect Browser</h3>
+    <bullet>
+        <strong>Example using location to redirect the browser:</strong>
+        <text>
+            // redirect browser to google.com
+            window.location = 'http://www.google.com';
+        </text>
+    </bullet>
+
+    <bullet>
+        <h3>Demo It:</h3>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        Write code to redirect to 'http://www.imdb.com'<br/>
+        <br/>
+    </bullet>
+
+    <h3 id="reload">Reload Page</h3>
+    <bullet>
+        <strong>Examples using location to reload a page:</strong>
+        <text>
+            location.reload(); // reload page, possibly from cache
+            location.reload(true); // reload page from server
+        </text>
+    </bullet>
+
+    <bullet>
+        <h3>Demo It: need to use buttons</h3>
+        <text>
+            |||ltbutton type="button" onClick="reloadFromCache()"|||gtRefresh!|||lt/button|||gt
+            |||ltbutton type="button" onClick="reloadFromServer()"|||gtRefresh!|||lt/button|||gt
+        </text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        Write code to reload a page possibly from the cache.<br/>
+        Write code to reload a page from the server.<br/>
+    </bullet>
+
+    <h3 id="navigator">Navigator and History</h3>
+
+    <bullet>
+        The <strong>navigator</strong> and <strong>history</strong> are also objects of the BOM similar to location.
+        They will not be used in this course, however, the links below are provided for you.
+    </bullet>
+
+    <bullet>
+        <strong>The MDN Navigator and History Documentation</strong>
+        <br/>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/History">
+            https://developer.mozilla.org/en-US/docs/Web/API/History
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">
+            https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+        </a>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./BomDom04BomReview.html" class="btn btn-info">BOM Review</a>
+</file>

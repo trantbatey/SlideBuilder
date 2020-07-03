@@ -1,4 +1,4 @@
-<file name="Arrays07Slicing" title="Slicing Arrays" toc="ArraysManTOC">
+<file name="ArraysMan02Slicing" title="Slicing Arrays" toc="ArraysManTOC">
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
@@ -51,5 +51,5 @@
     </bullet>
 
     <strong>Next:</strong>
-    <a href="./Arrays08Reversing.html" class="btn btn-info" >Reversing an Array</a>
+    <a href="./ArraysMan03Reversing.html" class="btn btn-info" >Reversing an Array</a>
 </file>

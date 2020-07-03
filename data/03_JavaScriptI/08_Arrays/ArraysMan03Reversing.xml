@@ -1,16 +1,11 @@
-<file name="Arrays09Sorting" title="Sorting Arrays" toc="ArraysManTOC">
+<file name="ArraysMan03Reversing" title="Reversing Arrays" toc="ArraysManTOC">
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
     <br/>
 
     <bullet>
-        An array can be sorted by calling the <strong>sort</strong> method.
-    </bullet>
-
-    <bullet>
-        The <strong>sort</strong> method, by default, will convert items in the array to their string
-        equivalent and order them based on that value.
+        An array can be <strong>reversed</strong> by calling the reverse method.
     </bullet>
 
     <bullet>
@@ -21,18 +16,17 @@
             console.log(colors);
             // ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']<br/>
 
-            console.log('Sorting the colors array.');<br/>
+            console.log('Reversing the colors array.');<br/>
 
-            colors.sort();<br/>
+            colors.reverse();<br/>
 
             console.log(colors);
-            // ['blue', 'green', 'indigo', 'orange', 'red', 'violet', 'yellow']
+            // ['violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
         </text>
     </bullet>
 
     <bullet>
-        Like <strong>.reverse</strong>, <strong>.sort</strong> will both sort the original array and
-        return the sorted array.
+        The <strong>.reverse</strong> method will both reverse the original array and return the reversed array.
     </bullet>
 
     <bullet>
@@ -43,10 +37,10 @@
         <h2>MINI LAB</h2>
         <ul>
             <li>Given: <em>fruits = ["Banana", "Orange", "Apple", "Mango"];</em></li>
-            <li>Sort the array, and write the reversed array in an alert.</li>
+            <li>Reverse the array, and write the reversed array in an alert.</li>
         </ul>
     </bullet>
 
     <strong>Next:</strong>
-    <a href="./Arrays10Conversion.html" class="btn btn-info" >Array String Conversion</a>
+    <a href="./ArraysMan04Sorting.html" class="btn btn-info" >Sorting an Array</a>
 </file>

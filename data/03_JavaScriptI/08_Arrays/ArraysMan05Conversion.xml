@@ -1,4 +1,4 @@
-<file name="Arrays10Conversion" title="Converting between strings and arrays" toc="ArraysManTOC">
+<file name="ArraysMan05Conversion" title="Converting between strings and arrays" toc="ArraysManTOC">
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
@@ -82,5 +82,5 @@
     </bullet>
 
     <strong>Next:</strong>
-    <a href="./Arrays11Review.html" class="btn btn-info" >Review Manipulating Arrays</a>
+    <a href="./ArraysMan06Review.html" class="btn btn-info" >Review Manipulating Arrays</a>
 </file>

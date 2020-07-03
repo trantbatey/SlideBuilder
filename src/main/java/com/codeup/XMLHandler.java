@@ -229,11 +229,19 @@ public class XMLHandler {
     }
 
     protected static void write(String output) {
+        output = handleSpecialHtmlChars(output);
         pw.print(output);
         out.print(output);
     }
 
     protected static void write(StringBuilder output) {
         write(output.toString());
+    }
+
+    protected static String handleSpecialHtmlChars(String output) {
+        output = output.replaceAll("\\|\\|\\|\\+", "&nbsp;&nbsp;&nbsp;&nbsp;"); // tab
+        output = output.replaceAll("\\|\\|\\|lt", "&lt;");                      // <
+        output = output.replaceAll("\\|\\|\\|gt", "&gt;");                      // >
+        return output;
     }
 }

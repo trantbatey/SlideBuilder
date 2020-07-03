@@ -57,7 +57,7 @@
     </bullet>
 
     <bullet>
-        How de we iterate through an array using an index?
+        How do we iterate through an array using an index?
     </bullet>
 
     <bullet indent="indent-star">
@@ -65,7 +65,7 @@
     </bullet>
 
     <bullet>
-        How de we iterate through each element of an array, calling a function?
+        How do we iterate through each element of an array, calling a function?
     </bullet>
 
     <bullet indent="indent-star">
@@ -82,5 +82,6 @@
     </bullet>
 
     <strong>Next:</strong>
-    <a href="https://java.codeup.com/javascript-i/arrays/#exercises" class="btn btn-info" >Exercise</a>
+    <a href="https://java.codeup.com/javascript-i/arrays/#exercises"
+       target="blank" class="btn btn-info" >Exercise</a>
 </file>

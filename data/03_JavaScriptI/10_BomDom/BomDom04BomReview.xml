@@ -1,52 +1,52 @@
-<file name="Arrays11Review" title="Review Manipulating Arrays" toc="ArraysManTOC">
+<file name="BomDom04BomReview" title="BOM Review" toc="BomDomTOC">
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
     <br/>
 
     <bullet>
-        What is the Array method to add an element to the front of the array?
+        What is the BOM?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.unshift</em> adds an item to the beginning of an array
+        Browser Object Model
     </bullet>
 
     <bullet>
-        What is the Array method to add an element to the end of the array?
+        What is the use to do?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.push</em> adds an item to the end of an array
+        Control the browser and get information from the browser.
     </bullet>
 
     <bullet>
-        What is the Array method to remove an element from the front of the array?
+        What is the top level node of the BOM?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.shift</em> removes an item from the beginning of an array
+        The window.
     </bullet>
 
     <bullet>
-        What is the Array method to remove an element from the end of the array?
+        Do you have to use <em>window</em> to call system dialogs like alert(), confirm(), or prompt()?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.pop</em> removes an item to the end of an array
+        No. Since the <em>window</em> object represents the global JavaScript object, the methods can be called
+        directly without mentioning the <em>window</em> object.
     </bullet>
 
     <bullet>
-        What is the Array method to find the first occurrence of a value in an array?
+        What does <em>setInterval(f, i)</em> do?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.indexOf</em> starts searching from the beginning of an array and will return the first
-        occurrence of the search value.
+        It allows code to be executed at a specified time interval.
     </bullet>
 
     <bullet>
-        What is the Array method to find the last occurrence of a value in an array?
+        What method cancels the interval code execution?
     </bullet>
 
     <bullet indent="indent-star">

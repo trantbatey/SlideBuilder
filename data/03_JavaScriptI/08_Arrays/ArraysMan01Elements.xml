@@ -1,10 +1,9 @@
-<file name="Arrays06Elements" title="Array Elements" toc="ArraysManTOC">
+<file name="ArraysMan01Elements" title="Array Elements" toc="ArraysManTOC">
     <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
     <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
     <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
-    <br/>
 
-    <h2>
+    <h2 class="subTitle">
         JavaScript arrays have a variety of methods that allow for manipulation of the array.
         In this lesson, we will cover some of the most commonly used methods.
     </h2>
@@ -192,5 +191,5 @@
     </bullet>
 
     <strong>Next:</strong>
-    <a href="./Arrays07Slicing.html" class="btn btn-info" >Slicing an Array</a>
+    <a href="./ArraysMan02Slicing.html" class="btn btn-info" >Slicing an Array</a>
 </file>

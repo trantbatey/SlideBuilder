@@ -10,6 +10,7 @@
             <li name="forloop" title="For Loop"></li>
             <li name="foreach" title="For-Each Loop"></li>
         </nav>
-    <li name="Arrays05Review" title="Array Into Review"></li>
-    <ali url="https://java.codeup.com/javascript-i/arrays/#exercises" label="Array Into Exercises"/>
+    <li name="Arrays05Review" title="Array Intro Review"></li>
+    <ali url="https://java.codeup.com/javascript-i/arrays/#exercises" label="Array Intro Exercises"/>
+    <li name="ArraysMan01Elements" title="Manipulating Arrays"></li>
 </file>

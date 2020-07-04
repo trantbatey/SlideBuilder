@@ -2,10 +2,8 @@
     <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
     <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
     <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
-    <br/>
 
-    The Browser Object Model (BOM) allows JavaScript to interact with the web browser.
-    <br/>
+    <p class="subTitle">The Browser Object Model (BOM) allows JavaScript to interact with the web browser.</p>
 
     <h2 id="window">The BOM Window</h2>
 

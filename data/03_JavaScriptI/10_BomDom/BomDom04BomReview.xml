@@ -13,7 +13,7 @@
     </bullet>
 
     <bullet>
-        What is the use to do?
+        What is it use to do?
     </bullet>
 
     <bullet indent="indent-star">
@@ -29,16 +29,16 @@
     </bullet>
 
     <bullet>
-        Do you have to use <em>window</em> to call system dialogs like alert(), confirm(), or prompt()?
+        Do you have to use <strong>window</strong> to call system dialogs like alert(), confirm(), or prompt()?
     </bullet>
 
     <bullet indent="indent-star">
-        No. Since the <em>window</em> object represents the global JavaScript object, the methods can be called
-        directly without mentioning the <em>window</em> object.
+        No. Since the <strong>window</strong> object represents the global JavaScript object, the methods can be called
+        directly without mentioning the <strong>window</strong> object.
     </bullet>
 
     <bullet>
-        What does <em>setInterval(f, i)</em> do?
+        What does <strong>setInterval(f, i)</strong> do?
     </bullet>
 
     <bullet indent="indent-star">
@@ -50,50 +50,59 @@
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.lastIndexOf</em> starts at the end of the array and works backwards.
+        The method <strong>clearInterval()</strong>
     </bullet>
 
     <bullet>
-        What is the Array method that allows us to copy a portion of an array?
+        How can we delay the execution of a function for a specified amount of time?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.slice</em> allows us to copy a portion of an array.
+        The <strong>setTimeout(f, i)</strong> method delays the execution of as function for a specified time interval.
     </bullet>
 
     <bullet>
-        What is the Array method to allows us to reverse the order of an array?
+        After setting the time delay, can we still stop the method from being invoked?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.reverse</em> reverses the order of the array.
+        Yes. The timeout code execution can be cancelled by calling <strong>clearTimeout()</strong> method.
     </bullet>
 
     <bullet>
-        What is the Array method to allows us to sort an array?
+        What unit of time do <strong>setInterval(f, i)</strong> and <strong>setTimeout(f, i)</strong> use to set the
+        time intervals?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.sort</em> sorts the order of the array.
+        milliseconds (1/1000th of a second)
     </bullet>
 
     <bullet>
-        What is the Array method splits a delimited string into array elements?
+        How do we change the browser's location using the BOM window?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.split</em> breaks up a delimited string into array elements.
+        We set the location value; <em>window.location = 'http://www.google.com';</em>
     </bullet>
 
     <bullet>
-        What is the Array method joins array elements into a delimited string?
+        How do we reload the current page possibly using the cache?
     </bullet>
 
     <bullet indent="indent-star">
-        <em>.join</em> joins array elements into a delimited string.
+        We use <strong>reload()</strong> without any arguments, "<em>location.reload();</em>"
+    </bullet>
+
+    <bullet>
+        How do we reload the current page specifically using the server?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use <strong>reload()</strong> with the boolean true as an argument, "<em>location.reload(true);</em>"
     </bullet>
 
     <strong>Next:</strong>
-    <a href="https://java.codeup.com/javascript-i/arrays/manipulating/#exercises" target="blank"
+    <a href="https://java.codeup.com/javascript-i/bom-and-dom/bom/#exercises" target="blank"
        class="btn btn-info" >Exercise</a>
 </file>

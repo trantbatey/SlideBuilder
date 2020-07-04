@@ -4,39 +4,43 @@
     <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
     <br/>
 
-    <bullet>
-        <h2>In web developments we have two very important concepts.
-            The <strong>BOM</strong> and the <strong>DOM</strong>.</h2>
-    </bullet>
+    <h2 class="subTitle">In web developments we have two very important concepts.
+        The <strong>BOM</strong> and the <strong>DOM</strong>.
+    </h2>
 
     <bullet>
-        The <strong>BOM</strong> is the Browser Object Model<br/>
+        The <strong>BOM</strong> is the Browser Object Model
+        <br/>
         It allows us to interact with the browser.
     </bullet>
 
-    <bullet>
+    <bullet indent="indent-star">
         The <strong>BOM</strong> represents the browser as a tree of nodes and objects. That way, programming
-        languages can control the browser and get information from it.<br/>
-    </bullet>
-
-    <bullet>
-        The <strong>Window</strong> is the root element of the BOM tree.
+        languages can control the browser and get information from it.
+        <br/>
         <img class="lg-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
     </bullet>
 
-    <bullet>
-        The <strong>DOM</strong> is the Document Object Model<br/>
-        It allows us to interact with the webpage.<br/>
+    <bullet indent="indent-star">
+        The <strong>Window</strong> is the root element of the BOM tree.
     </bullet>
 
     <bullet>
+        The <strong>DOM</strong> is the Document Object Model
+        <br/>
+        It allows us to interact with the webpage.
+        <br/>
+    </bullet>
+
+    <bullet indent="indent-star">
         The <strong>DOM</strong> represents the document (web page) as a tree of nodes and objects. That way,
-        programming languages can control the page and get information from it.<br/>
+        programming languages can control the page and get information from it.
+        <br/>
+        <img class="lg-img" src="resource/images/BomDom02.png" alt="Third BOM DOM Image"/>
     </bullet>
 
-    <bullet>
+    <bullet indent="indent-star">
         The <strong>Document</strong> is the root element of the DOM tree.
-        <img class="lg-img" src="resource/images/BomDom02.png" alt="Third BOM DOM Image"/>
     </bullet>
 
     <bullet>
@@ -45,22 +49,36 @@
     </bullet>
 
     <bullet>
-        We'll learn about the <strong>Browser Object Model (BOM)</strong>
+        We'll learn about the
+        <strong>Browser Object Model (BOM)</strong>
     </bullet>
     <bullet>
-        We'll learn about the <strong>Document Object Model (DOM)</strong>
+        We'll learn about the
+        <strong>Document Object Model (DOM)</strong>
     </bullet>
+
     <bullet>
         We'll learn how to use both to write JavaScript that modifies HTML and responds to
         events triggered by users.
     </bullet>
 
     <bullet>
+        We'll recognise the creator of the BOM and DOM.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <img class="lg-img" src="resource/images/JeanClaudeBomDom.jpg" alt="Jean Claude Bom Dom Image"/><br/>
+        <h3 style="text-align: center">Jean Claude Bom Dom</h3>
+    </bullet>
+
+    <bullet>
         <h2>MINI LAB</h2>
-        What is the <strong>BOM</strong> and what is it used to do?<br/>
-        What is the <strong>DOM</strong> and what is it used to do?<br/>
+        What is the <strong>BOM</strong> and what is it used to do?
+        <br/>
+        What is the <strong>DOM</strong> and what is it used to do?
+        <br/>
     </bullet>
 
     <strong>Next:</strong>
-    <a href="./BomDom02BomWindow.html" class="btn btn-info" >The Browser Object Model</a>
+    <a href="./BomDom02BomWindow.html" class="btn btn-info">The Browser Object Model</a>
 </file>

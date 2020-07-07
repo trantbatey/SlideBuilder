@@ -1,0 +1,156 @@
+<file name="BomDom06DomLocating" title="Document Object Model (DOM)" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
+
+    <h2>Locating Elements</h2>
+
+    <bullet indent="indent-star">
+        There are a variety of ways to query the DOM for elements.
+    </bullet>
+
+    <bullet indent="indent-star">
+        We will cover methods for retrieving elements by <strong>id</strong>, <strong>class</strong>,
+        or <strong>tag name</strong>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        We will also cover the direct access of form inputs.
+    </bullet>
+
+    <div id="by_id"></div>
+    <p class="subTitle">Retrieve Element by Id</p>
+
+    <bullet indent="indent-star">
+        When you want to retrieve an individual HTML element, it is very easy to do so by accessing it by its
+        <strong>id</strong> with the <strong>document.getElementById()</strong> method.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        In the example above, the id <strong>btnToClick</strong> is on a button element. When we call
+        <strong>document.getElementById()</strong> with that id, we get back the button element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        If an element with the specified id is not found, <strong>null</strong> will be returned by the
+        <strong>document.getElementById()</strong> method.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Second Example:</strong><br/>
+        Here we use the element id to print text at a paragraph tag, |||ltp|||gt.
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        Use <b>document.getElementById('demo')</b> and an <b>h1</b> tag with an id="demo", to print
+        "<em>Hyperion Rocks!</em>" on a website.
+    </bullet>
+
+    <div id="by_class"></div>
+    <p class="subTitle">Retrieve Element List by Class</p>
+
+    <bullet indent="indent-star">
+        Elements are also often located by <b>class</b>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        To access HTML elements by class, use the document.getElementsByClassName() method.<br/>
+        <b>document.getElementsByClassName()</b> returns an HTML element collection (NodeList) of elements.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Note<b><em>Elements</em></b>, plural, in the method name; not <em>Element</em>, singular. Unlike
+        <b>document.getElementById()</b>,
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        Here we use the <b>getElementsByClassName</b> to get all the elements of a single class.
+        <text tid="t3"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a page with a four paragraph tags. </li>
+            <li>Two of them should have class='a' and two should have class='b'.</li>
+            <li>Use document.getElementsByClassName() to get all the paragraphs tags from class 'b'. </li>
+            <li>Write their outerHTML text to the console log.</li>
+        </ul>
+    </bullet>
+
+    <div id="by_tag"></div>
+    <p class="subTitle">Retrieve Element List by Tag</p>
+
+    <bullet indent="indent-star">
+        Elements may also be located by html <b>Tag</b>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        To access HTML elements by their tag, use the document.getElementsByTagName() method.<br/>
+        <b>document.getElementsByTagName()</b> returns an HTML element collection (NodeList) of elements.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        Here we use the <b>getElementsByTagName</b> to get all the elements of a single class.
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a page with a heading tag, and three paragraph tags. </li>
+            <li>Use document.getElementsByTagName('p') to get all the paragraphs tags from the page.</li>
+            <li>Write their innerHTML text to the console log.</li>
+        </ul>
+    </bullet>
+
+    <div id="direct"></div>
+    <p class="subTitle">Direct Access to Form Inputs</p>
+
+    <bullet indent="indent-star">
+        Some elements, like form inputs, can be accessed directly by name through special properties on the
+        <hl>document</hl> object.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        Write the value of an input field to the console log directly using its name through a form.
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./BomDom07DomProperties.html" class="btn btn-info">Accessing Element Properties</a>
+</file>

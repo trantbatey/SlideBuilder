@@ -15,7 +15,23 @@
             <li name="navigator" title="Navigator and History"></li>
         </nav>
     <li name="BomDom04BomReview" title="BOM Review"></li>
-    <li name="BomDom05BomExercise" title="BOM Exercise"></li>
+    <ali url="https://java.codeup.com/javascript-i/bom-and-dom/bom/#exercises" label="BOM Exercises"/>
+    <li name="BomDom05TheDom" title="The DOM"></li>
+    <li name="BomDom06DomLocating" title="Locating Elements"></li>
+        <nav>
+            <li name="by_id" title="Element by Id"></li>
+            <li name="by_class" title="Element by Class"></li>
+            <li name="by_tag" title="Element by Tag"></li>
+            <li name="direct" title="Direct from Form"></li>
+        </nav>
+    <li name="BomDom07DomProperties" title="Modifying Element Properties"></li>
+        <nav>
+            <li name="text" title="Text"></li>
+            <li name="attributes" title="Attributes"></li>
+            <li name="styles" title="Styles"></li>
+            <li name="add_remove" title="Adding/Removing Elements"></li>
+        </nav>
+    <li name="BomDom08DomReview" title="Dom Review"></li>
     <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom/#exercises" label="DOM Exercises"/>
     <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom-events/#exercises" label="DOM Events Exercises"/>
 </file>

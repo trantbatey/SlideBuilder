@@ -53,6 +53,7 @@ public class XMLHandler {
         }
     }
 
+    String rootName;
     public void startElement(StartElement startElement) throws IOException {
         Map<String, String> attributes = convertAttributesToMap(startElement);
         String qName = startElement.getName().getLocalPart();
@@ -62,6 +63,7 @@ public class XMLHandler {
             String toc = attributes.remove("toc");
             try {
                 pw = new PrintWriter(new FileOutputStream("output/" + name + ".html"));
+                rootName = name;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -103,11 +105,12 @@ public class XMLHandler {
             write(output);
         } else if (qName.equalsIgnoreCase("text")) {
             textField = true;
+            String tid = attributes.remove("tid");
             output = new StringBuilder(
                     indention + "<table>\n" +
                             indention + "    <tr>\n" +
                             indention + "        <td>\n" +
-                            indention + "            <span class=\"horizontal-scroll\">\n");
+                            indention + "            <span id=\"" +tid+ "\" class=\"horizontal-scroll\">\n");
             indention += "                ";
             write(output);
         } else if (EMPTY_BODY_ELEMENTS.contains(qName.toLowerCase())) {
@@ -149,6 +152,7 @@ public class XMLHandler {
             output = new StringBuilder("" +
                     "    </div>\n" +
                     "\n" + "</body>\n" +
+                    "    <script src=\"resource/js/" + rootName + ".js\"></script>\n" +
                     "    <script src=\"resource/js/General.js\"></script>\n" +
                     "    <script src=\"resource/js/bootstrap.min.js\"></script>\n" +
                     "</html>");

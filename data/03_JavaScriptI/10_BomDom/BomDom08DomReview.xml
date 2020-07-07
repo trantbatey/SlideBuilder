@@ -1,0 +1,114 @@
+<file name="BomDom08DomReview" title="DOM Review" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        What is the DOM?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Document Object Model
+    </bullet>
+
+    <bullet>
+        What is it use to do?
+    </bullet>
+
+    <bullet indent="indent-star">
+        It allows us to interact with the webpage.
+    </bullet>
+
+    <bullet>
+        What is the top level node of the DOM?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The document.
+    </bullet>
+
+    <bullet>
+        What are some ways we can get elements from the document?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We can get them by using the id, the class, or the tag name.
+    </bullet>
+
+    <bullet>
+        What method gets elements by their Id?
+    </bullet>
+
+    <bullet indent="indent-star">
+        document.getElementById()
+    </bullet>
+
+    <bullet>
+        What method gets elements by their class?
+    </bullet>
+
+    <bullet indent="indent-star">
+        document.getElementsByClassName
+    </bullet>
+
+    <bullet>
+        What does <b>document.getElementsByClassName</b> return?
+    </bullet>
+
+    <bullet indent="indent-star">
+        It returns an HTML element collection (NodeList) of elements.
+    </bullet>
+
+    <bullet>
+        What method gets elements by their HTML tag?
+    </bullet>
+
+    <bullet indent="indent-star">
+        document.getElementsByTagName()
+    </bullet>
+
+    <bullet>
+        What is the <b>innerHTML</b>?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Everything that appears between the two element tags.
+    </bullet>
+
+    <bullet>
+        What is the difference between the <b>innerHTML</b> and the <b>innerText</b>?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The property <b>innerText</b> behaves in a similar manner, but it ignores any HTML tags.
+    </bullet>
+
+    <bullet>
+        How can we tell if an element has a given attribute?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Use the <b>hasAttribute()</b> method.
+    </bullet>
+
+    <bullet>
+        What are the "data-*" attributes used to do?
+    </bullet>
+
+    <bullet indent="indent-star">
+        They store meta data related to the element, usually  related back to the database.
+    </bullet>
+
+    <bullet>
+        How do we set the background color for an element?
+    </bullet>
+
+    <bullet indent="indent-star">
+        We use it's "style['background-color']" notation, because of the hyphen.
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="https://java.codeup.com/javascript-i/bom-and-dom/bom/#exercises" target="blank"
+       class="btn btn-info" >Exercise</a>
+</file>

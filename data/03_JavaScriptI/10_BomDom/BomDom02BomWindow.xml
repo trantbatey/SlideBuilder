@@ -100,57 +100,13 @@
     <bullet indent="indent-star">
         <strong>Unnamed Function Example:</strong>
         <br/>
-        <text>
-            'use strict';
-            <br/>
-
-            // this code will produce a console log every second
-            // when count >= max, the interval is cancelled, and the logging will stop
-            <br/>
-
-            var count = 0;
-            var max = 10;
-            var interval = 1000; // interval time in milliseconds
-            <br/>
-
-            var intervalId = setInterval(function () {
-            |||+if (count >= max) {
-            |||+|||+clearInterval(intervalId);
-            |||+|||+console.log('All done');
-            |||+} else {
-            |||+|||+count++;
-            |||+|||+console.log('Repeating this line ' + count);
-            |||+}
-            }, interval);
-        </text>
+        <text tid="t1"></text>
     </bullet>
 
     <bullet indent="indent-star">
         <strong>Named Function Example:</strong>
         <br/>
-        <text>
-            'use strict';
-            <br/>
-
-            // this code will produce a console log every second
-            // when count >= max, the interval is cancelled, and the logging will stop
-            <br/>
-
-            var count = 0;
-            var max = 10;
-            var interval = 1000; // interval time in milliseconds
-            var intervalId = setInterval(myFunc, interval);<br/>
-
-            function myFunc() {
-            |||+if (count >= max) {
-            |||+|||+clearInterval(intervalId);
-            |||+|||+console.log('All done');
-            |||+} else {
-            |||+|||+count++;
-            |||+|||+console.log('Repeating this line ' + count);
-            |||+}
-            }
-        </text>
+        <text tid="t2"></text>
     </bullet>
 
     <bullet indent="indent-star">
@@ -188,22 +144,7 @@
     <bullet indent="indent-star">
         <strong>Example:</strong>
         <br/>
-        <text>
-            'use strict';
-            <br/>
-
-            var delay = 5000; // delay time in milliseconds
-            <br/>
-
-            var timeoutId = setTimeout(function () {
-            |||+alert('Here is a delayed hello!');
-            }, delay);
-            <br/>
-
-            // to cancel the timeout, you can call
-            // clearTimeout(timeoutId);
-            // prior to the delay expiring
-        </text>
+        <text tid="t3"></text>
     </bullet>
 
     <bullet indent="indent-star">

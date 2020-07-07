@@ -1,0 +1,148 @@
+<file name="BomDom07DomProperties" title="Accessing or Modifying Element Properties" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
+
+    <h3 class="subTitle">
+        Once you have retrieved an element or list of elements, you can make modifications if desired. We will be
+        covering accessing or modification of the inner HTML of the element, an attribute of the element, and the
+        style of an element.
+    </h3>
+
+    <div id="text"></div>
+    <p class="subTitle">Accessing or Modifying Inner HTML and Text</p>
+
+    <bullet indent="indent-star">
+        <span class="green">Inner HTML</span> is the content within the open and close tag of an HTML element.
+        This can be retrieved or updated via the innerHTML property on the element you are working with.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The property <b>innerText</b> behaves in a similar manner, but it ignores any HTML tags. This can be useful if
+        are just concerned with the text a user sees, or if we do not want to allow them to inject HTML tags in
+        our page.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a |||ltp> tag with the id='demo'</li>
+            <li>Change the innerHTML to '|||ltb>Hello Hyperion!|||lt\b>'</li>
+            <li>Create a |||ltp> tag with the id='demoText'</li>
+            <li>Change the innerText to '|||ltb>Hello Hyperion!|||lt\b>'</li>
+        </ul>
+    </bullet>
+
+    <div id="attributes"></div>
+    <p class="subTitle">Accessing or Modifying Attributes</p>
+
+    <bullet indent="indent-star">
+        In addition to retrieving or updating an element's inner HTML, the element's attributes can also be accessed
+        and updated. We can do this using a handful of methods.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t3"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>data-* attribute</strong><br/>
+        In HTML 5, <strong>data-*</strong> attributes can be added to HTML elements to provide metadata for an element.
+        The meta data is typically used to tie the html field to the database.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <hl>*</hl> portion of the name must be at least one character long and should be all lower case.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create an |||ltp> tag with the id='demo'</li>
+            <li>Change the font-size to 6rem;'</li>
+            <li>Create a |||ltp> tag with the id='demo2' and a data-* attribute</li>
+            <li>Log the attribute to the console log or alert it.</li>
+        </ul>
+    </bullet>
+
+    <div id="styles"></div>
+    <p class="subTitle">Accessing or Modifying Styles</p>
+
+    <bullet indent="indent-star">
+        Very similar to accessing and updating attributes on an element, the styles of an element can be changed
+        via the <span class="green">style</span> property on an element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <strong>Example:</strong><br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a webpage with two div tags</li>
+            <li>Change the background color of the second div</li>
+        </ul>
+    </bullet>
+
+    <div id="add_remove"></div>
+    <p class="subTitle">Adding and Removing Elements</p>
+
+    <bullet indent="indent-star">
+        Elements can also be added and removed to/from the DOM via JavaScript. We will not be covering the details
+        in the class, but the methods below are provided for your edification.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <ul>
+            <li>createElement(): <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.createElement">
+                https://developer.mozilla.org/en-US/docs/Web/API/document.createElement</a></li>
+            <li>removeChild(): <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node.removeChild">
+                https://developer.mozilla.org/en-US/docs/Web/API/Node.removeChild</a></li>
+            <li>appendChild(): <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node.appendChild">
+                https://developer.mozilla.org/en-US/docs/Web/API/Node.appendChild</a></li>
+            <li>replaceChild(): <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node.replaceChild">
+                https://developer.mozilla.org/en-US/docs/Web/API/Node.replaceChild</a></li>
+        </ul>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./BomDom08DomReview.html" class="btn btn-info">DOM Review</a>
+</file>

@@ -33,5 +33,7 @@
         </nav>
     <li name="BomDom08DomReview" title="Dom Review"></li>
     <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom/#exercises" label="DOM Exercises"/>
+    <li name="BomDom08EVT" title="Dom Events"></li>
+    <li name="BomDom10EvtReview" title="Dom Events Review"></li>
     <ali url="https://java.codeup.com/javascript-i/bom-and-dom/dom-events/#exercises" label="DOM Events Exercises"/>
 </file>

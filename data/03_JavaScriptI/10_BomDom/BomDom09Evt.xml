@@ -1,0 +1,140 @@
+<file name="BomDom09Evt" title="Document Object Model (DOM) Events" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
+
+    <p class="subTitle">
+        The DOM provides an Event Model that allows you to write code that responds to events that happen within the web browser.
+    </p>
+
+    <bullet>
+        So what is an "event"?
+    </bullet>
+
+    <bullet indent="indent-star">
+        More specifically, in computer programming, and event is something that happens to which you might want to
+        respond.<br/>
+        <b>Examples:</b>
+        <ul>
+            <li>A user clicks with their mouse</li>
+            <li>A user presses a key on the keyboard</li>
+            <li>The Java Virtual Machine gets low on memory</li>
+            <li>The user submits a form</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        So we are going to want our programs to respond to some of these events, but probably not all of them.
+    </bullet>
+
+    <bullet>
+        Once we have decided which events require a response, how do we tell the computer that we want to respond to
+        the event?
+    </bullet>
+
+    <bullet>
+        The answer is, we register the events that require a response.
+    </bullet>
+
+    <bullet>
+        There are several different ways to register an event listener, but we are only going to discuss the
+        preferred method.
+    </bullet>
+
+    <div id="register"></div>
+    <p class="subTitle">Register an Event Listener</p>
+
+    <bullet indent="indent-star">
+        Events can be registered on the <b>window</b>, <b>document</b>, or on an element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The object that an event listener is registered on is called the target.
+    </bullet>
+
+    <bullet indent="indent-star">
+        To register an event listener on a target, the <hl>addEventListener</hl> method can be used.<br/>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener" target="blank">
+            https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener
+        </a>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Let's look at the addEventListener method signature:<br/>
+        <text>
+            target.addEventListener(type, listener);
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>target</b> is the object the event listener is registered on. The <b>type</b> is the type of event that
+        is being listened for. The <b>listener</b> is the function that is called when an event of <b>type</b> occurs
+        on the <b>target</b>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        We have talked a little about event targets, now let's talk about event types. There are tons of options
+        available. Here are a few common events:<br/>
+        <ul>
+            <li><hl>keyup</hl> (key is released)</li>
+            <li><hl>click</hl> (mouse is clicked)</li>
+            <li><hl>change</hl> (input loses focus after it has been modified)</li>
+            <li><hl>submit</hl> (form is submitted)</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        A complete event reference can be found here:<br/>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events" target="blank">
+            https://developer.mozilla.org/en-US/docs/Web/Reference/Events
+        </a>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Let's see an example in action:<br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Create a button with the id='me'</li>
+            <li>Create a listener named 'listenToMe' that says, "You clicked me."</li>
+            <li>Register the listener 'listenToMe' to be called when the element 'me' is clicked.</li>
+        </ul>
+    </bullet>
+
+    <div id="remove"></div>
+    <p class="subTitle">Remove an Event Listener</p>
+
+    <bullet indent="indent-star">
+        To remove an event listener, you just call <b>removeEventListener</b>, on the same <b>target</b> and with the
+        same parameters you used to initially add the event listener.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Let's see an example:<br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Demo It!</b>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>Add a second button to you first lab.</li>
+            <li>Write a second event listener to remove 'listenToMe' from the 'me'.</li>
+            <li>Register the snd listener to be called when the 2nd button is clicked.</li>
+            <li>Test you code.</li>
+        </ul>
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="./BomDom10EvtReview.html" class="btn btn-info">DOM Event Review</a>
+</file>

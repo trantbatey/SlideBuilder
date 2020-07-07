@@ -1,0 +1,58 @@
+<file name="BomDom10EvtReview" title="DOM Events Review" toc="BomDomTOC">
+    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <br/>
+
+    <bullet>
+        What are events?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Something that happens to which you might want to respond
+    </bullet>
+
+    <bullet>
+        How do we tell the computer that we want to respond to the event?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Register the events that require a response.
+    </bullet>
+
+    <bullet>
+        On what objects can we register events?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Events can be registered on the <b>window</b>, <b>document</b>, or on an element.
+    </bullet>
+
+    <bullet>
+        What method do we use to register and event listener on a target?
+    </bullet>
+
+    <bullet indent="indent-star">
+        target.addEventListener(type, listener);
+    </bullet>
+
+    <bullet>
+        What are some event types?
+    </bullet>
+
+    <bullet indent="indent-star">
+        keyup, click, change, and submit
+    </bullet>
+
+    <bullet>
+        What method do we use to remove an event listener?
+    </bullet>
+
+    <bullet indent="indent-star">
+        target.removeEventListener(type, listener);
+    </bullet>
+
+    <strong>Next:</strong>
+    <a href="https://java.codeup.com/javascript-i/bom-and-dom/dom-events/#exercises" target="blank"
+       class="btn btn-info" >Exercise</a>
+</file>

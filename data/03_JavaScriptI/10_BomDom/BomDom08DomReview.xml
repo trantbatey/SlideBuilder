@@ -1,7 +1,7 @@
 <file name="BomDom08DomReview" title="DOM Review" toc="BomDomTOC">
-    <img class="md-img" src="resource/images/Array01.png" alt="First Array Image"/>
-    <img class="md-img" src="resource/images/Array02.png" alt="Second Array Image"/>
-    <img class="md-img" src="resource/images/Array03.png" alt="Third Array Image"/>
+    <img class="md-img" src="resource/images/BomDom01.png" alt="First BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom02.png" alt="Second BOM DOM Image"/>
+    <img class="md-img" src="resource/images/BomDom03.png" alt="Third BOM DOM Image"/>
     <br/>
 
     <bullet>
@@ -33,7 +33,7 @@
     </bullet>
 
     <bullet indent="indent-star">
-        We can get them by using the id, the class, or the tag name.
+        We can get them by using the <b>id</b>, the <b>class</b>, or the <b>tag name</b>.
     </bullet>
 
     <bullet>
@@ -41,7 +41,7 @@
     </bullet>
 
     <bullet indent="indent-star">
-        document.getElementById()
+        <b>document.getElementById()</b>
     </bullet>
 
     <bullet>
@@ -49,11 +49,11 @@
     </bullet>
 
     <bullet indent="indent-star">
-        document.getElementsByClassName
+        <b>document.getElementsByClassName()</b>
     </bullet>
 
     <bullet>
-        What does <b>document.getElementsByClassName</b> return?
+        What does <b>document.getElementsByClassName()</b> return?
     </bullet>
 
     <bullet indent="indent-star">
@@ -65,7 +65,7 @@
     </bullet>
 
     <bullet indent="indent-star">
-        document.getElementsByTagName()
+        <b>document.getElementsByTagName()</b>
     </bullet>
 
     <bullet>
@@ -105,10 +105,11 @@
     </bullet>
 
     <bullet indent="indent-star">
-        We use it's "style['background-color']" notation, because of the hyphen.
+        We use it's <b>style['background-color']</b> notation, because of the hyphen.<br/>
+        We can also use <b>style.backgroundColor</b> wih camel case.
     </bullet>
 
     <strong>Next:</strong>
-    <a href="https://java.codeup.com/javascript-i/bom-and-dom/bom/#exercises" target="blank"
+    <a href="https://java.codeup.com/javascript-i/bom-and-dom/dom/#exercises" target="blank"
        class="btn btn-info" >Exercise</a>
 </file>

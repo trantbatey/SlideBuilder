@@ -89,12 +89,13 @@
 
     <bullet indent="indent-star">
         <h2>MINI LAB</h2>
+        Using the code below:<br/>
         <ul>
-            <li>Create an |||ltp> tag with the id='demo'</li>
-            <li>Change the font-size to 6rem;'</li>
-            <li>Create a |||ltp> tag with the id='demo2' and a data-* attribute</li>
-            <li>Log the attribute to the console log or alert it.</li>
+            <li>Change the style of p1 to 'font-size: 4rem'</li>
+            <li>Get the data-* attribute from p2</li>
+            <li>Print the data-* attribute on the console log.</li>
         </ul>
+        <text tid="t7"></text>
     </bullet>
 
     <div id="styles"></div>
@@ -116,10 +117,8 @@
 
     <bullet indent="indent-star">
         <h2>MINI LAB</h2>
-        <ul>
-            <li>Create a webpage with two div tags</li>
-            <li>Change the background color of the second div</li>
-        </ul>
+        Using the code below, change the background color of the second |||ltdiv> using 'element.style'.<br/>
+        <text tid="t6"></text>
     </bullet>
 
     <div id="add_remove"></div>

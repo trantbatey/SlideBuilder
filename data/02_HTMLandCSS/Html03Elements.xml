@@ -1,0 +1,392 @@
+<file name="Html03Elements" title="HTML Elements" toc="HtmlElementsTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <bullet>
+        HTML uses elements to describe the data in a web document. These <em>elements</em> help give meaning and
+        context to information being displayed.
+    </bullet>
+
+    <bullet>
+        With the exception of void elements, all elements begin with an opening tag that is the name of the element
+        inside of angle brackets (|||lt and >) and end with a closing tag, which is the name of the element preceded
+        by a /, also inside of angle brackets.
+    </bullet>
+
+    <bullet>
+        <b>Example:</b>
+        <text>|||ltp>Some content|||lt/p></text>
+    </bullet>
+
+    <bullet>
+        In between the opening and closing tag is the <i>contents</i> of the element. This can be either text, or
+        additional html elements.
+    </bullet>
+
+    <bullet>
+        When an element contains other elements, we say that the surrounding element is the <i>parent</i> element,
+        and the nested elements are the <i>child</i> elements.
+        <text tid="t1"></text>
+    </bullet>
+
+    <div id="element_types"></div>
+    <h2 class="subTitle">Element Types</h2>
+
+    <bullet>There are three basic type of elements; block-level, inline, and void. </bullet>
+
+    <div id="block_level"></div>
+    <h3 class="subTitle">Block-Level Elements</h3>
+
+    <bullet indent="indent-star">
+        In HTML programming, a block-level element is any element that starts a new line, like a paragraph, and uses
+        the full width of the page or container.
+    </bullet>
+
+    <bullet indent="indent-star">
+        A block-level element is use to define a section of the page.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Block-level elements can take up one line or multiple lines and have a line break before and after the
+        element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Generally, block-level elements contain data, other block-level elements, or inline elements.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Some block-level elements:<br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t2a"></text>
+    </bullet>
+
+    <div id="inline_elements"></div>
+    <h3 class="subTitle">Inline Elements</h3>
+
+    <bullet indent="indent-star">
+        An inline element occupies only the space bounded by the tags that define the inline element. Generally,
+        inline elements contain only data and other inline elements. You can't put a block element in an in-line
+        element because then it wouldn't be in-line.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Some inline elements:<br/>
+        <text tid="t3"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t3a"></text>
+    </bullet>
+
+    <div id="void_elements"></div>
+    <h3 class="subTitle">Void Elements</h3>
+
+    <bullet indent="indent-star">
+        Some HTML elements, are defined as "void elements". This is because they do not have a content area or a
+        closing tag.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Void elements may have fields that show up on the page, like an input field. Or, the may just control the page
+        layout by inserting a new line.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Some void elements:</b><br/>
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Below are two example of void elements:</b><br/>
+        <text tid="t4a"></text>
+        Note that void elements can end with a /, but it is not required.
+    </bullet>
+
+    <div id="attributes"></div>
+    <h2 class="subTitle">Attributes</h2>
+
+    <bullet indent="indent-star">
+        HTML elements can also contain additional data, known as attributes. You saw an example of this above with the
+        <hl>input</hl> element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Attributes are specified inside of the opening tag for an element, and consist of a name, an <hl>=</hl> sign,
+        and a value inside of double quotes (<hl>""</hl>). Multiple attributes are separated by spaces.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>What are some block-level elements?</li>
+            <li>What are some inline elements?</li>
+            <li>What are some void elements?</li>
+            <li>Can a block-level element also be an inline element?</li>
+            <li>How are attributes set on elements?</li>
+        </ul>
+    </bullet>
+
+    <div id="common"></div>
+    <h2 class="subTitle">Common HTML Elements</h2>
+
+    <bullet indent="indent-star">
+        While not an exhaustive list, below are some of the most common HTML elements you will use.
+    </bullet>
+
+    <div id="headings"></div>
+    <h3 class="subTitle">Headings</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t6"></text>
+        <ul>
+            <li>Block level element.</li>
+            <li>6 levels designating importance, <b>h1</b> through <b>h6</b>.</li>
+        </ul>
+    </bullet>
+
+    <div id="paragraphs"></div>
+    <h3 class="subTitle">Paragraphs</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t7"></text>
+        <ul>
+            <li>Block level element.</li>
+            <li>Define a paragraph.</li>
+        </ul>
+    </bullet>
+
+    <div id="line_breaks_hr"></div>
+    <h3 class="subTitle">Line Breaks and Horizontal Rules</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t8"></text>
+        <ul>
+            <li>Block-level, void elements.</li>
+            <li>Both create a line break in the document, <b>hr</b>s do so with a horizontal line.</li>
+        </ul>
+    </bullet>
+
+    <div id="strong_emphasis"></div>
+    <h3 class="subTitle">Strong and Emphasis</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t9"></text>
+        <ul>
+            <li>Inline elements.</li>
+            <li>Draw attention to, and indicate importance of, their content.</li>
+            <li>By default, the contents of strong tags are bolded, and the contents of <b>em</b> tags are
+                italicized.</li>
+        </ul>
+    </bullet>
+
+    <div id="nesting"></div>
+    <h3 class="subTitle">Nesting Elements</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t10"></text>
+        <ul>
+            <li>Sometimes we can combine elements by nesting.</li>
+            <li>By default, the example above will bold and italicize the contents within the
+                <b>em</b> and <b>strong</b> tag.</li>
+        </ul>
+    </bullet>
+
+    <div id="lists"></div>
+    <h3 class="subTitle">Lists</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t11"></text>
+        <ul>
+            <li>Block level elements.</li>
+            <li>Two types, ordered (<hl>ol</hl>) and unordered (<hl>ul</hl>).</li>
+            <li>Contents should be list items, that is, <hl>li</hl> elements.</li>
+        </ul>
+    </bullet>
+
+    <div id="anchors"></div>
+    <h3 class="subTitle">Anchors</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t12"></text>
+        <ul>
+            <li>Inline element.</li>
+            <li>Hyperlinks to other pages, or locations within the current page.</li>
+            <li>Contents (including nested elements) will follow the link when clicked.</li>
+            <li><b>href</b> attribute's value is the location to navigate to.</li>
+            <li><b>target</b> attribute can specify how a link is opened.</li>
+            <li>Can link to individual elements by specifying the <b>id</b> of the element preceded by a <b>#</b>.</li>
+        </ul>
+    </bullet>
+
+    <div id="images"></div>
+    <h3 class="subTitle">Images</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t13"></text>
+        <i>Hotlinking</i> is the practice of using an image that is hosted on an external domain, and should be
+        avoided.<br/>
+        <ul>
+            <li>Inline, void element.</li>
+            <li>Displays an image.</li>
+            <li><b>src</b> attribute specifies the url of the image.</li>
+            <li><b>alt</b> attribute specifies alternate text.</li>
+        </ul>
+    </bullet>
+
+    <div id="tables"></div>
+    <h3 class="subTitle">Tables</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t14"></text>
+        <ul>
+            <li>Used to display tabular data (not for layout).</li>
+            <li>Displays an image.</li>
+            <li>Consist of table rows (<b>tr</b> elements).</li>
+            <li>Table rows consist of either table headings, <b>th</b>, or table cells, <b>td</b> elements.</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB 02</h2>
+        <ul>
+            <li>How many sizes of header elements are there?</li>
+            <li>What element do you use to emphasise text?</li>
+            <li>What element causes a line break?</li>
+            <li>Which type of element creates a hyperlink?</li>
+            <li>What are the three major types of elements?</li>
+            <li>Can a block-level element include inline elements?</li>
+            <li>Can inline elements include block-level elements?</li>
+        </ul>
+    </bullet>
+
+    <div id="page_layouts"></div>
+    <h2 class="subTitle">HTML for Page Layouts</h2>
+
+    <bullet indent="indent-star">
+        Websites often display content in multiple columns like a magazine or newspaper. Page layout is the process of
+        placing and arranging text, images, and graphics on a web page.
+    </bullet>
+
+    <bullet indent="indent-star">
+        HTML5 offers new semantic elements that define the different parts of a layout:<br/>
+        <ul>
+            <li><b>|||ltheader></b>. Defines a header for a document or a section.</li>
+            <li><b>|||ltnav></b>. Defines a container for navigation links.</li>
+            <li><b>|||ltmain></b>. The main content area consists of content that is directly related to the central
+                topic of a document.</li>
+            <li><b>|||ltarticle></b>. Defines an independent self-contained article.</li>
+            <li><b>|||ltsection></b>. Defines a section in a document.</li>
+            <li><b>|||ltaside></b>. Defines content aside from the content (like a sidebar).</li>
+            <li><b>|||ltfooter></b>. Defines a footer for a document or a section.</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text tid="t15"></text>
+    </bullet>
+
+    <div id="review"></div>
+    <h2 class="subTitle">HTML Elements Review</h2>
+
+    <bullet>
+        What do HTML elements do?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Elements are markups that control the way the content looks on a web page. These <em>elements</em> help give
+        meaning and context to information being displayed.
+    </bullet>
+
+    <bullet>
+        What are block-level elements?
+    </bullet>
+
+    <bullet indent="indent-star">
+        In HTML programming, a block-level element is any element that starts a new line, like a paragraph, and uses
+        the full width of the page or container. A block-level element is use to define a section of the page.
+    </bullet>
+
+    <bullet>
+        What are void elements?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Some HTML elements, are defined as "void elements". This is because they do not have a content area or
+        a closing tag.
+    </bullet>
+
+    <bullet>
+        How are attributes set on elements?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Attributes are specified inside of the opening tag for an element, and consist of a name, an <hl>=</hl> sign,
+        and a value inside of double quotes (<hl>""</hl>). Multiple attributes are separated by spaces.
+    </bullet>
+
+    <bullet>
+        What header element has the smallest size?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>|||lth6></b>
+    </bullet>
+
+    <bullet>
+        Why is it better to use <b>|||ltem></b> instead of <b>|||lti></b> to italicise text?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Because using <b>|||ltem></b> gives context and intent as to why the text is italicised.
+    </bullet>
+
+    <bullet>
+        What is an anchor tag used to do?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Create a hyperlink.
+    </bullet>
+
+    <bullet>
+        Why can't block-level element be placed in an inline element?
+    </bullet>
+
+    <bullet indent="indent-star">
+        An inline element is intended to be place seamlessly in the middle of a line, but a block-level element has a
+        line break in-front of it and behind it.
+    </bullet>
+
+    <bullet>
+        What is the <b>|||ltmain></b> element use to define?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The main content area consists of content that is directly related to the central
+        topic of a document.
+    </bullet>
+
+    <bullet>
+        What is the <b>|||ltarticle></b> element use to define?
+    </bullet>
+
+    <bullet indent="indent-star">
+        an independent self-contained article.
+    </bullet>
+
+    <a href="https://java.codeup.com/html-css/elements/#further-reading" class="btn btn-info" Target="blank">
+        HTML Elements Further Reading and Exercises</a>
+</file>

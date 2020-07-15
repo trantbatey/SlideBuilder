@@ -1,0 +1,222 @@
+<file name="Html02Intro" title="Introduction to HTML" toc="HtmlIntroTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <bullet>
+        HTML stands for <b>HyperText Markup Language</b>, and it is the language of the web.
+    </bullet>
+
+    <bullet>
+        When you view a page on the web, your web browser processes the HTML, along with styling information, into
+        the page you see on your screen.
+    </bullet>
+
+    <bullet>
+        Even if the website was written using PHP, Ruby, Python, or Java the final result that your browser sees
+        is just HTML.
+    </bullet>
+
+    <bullet>
+        HyperText is described as text that is displayed on an electronic device that can be linked to other text
+        which is accessible to the user.
+    </bullet>
+
+    <bullet>
+        Whenever you click on a link on a web page, you are taking advantage of HyperText linking.
+    </bullet>
+
+    <bullet>
+        A Markup Language is defined annotations that gets added to text that describes the text further.
+    </bullet>
+
+    <bullet>
+        In this course, we will be using HTML5, the fifth revision of the HTML standard.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>What is HTML?</li>
+            <li>What is HyperText?</li>
+            <li>What is a markup language?</li>
+        </ul>
+    </bullet>
+
+    <div id="doctype"></div>
+    <h3 class="subTitle">Doctype Declaration</h3>
+
+    <bullet>
+        The first line of an HTML document is the doctype declaration. Since there are different versions of the
+        HTML standard, this line is needed to help the browser identify the data that will follow.
+    </bullet>
+
+    <bullet indent="indent-star">
+        For HTML5, the doctype declaration looks like this:<br/>
+        <text>|||lt!DOCTYPE html></text>
+    </bullet>
+
+    <div id="root"></div>
+    <h3 class="subTitle">Root Element</h3>
+
+    <bullet>
+        In an element-based markup language, the root element is the first element on the page. It is also the
+        element that contains all other elements. For HTML, the root element is <b>|||lthtml></b>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        So far, this is what we have:<br/>
+        <text>
+            |||lt!DOCTYPE html>
+            |||lthtml>
+            |||lt/html>
+        </text>
+    </bullet>
+
+    <div id="head_and_body"></div>
+    <h3 class="subTitle">Head and Body</h3>
+
+    <bullet>
+        Within the root element, <b>|||lthtml></b>, of an html document, you will find a <b>|||lthead></b> element,
+        and a <b>|||ltbody></b> element. The <b>|||lthead></b> element is used to tell the web browser information
+        about the web page. The <b>|||ltbody></b> element is used to define the content that the web browser will
+        display to a user.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Now, we have a document that looks like this:<br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <div id="page_title"></div>
+    <h4 style="margin-left: 50px;;">Page Title</h4>
+
+    <bullet indent="indent-star">
+        As you know, web pages have titles. You have seen these in the title bar of your web browser, or in the name
+        of bookmarks you make. There is an element, <b>|||lttitle></b>, that gets added to the HTML document's
+        <b>|||lthead></b> that provides the title to the web browser. An HTML document with a title looks like this:
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text tid="t2"></text>
+    </bullet>
+
+    <div id="metadata"></div>
+    <h4 style="margin-left: 50px;;">Metadata</h4>
+
+    <bullet indent="indent-star">
+        Metadata, or extended information, can be provided via the |||ltmeta> element within the document's
+        |||lthead>. A few examples of things specified via metadata are:<br/>
+        <ul>
+            <li>search keywords</li>
+            <li>page description</li>
+            <li>page author</li>
+            <li>page character set</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b>
+        <text tid="t3"></text>
+        Notice that there is no close tag for <b>|||ltmeta></b> because it is a void element.
+    </bullet>
+
+    <div id="styles"></div>
+    <h4 style="margin-left: 50px;;">Styles and Scripts</h4>
+
+    <bullet indent="indent-star">
+        Later on, we will learn about adding styles and scripts to our HTML pages. There are special elements that get
+        added to the document to describe such data that we will discuss in more detail in a later section.
+    </bullet>
+
+    <div id="comments"></div>
+    <h4 style="margin-left: 50px;;">Comments</h4>
+
+    <bullet indent="indent-star">
+        Comments in HTML pages look different from what you see in PHP or other programming languages. HTML comments
+        will not be rendered by the web browser, but are viewable in the source of the web page. An HTML comment
+        looks like this:
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h2>MINI LAB 02</h2>
+        <ul>
+            <li>What version of HTML are we using?</li>
+            <li>What tag specifies that version?</li>
+            <li>Which tag is the root element?</li>
+            <li>Which element of the page has the title and the meta data?</li>
+            <li>Which element of the page has the information which the web browser will display?</li>
+        </ul>
+    </bullet>
+
+    <div id="markup"></div>
+    <h3 class="subTitle">Semantic Markup</h3>
+
+    <bullet>
+        As we get further into HTML and begin learning about some of the available elements, you may notice that the
+        same visual result can be achieved using different combinations of markup and styles. It should be noted that
+        the HTML element that best describes the data that it contains is the appropriate one for the job.<br/>
+
+        Keep in mind that there are other consumers of web pages besides web browsers. For example, there are screen
+        readers, for the visually impaired, that actually read the contents of the page to a user. If you do not use
+        the appropriate elements to hold your data, the screen reader will not provide a good user experience.
+    </bullet>
+
+    <div id="review"></div>
+    <h3 class="subTitle">HTML Introduction Review</h3>
+
+    <bullet>
+        What is HTML?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The language of the web. (HyperText Markup Language)
+    </bullet>
+
+    <bullet>
+        What is HyperText?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Text displayed on an electronic device that can be linked to other text accessible to the user.
+    </bullet>
+
+    <bullet>
+        What is a markup language?
+    </bullet>
+
+    <bullet indent="indent-star">
+        A type of document with defined annotations that determines how other text is displayed.
+    </bullet>
+
+    <bullet>What version of HTML are we using?</bullet>
+    <bullet indent="indent-star">HTML 5</bullet>
+
+    <bullet>What tag specifies that version?</bullet>
+    <bullet indent="indent-star"><text>|||lt!DOCTYPE html></text></bullet>
+
+    <bullet>Which tag is the root element?</bullet>
+    <bullet indent="indent-star"><text>|||lthtml></text></bullet>
+
+    <bullet>Which element of the page has the title and the meta data</bullet>
+    <bullet indent="indent-star">|||lthead></bullet>
+
+    <bullet>Which element of the page has the information which the web browser will display?</bullet>
+    <bullet indent="indent-star">|||ltbody></bullet>
+
+    <bullet>What are two reasons for using Semantic based html tags?</bullet>
+    <bullet indent="indent-star">
+        <ul>
+            <li>They provide a better user interface for screen readers.</li>
+            <li>They make the intent of the code more clear to programmers reading the code.</li>
+        </ul>
+    </bullet>
+
+    <a href="https://java.codeup.com/html-css/introduction/#exercises" class="btn btn-info" Target="blank">
+        HTML Introduction Exercises</a>
+</file>

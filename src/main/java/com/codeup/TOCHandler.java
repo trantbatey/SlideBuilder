@@ -44,9 +44,20 @@ public class TOCHandler extends XMLHandler {
             String title = attributes.remove("title");
             String url = "";
             if (navName.length() != 0) {
-                url = navName + ".html#"+ name + "\"";
+                if (navName.contains("#")) {
+                    int indexOf = navName.indexOf("#");
+                    url = navName.substring(0, indexOf) + ".html#" + name + "\"";
+                } else {
+                    url = navName + ".html#" + name + "\"";
+                }
             } else {
-                url = name + ".html\"";
+                if (name.contains("#")) {
+                    int indexOf = name.indexOf("#");
+                    url = name.substring(0, indexOf) + ".html" + name.substring(indexOf) + "\"";
+                    System.out.println(url);
+                } else {
+                    url = name + ".html\"";
+                }
             }
             output = new StringBuilder(indention + "<li>\n");
             output.append(indention + "    <a href=\"./" + url + " title=\"" + title + "\">\n");
@@ -68,6 +79,8 @@ public class TOCHandler extends XMLHandler {
             navName = name;
             indention += "        ";
             write(output);
+        } else {
+            openSimpleElement(qName, attributes);
         }
     }
 
@@ -93,6 +106,8 @@ public class TOCHandler extends XMLHandler {
             output.append("`);\n");
             write(output);
             pw.close();
+        } else {
+            closeSimpleElement(endElement.getName().getLocalPart());
         }
     }
 }

@@ -1,0 +1,89 @@
+<file name="Html01Overview" title="HTML Overview" toc="HtmlTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <h2 class="subTitle">HTML and CSS</h2>
+
+    <bullet>
+        <text>
+            "Writing code is like writing a book, your efforts are for other readers."<br/>
+
+            - Sandi Metz
+        </text>
+    </bullet>
+
+    <bullet>
+        <h3>By the End of This Module, You Should Be Able To:</h3>
+        <ul>
+            <li>Plan and implement the creation of responsive web pages.</li>
+            <li>Create a web page based on wireframes or image mockups using HTML and custom CSS, or the
+                Bootstrap framework.</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        <h3>You should understand</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The structure of an HTML document.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The different types of HTML elements.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The structure of an HTML form.
+    </bullet>
+
+    <bullet indent="indent-star">
+        How CSS styles are applied to HTML elements, and the different ways to apply them.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The CSS Box Model.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Different types of CSS positioning.
+    </bullet>
+
+    <bullet indent="indent-star">
+        How media queries work.
+    </bullet>
+
+    <bullet indent="indent-star">
+        What the Bootstrap CSS Framework is and the benefits of using it.
+    </bullet>
+    <br/>
+
+    <bullet>
+        <h3>Know How To</h3>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Create an HTML document.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Create HTML elements and forms.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Style and position HTML elements with externally linked CSS.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Create a page that has different styling depending on the screen size.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Style and layout a page using Bootstrap's classes and grid system.
+    </bullet>
+
+    <strong>Let's get started:</strong>
+    <a href="./Html02Intro.html" class="btn btn-info" >Introduction to HTML</a>
+</file>

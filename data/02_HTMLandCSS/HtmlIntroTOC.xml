@@ -1,0 +1,21 @@
+<file name="HtmlIntroTOC" title="HTML TOC" home="Html02Intro">
+    <li name="Html02Intro#doctype" title="Doctype Declaration"></li>
+    <li name="Html02Intro#root" title="Root Element"></li>
+    <li name="Html02Intro#head_and_body" title="Head and Body"></li>
+    <nav>
+        <li name="page_title" title="Page Title"></li>
+        <li name="metadata" title="Metadata"></li>
+        <li name="styles" title="Styles and Scripts"></li>
+        <li name="comments" title="Comments"></li>
+    </nav>
+    <li name="Html02Intro#markup" title="Semantic Markup"></li>
+    <li name="Html02Intro#review" title="HTML Intro Review"></li>
+    <ali url="https://java.codeup.com/html-css/introduction/#exercises" label="HTML Intro Exercises"/>
+    <hr/>
+    <li name="Html01Overview" title="HTML and CSS Overview"></li>
+    <li name="Html02Intro" title="Introduction to HTML"></li>
+    <li name="Html03Elements" title="HTML Elements"></li>
+    <li name="Html04Forms" title="HTML Forms"></li>
+    <li name="CSS01/Css01Overview" title="CSS I"></li>
+    <li name="CSS02/Css02Overview" title="CSS II"></li>
+</file>

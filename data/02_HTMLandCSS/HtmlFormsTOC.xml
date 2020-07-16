@@ -1,0 +1,33 @@
+<file name="HtmlFormsTOC" title="HTML Forms TOC" home="Html04Forms">
+    <li name="Html04Forms#structure" title="Structure"></li>
+    <nav>
+        <li name="method" title="Method"></li>
+        <li name="action" title="Action"></li>
+        <li name="query_strings" title="Query Strings"></li>
+        <li name="submitting" title="Submitting"></li>
+    </nav>
+    <li name="Html04Forms#inputs" title="Inputs"></li>
+    <li name="Html04Forms#form_elements" title="Common Form Input Elements"></li>
+    <nav>
+        <li name="text" title="Text Inputs"></li>
+        <li name="text_areas" title="Text Areas"></li>
+        <li name="checkboxes" title="Checkboxes and Radio Buttons"></li>
+        <li name="selects" title="Selects"></li>
+        <li name="hidden_inputs" title="Hidden Inputs"></li>
+    </nav>
+    <li name="Html04Forms#form_attributes" title="Common Attributes of Form Elements"></li>
+    <nav>
+        <li name="name_and_value" title="Name and Value"></li>
+        <li name="disabled" title="Disabled"></li>
+    </nav>
+    <li name="Html04Forms#labels" title="Labels"></li>
+    <li name="Html04Forms#review" title="HTML Forms Review"></li>
+    <ali url="https://java.codeup.com/html-css/forms/#exercises" label="HTML Forms Exercises"/>
+    <hr/>
+    <li name="Html01Overview" title="HTML and CSS Overview"></li>
+    <li name="Html04Forms" title="Introduction to HTML"></li>
+    <li name="Html04Forms" title="HTML Elements"></li>
+    <li name="Html04Forms" title="HTML Forms"></li>
+    <li name="CSS01/Css01Overview" title="CSS I"></li>
+    <li name="CSS02/Css02Overview" title="CSS II"></li>
+</file>

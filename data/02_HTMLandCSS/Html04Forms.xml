@@ -1,0 +1,377 @@
+<file name="Html04Forms" title="Introduction to HTML Forms" toc="HtmlFormsTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <br/>
+    <p>
+        If you have used the internet, you have used forms in web pages many times. Maybe you were logging into your
+        favorite website, or leaving a comment on an informative blog post. Forms provide a way to take inputs from
+        a user and then perform some action based upon them.
+    </p>
+
+    <div id="structure"></div>
+    <h2 class="subTitle">Structure</h2>
+
+    <bullet indent="indent-star">
+        HTML forms can be defined by using the <b>|||ltform></b> element. Let's start out by looking at an example of
+        a simple login form.<br/>
+        <text tid="t1"></text>
+        In the example above, a couple attributes were specified on the <b>|||ltform></b>  element, and the form is
+        made up of several input elements.
+    </bullet>
+
+    <div id="method"></div>
+    <h3 class="subTitle">Method</h3>
+
+    <bullet indent="indent-star">
+        The <b>method</b> attribute of a <b>form</b> element refers to the HTTP method that should be used to transmit
+        the form data. If no <b>method</b> is specified, by default, the <b>GET</b> method will be used. While
+        other HTTP methods exist, the <hl>html specification</hl> limits us to using GET and POST in forms.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>GET</b><br/>
+        HTTP GETs are used to request information, without making any changes to data on the server. When a
+        form's method is set to <b>GET</b>, any of the data that the form sends will be appended to the url in the
+        form of a query string.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>POST</b><br/>
+        HTTP POSTs are used to make a change to existing data on the server. When a form's method is
+        set to <b>POST</b>, any of the data that the form sends will not be added to the url, but will instead
+        be embedded in the body of the HTTP request as key-value pairs. If you have ever been asked a
+        question like, "Are you sure you want to re-submit this form?", then you were probably refreshing
+        a page after submitting an HTTP <b>POST</b>.
+    </bullet>
+
+    <div id="action"></div>
+    <h3 class="subTitle">Action</h3>
+
+    <bullet indent="indent-star">
+        The <b>action</b> attribute of an HTML <b>form</b> refers to the location that the form data should be sent. If
+        no <b>action</b> is specified, by default, the <b>action</b> will be set to send data back to the current url.
+    </bullet>
+
+    <div id="query_strings"></div>
+    <h3 class="subTitle">Query Strings</h3>
+
+    <bullet indent="indent-star">
+        A <i><b>query string</b></i> is composed of key-value pairs. It begins with a question mark (<b>?</b>).
+        Following the question mark, is the first key-value pair. Key-value pairs are structured as <b>key=value</b>.
+        Key-value pairs after the first will be separated by ampersands (<b>&amp;</b>).
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Whenever you use the <b>GET</b> method in an HTML form, the form inputs will be appended to the url in
+        the format shown above. If you are using a <b>POST</b> method in an HTML form, the inputs will be sent as a
+        query string (this time without the preceding question mark) in the body of the HTTP request.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The following anchor tag example and form example send a very similar GET request. If you put <b>78205</b> in
+        the text input, then the form below sends the same key, which is <b>zipcode</b>, and the same value,
+        the value <b>78205</b><br/>
+        <text tid="t2"></text>
+        <text tid="t3"></text>
+    </bullet>
+
+    <div id="submitting"></div>
+    <h3 class="subTitle">Submitting</h3>
+
+    <bullet indent="indent-star">
+        In order to submit a form, the form must contain either a button, or input element, with a type attribute
+        whose value is "submit".
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Examples:</b><br/>
+        <text>|||ltinput type="submit"></text>
+        <text>|||ltbutton type="submit">Submit the form|||lt/button></text>
+        Both of the above examples will create a button that, when clicked, will submit the form. Because inputs are
+        void elements, using a <b>button</b> element will give us a little more flexibility with styling the form.
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>What are forms use to do?</li>
+            <li>What are some form attribute?</li>
+            <li>List two HTTP methods?</li>
+            <li>What does action specify?</li>
+            <li>What is a Query String?</li>
+            <li>What two elements can submit a form?</li>
+            <li>Create a web page with a form that has three elements; a <b>label</b>, an <b>input</b>, and
+                a <b>button</b>.</li>
+        </ul>
+    </bullet>
+
+    <div id="inputs"></div>
+    <h2 class="subTitle">Inputs</h2>
+
+    <bullet indent="indent-star">
+        Form inputs are what define the actual data that goes along with the form submission. While there are several
+        types of inputs a form can contain, they all share some common characteristics.
+    </bullet>
+
+    <div id="form_elements"></div>
+    <h3 class="subTitle">Common Form Input Elements</h3>
+
+    <div id="text"></div>
+    <h4 class="subTitle">Text Inputs</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t4"></text>
+        <ul>
+            <li>Basic text input element is an <b>input</b> element with a <b>type</b> of <b>text</b>.</li>
+            <li>Can optionally specify a <b>placeholder</b> attribute.</li>
+            <li>Setting the attribute <b>type</b> to <b>password</b> will hide whatever the user enters.</li>
+            <li>Specifying a <b>value</b> attribute will pre-fill the input with the specified text.</li>
+        </ul>
+    </bullet>
+
+    <div id="text_areas"></div>
+    <h4 class="subTitle">Text Areas</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t6"></text>
+        <ul>
+            <li><b>textarea</b> elements can be used for longer text input.</li>
+            <li>Unlike inputs, a <b>textarea</b> is <i>not</i> a void element.</li>
+            <li>Uses the contents of the element instead of a <b>value</b> attribute.</li>
+        </ul>
+    </bullet>
+
+    <div id="checkboxes"></div>
+    <h4 class="subTitle">Checkboxes and Radio Buttons</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t7"></text>
+        <text tid="t8"></text>
+        <ul>
+            <li><b>input</b> elements with a type of either <b>radio</b> or <b>checkbox</b>.</li>
+            <li>Multiple elements relating to the same question should share a <b>name</b> attribute.</li>
+            <li>Commonly placed inside <b>label</b> elements.</li>
+            <li>Checkboxes are pre-selected by adding a <b>checked</b> attribute.</li>
+            <li>Radio buttons are pre-selected by adding a <b>checked</b> attribute.</li>
+        </ul>
+    </bullet>
+
+    <div id="selects"></div>
+    <h4 class="subTitle">Selects</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t9"></text>
+        <ul>
+            <li><b>select</b> elements create a drop-down of choices.</li>
+            <li>Consists of <b>option</b> elements for each choice.</li>
+            <li>The contents of an <b>option</b> element are what the user sees, and the <b>value</b> attribute is the
+                data is submitted as part of the form.</li>
+            <li>The parent <b>select</b> element has a <b>name</b> attribute, and child <b>option</b> elements have
+                <b>value</b> attributes.</li>
+        </ul>
+    </bullet>
+
+    <div id="hidden_inputs"></div>
+    <h4 class="subTitle">Hidden Inputs</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t10"></text>
+        <ul>
+            <li>Not shown to the user.</li>
+            <li>Used to submit data along with the form that the user does not specify, and does not modify.</li>
+            <li>Useful for the backend of our web applications.</li>
+        </ul>
+    </bullet>
+
+    <div id="form_attributes"></div>
+    <h3 class="subTitle">Common Attributes of Form Elements</h3>
+
+    <div id="name_and_value"></div>
+    <h4 class="subTitle">Name and Value</h4>
+
+    <bullet indent="indent-star">
+        In order for an input to be submitted, it must have a <b>name</b> attribute. The value of the
+        <b>name</b> attribute will become the name of the key that corresponds to the <b>value</b> of the current
+        input.
+        <text tid="t11"></text>
+        <ul>
+            <li>Basic text input element is an <b>input</b> element with a <b>type</b> of <b>text</b>.</li>
+            <li>Can optionally specify a <b>placeholder</b> attribute.</li>
+            <li>Setting the attribute <b>type</b> to <b>password</b> will hide whatever the user enters.</li>
+            <li>Specifying a <b>value</b> attribute will pre-fill the input with the specified text.</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        When the above form is submitted, the following query string will be appended to the current url:<br/>
+        <text tid="t12"></text>
+        There are several things to note in the above example:<br/>
+        <ul>
+            <li>Because there is no <b>action</b> attribute on the form, it will default to submitting to the
+                current page.</li>
+            <li>Because there is no <b>method</b> attribute on the form, it will default to a <b>GET</b> request,
+                and will create the query string.</li>
+            <li>If we instead had specified <b>POST</b> as the method, we would not see a query string, but the form
+                data would still be submitted.</li>
+            <li>The value of <b>42</b> is prefilled in the input, but if the user replaced that value with something
+                else, it would replace the <b>42</b> in the query string.</li>
+        </ul>
+    </bullet>
+
+    <div id="disabled"></div>
+    <h4 class="subTitle">Disabled</h4>
+
+    <bullet indent="indent-star">
+        <text tid="t13"></text>
+        A <b>disabled</b> attribute can be added to any of the above elements to make the element non-interactive.
+        For <b>select</b> elements, the <b>disabled</b> attribute can be added to individual <b>option</b> elements.
+    </bullet>
+
+    <div id="labels"></div>
+    <h3 class="subTitle">Labels</h3>
+
+    <bullet indent="indent-star">
+        <text tid="t14"></text>
+        The <b>label</b> element is used to label form inputs. Label elements should have a <b>for</b> attribute
+        that matches up with the <b>id</b> attribute of the element that is being labeled.
+    </bullet>
+
+    <bullet indent="indent-star">
+        When a form input is properly labeled, clicking on the label will focus that input element. This is
+        particularly useful for checkboxes and radio buttons, and it is a common practice to wrap checkbox and radio
+        inputs with a <b>label</b>.
+        <text tid="t15"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>What element allows us to enter text?</li>
+            <li>Why are <b>textarea</b> used?</li>
+            <li>How do we default a checkbox to checked?</li>
+            <li>Which elements implements a dropdown menu?</li>
+            <li>How do we store data on a form but hide it from view?</li>
+            <li>How can we disable an option?</li>
+            <li>Create a web page with a 4-option dropdown menu with the 3rd option disabled</li>
+        </ul>
+    </bullet>
+
+    <div id="review"></div>
+    <h2 class="subTitle">Review</h2>
+
+    <bullet>
+        Which parent element allows the user input data?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>|||ltform|||gt</b> element.
+    </bullet>
+
+    <bullet>
+        What are two attributes of the <b>form</b> element?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Method</b> and <b>action</b>
+    </bullet>
+
+    <bullet>
+        What are two types of methods?
+    </bullet>
+
+    <bullet indent="indent-star">
+        HTTP GETs and HTTP POSTs
+    </bullet>
+
+    <bullet>
+        Which methods type embeds data in the body of the request?
+    </bullet>
+
+    <bullet indent="indent-star">
+        POST
+    </bullet>
+
+    <bullet>
+        What does the <b>action</b> attribute determine?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The location where the form request should be sent.
+    </bullet>
+
+    <bullet>
+        What is a Query String?
+    </bullet>
+
+    <bullet indent="indent-star">
+        A set of key-value pairs used for passing data in a request.
+    </bullet>
+
+    <bullet>
+        Which element defines the actual data that goes along with the form submission?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>|||ltinput|||gt</b>
+    </bullet>
+
+    <bullet>
+        Which element allows for multi-line text entry?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>|||lttextarea|||gt</b>
+    </bullet>
+
+    <bullet>
+        Which type of toggle box allows for multiple checked responses?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>|||ltcheckbox|||gt</b>
+    </bullet>
+
+    <bullet>
+        What attribute and value pair will hides an <b>input</b> element from the user?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>type</b> attribute set to "hidden".
+    </bullet>
+
+    <bullet>
+        Aside from type, what are two common input attributes?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>name</b> and <b>value</b> attributes.
+    </bullet>
+
+    <bullet>
+        Which attribute disables an option?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>disabled</b> attribute.
+    </bullet>
+
+    <bullet>
+        Which attribute ties a <b>label</b> to an <b>input</b>'s id?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>for</b> attribute.
+    </bullet>
+
+    <br/>
+    <a href="https://java.codeup.com/html-css/forms/#exercises" class="btn btn-info" Target="blank">
+        HTML Forms Exercises</a>
+</file>

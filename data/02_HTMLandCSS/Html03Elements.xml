@@ -136,6 +136,8 @@
             <li>What are some void elements?</li>
             <li>Can a block-level element also be an inline element?</li>
             <li>How are attributes set on elements?</li>
+            <li>Create an HTML page with a <b>body</b> element. Inside the body element add a <b>header</b> element
+                and a <b>main</b> element</li>
         </ul>
     </bullet>
 
@@ -296,6 +298,19 @@
 
     <bullet indent="indent-star">
         <text tid="t15"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB 03</h2>
+        <ul>
+            <li>Going back to your page, create a margin on the page by setting the "style" attribute to
+                "margin: 20px 20px 20px 20px;"</li>
+            <li>Set the "id" attribute of the <b>header</b> element to "introduction"</li>
+            <li>In the <b>header</b> add an <b>h1</b> element with your name and a <b>h4</b> element with a one line
+                introduction of yourself</li>
+            <li>Center the text in the header by setting the "style" attribute to "text-align: center;"</li>
+            <li>Use the style attribute of the "main" element to Set the background color to "#F5DEB3"</li>
+        </ul>
     </bullet>
 
     <div id="review"></div>

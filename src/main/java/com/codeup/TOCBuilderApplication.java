@@ -18,6 +18,6 @@ public class TOCBuilderApplication {
 
     public static void main(String[] args) {
         XMLHandler XMLHandler = new TOCHandler();
-        XMLHandler.parseXMLFile(XMLHandler, "data/02_HTMLandCSS/HtmlFormsTOC.xml");
+        XMLHandler.parseXMLFile(XMLHandler, "data/02_HTMLandCSS/CSS01/Css1IntroTOC.xml");
     }
 }

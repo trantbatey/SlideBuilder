@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction to CSS </title>
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/general.css">
+</head>
+<body>
+
+    <script src="Css1IntroTOC.js"></script>
+    <div class="container main">
+        <h1 class="mainTitle">Introduction to CSS </h1>
+        <img src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image" class="md-img"/>
+        <br/>
+        <h1 id="css_overview">
+            CSS Overview
+        </h1>
+        <p>
+            CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen.
+        </p>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText01()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text01">
+                        <tr>
+                            <td>
+                                In this section, we will learn the basics of CSS, including basic styling, the box model, and different types of positioning.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText02()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text02">
+                        <tr>
+                            <td>
+                                CSS also provides for the separation of the document content from the presentation. This separation has many benefits, including:
+                                <ul>
+                                    <li>
+                                        Content can be used independently of styling for other purposes.
+                                    </li>
+                                    <li>
+                                        Styles can be re-used across pages.
+                                    </li>
+                                    <li>
+                                        Updating styles in a stylesheet that is used in many pages is much more efficient than updating all the pages individually.
+                                    </li>
+                                    <li>
+                                        Bandwidth savings can be significant due to stylesheet caching.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="introduction">
+            Introduction
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText03()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text03">
+                        <tr>
+                            <td>
+                                In this lesson, we will cover three different ways to apply css styles to our web pages;
+                                <ul>
+                                    <li>
+                                        using the style attribute
+                                    </li>
+                                    <li>
+                                        using an embedded (inline) stylesheet
+                                    </li>
+                                    <li>
+                                        using an external stylesheet
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="attribute">
+            Element Style Attribute
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText04()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text04">
+                        <tr>
+                            <td>
+                                One of the simplest ways to add style to an HTML element is by using the
+                                <b>
+                                    style
+                                </b>
+                                attribute.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText05()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text05">
+                        <tr>
+                            <td>
+                                <b>
+                                    Example:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t1" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText06()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text06">
+                        <tr>
+                            <td>
+                                This is also the least recommended method, because all the benefits described in the overview do not apply to styles applied in this way. Nonetheless, it is still useful to test a style quickly, or for a one-off
+                                style change, or for a quick demonstration. I often use this method in the class for demonstrations.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="inline">
+            Inline/Embedded Stylesheet
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText07()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text07">
+                        <tr>
+                            <td>
+                                Another method of adding styles to a webpage is via an embedded stylesheet. This can be accomplished by using a
+                                <b>
+                                    style
+                                </b>
+                                element in the
+                                <b>
+                                    head
+                                </b>
+                                of your HTML page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText08()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text08">
+                        <tr>
+                            <td>
+                                <b>
+                                    Example:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t2" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                Using styles in this way provides some of the benefits described in the overview, but not all of them.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="external">
+            External Stylesheet
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText09()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text09">
+                        <tr>
+                            <td>
+                                Finally, another way to add styles to a web page is to link to an external stylesheet. This is the recommended method, and the one that will provide all of the benefits listed in the overview.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText10()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text10">
+                        <tr>
+                            <td>
+                                <b>
+                                    From Stylesheet:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t3" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                                <b>
+                                    From HTML:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t4" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText11()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text11">
+                        <tr>
+                            <td>
+                                Using this method, the
+                                <i>
+                                    fancy-header
+                                </i>
+                                style can be used multiple times in multiple pages. If you want to change what a
+                                <i>
+                                    fancy-header
+                                </i>
+                                looks like, you only need to change it in one place and the update will take place anywhere it is used.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="comments">
+            Comments
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText12()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text12">
+                        <tr>
+                            <td>
+                                Comments in CSS are started with a slash followed by an asterisk (
+                                <hl>
+                                    /*
+                                </hl>
+                                ), and ended with the same in reverse order, (
+                                <hl>
+                                    */
+                                </hl>
+                                ).
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText13()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text13">
+                        <tr>
+                            <td>
+                                <b>
+                                    Example:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t5" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="review">
+            Review
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText14()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text14">
+                        <tr>
+                            <td>
+                                What does CSS stand for?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText15()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text15">
+                        <tr>
+                            <td>
+                                Cascading Style Sheets
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText16()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text16">
+                        <tr>
+                            <td>
+                                What are the advantages of separating the document content from the presentation style?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText17()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text17">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Content can be used independently of styling for other purposes.
+                                    </li>
+                                    <li>
+                                        Styles can be re-used across pages.
+                                    </li>
+                                    <li>
+                                        Updating styles in a stylesheet that is used in many pages is much more efficient than updating all the pages individually.
+                                    </li>
+                                    <li>
+                                        Bandwidth savings can be significant due to stylesheet caching.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText18()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text18">
+                        <tr>
+                            <td>
+                                What are the three ways to apply styles to a website?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText19()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text19">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        using the style attribute
+                                    </li>
+                                    <li>
+                                        using an embedded (inline) stylesheet
+                                    </li>
+                                    <li>
+                                        using an external stylesheet
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText20()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text20">
+                        <tr>
+                            <td>
+                                Which method best supports the advantages of separating styling from content?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText21()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text21">
+                        <tr>
+                            <td>
+                                using an external stylesheet
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText22()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text22">
+                        <tr>
+                            <td>
+                                How do we add a comment into a stylesheet?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText23()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text23">
+                        <tr>
+                            <td>
+                                Comments in CSS are started with a slash followed by an asterisk (
+                                <hl>
+                                    /*
+                                </hl>
+                                ), and ended with the same in reverse order, (
+                                <hl>
+                                    */
+                                </hl>
+                                ).
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <a Target="blank" href="https://java.codeup.com/html-css/css-i/introduction/#exercises" class="btn btn-info">
+            Exercises
+        </a>
+    </div>
+
+</body>
+    <script src="resource/js/Css1_01Introduction.js"></script>
+    <script src="resource/js/General.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+</html>

@@ -62,7 +62,7 @@ public class XMLHandler {
             String title = attributes.remove("title");
             String toc = attributes.remove("toc");
             try {
-                pw = new PrintWriter(new FileOutputStream("output/" + name + ".html"));
+                pw = new PrintWriter(new FileOutputStream("output/CSS01/" + name + ".html"));
                 rootName = name;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();

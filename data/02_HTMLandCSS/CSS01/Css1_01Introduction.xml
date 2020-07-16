@@ -1,0 +1,157 @@
+<file name="Css1_01Introduction" title="Introduction to CSS " toc="Css1IntroTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <h1 id="css_overview">CSS Overview</h1>
+
+    <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen.</p>
+
+    <bullet>
+        In this section, we will learn the basics of CSS, including basic styling, the box model, and different types
+        of positioning.
+    </bullet>
+
+    <bullet>
+        CSS also provides for the separation of the document content from the presentation. This separation has many
+        benefits, including:
+        <ul>
+            <li>Content can be used independently of styling for other purposes.</li>
+            <li>Styles can be re-used across pages.</li>
+            <li>Updating styles in a stylesheet that is used in many pages is much more efficient than updating
+                all the pages individually.</li>
+            <li>Bandwidth savings can be significant due to stylesheet caching.</li>
+        </ul>
+    </bullet>
+
+    <h2 id="introduction">Introduction</h2>
+
+    <bullet>
+        In this lesson, we will cover three different ways to apply css styles to our web pages;
+        <ul>
+            <li>using the style attribute</li>
+            <li>using an embedded (inline) stylesheet</li>
+            <li>using an external stylesheet</li>
+        </ul>
+    </bullet>
+
+    <h2 id="attribute">Element Style Attribute</h2>
+
+    <bullet indent="indent-star">
+        One of the simplest ways to add style to an HTML element is by using the <b>style</b> attribute.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        This is also the least recommended method, because all the benefits described in the overview do not
+        apply to styles applied in this way. Nonetheless, it is still useful to test a style quickly, or for a one-off
+        style change, or for a quick demonstration. I often use this method in the class for demonstrations.
+    </bullet>
+
+    <h2 id="inline">Inline/Embedded Stylesheet</h2>
+
+    <bullet indent="indent-star">
+        Another method of adding styles to a webpage is via an embedded stylesheet. This can be accomplished by
+        using a <b>style</b> element in the <b>head</b> of your HTML page.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t2"></text><br/>
+        Using styles in this way provides some of the benefits described in the overview, but not all of them.
+    </bullet>
+
+    <h2 id="external">External Stylesheet</h2>
+
+    <bullet indent="indent-star">
+        Finally, another way to add styles to a web page is to link to an external stylesheet. This is the
+        recommended method, and the one that will provide all of the benefits listed in the overview.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>From Stylesheet:</b><br/>
+        <text tid="t3"></text><br/>
+        <b>From HTML:</b><br/>
+        <text tid="t4"></text><br/>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Using this method, the <i>fancy-header</i> style can be used multiple times in multiple pages. If you want
+        to change what a <i>fancy-header</i> looks like, you only need to change it in one place and the update
+        will take place anywhere it is used.
+    </bullet>
+
+    <h2 id="comments">Comments</h2>
+
+    <bullet indent="indent-star">
+        Comments in CSS are started with a slash followed by an asterisk (<hl>/*</hl>), and ended with the same
+        in reverse order, (<hl>*/</hl>).
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Example:</b><br/>
+        <text tid="t5"></text><br/>
+    </bullet>
+
+    <h2 id="review">Review</h2>
+
+    <bullet>
+        What does CSS stand for?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Cascading Style Sheets
+    </bullet>
+
+    <bullet>
+        What are the advantages of separating the document content from the presentation style?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <ul>
+            <li>Content can be used independently of styling for other purposes.</li>
+            <li>Styles can be re-used across pages.</li>
+            <li>Updating styles in a stylesheet that is used in many pages is much more efficient than updating
+                all the pages individually.</li>
+            <li>Bandwidth savings can be significant due to stylesheet caching.</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        What are the three ways to apply styles to a website?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <ul>
+            <li>using the style attribute</li>
+            <li>using an embedded (inline) stylesheet</li>
+            <li>using an external stylesheet</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        Which method best supports the advantages of separating styling from content?
+    </bullet>
+
+    <bullet indent="indent-star">
+        using an external stylesheet
+    </bullet>
+
+    <bullet>
+        How do we add a comment into a stylesheet?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Comments in CSS are started with a slash followed by an asterisk (<hl>/*</hl>), and ended with the same
+        in reverse order, (<hl>*/</hl>).
+    </bullet>
+
+    <br/>
+    <a href="https://java.codeup.com/html-css/css-i/introduction/#exercises" class="btn btn-info" Target="blank">
+        Exercises</a>
+</file>

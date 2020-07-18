@@ -62,7 +62,7 @@ public class XMLHandler {
             String title = attributes.remove("title");
             String toc = attributes.remove("toc");
             try {
-                pw = new PrintWriter(new FileOutputStream("output/CSS01/" + name + ".html"));
+                pw = new PrintWriter(new FileOutputStream("output/" + name + ".html"));
                 rootName = name;
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -149,10 +149,20 @@ public class XMLHandler {
             output.append(indention).append("</table>\n");
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("file")) {
+            // remove paths for javascript file
+            String jsName = "";
+            if (rootName.contains("/")) {
+                String[] paths = rootName.split("/");
+                jsName = paths[paths.length-1];
+            } else {
+                jsName = rootName;
+            }
+
+            // write out javascript files
             output = new StringBuilder("" +
                     "    </div>\n" +
                     "\n" + "</body>\n" +
-                    "    <script src=\"resource/js/" + rootName + ".js\"></script>\n" +
+                    "    <script src=\"resource/js/" + jsName + ".js\"></script>\n" +
                     "    <script src=\"resource/js/General.js\"></script>\n" +
                     "    <script src=\"resource/js/bootstrap.min.js\"></script>\n" +
                     "</html>");

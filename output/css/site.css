@@ -2,7 +2,29 @@
 this file is named "site.css" and is in a directory named "css"
 */
 
-.fancy-header {
-    color: red;
+#basic_selectors, .fancy-header {
+    font-weight: bolder;
     text-decoration: underline;
+}
+
+.danger {
+    color: #ff0000;
+}
+
+div:hover {
+    background-color: #00ff00;
+}
+
+.right-just {
+    text-align: right;
+    font-size: 3em;
+    font-family: "Times New Roman", Times, Serif;
+}
+
+p {
+    color: #00f;
+}
+
+#override {
+    color: inherit;
 }

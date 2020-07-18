@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors and Properties</title>
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/general.css">
+</head>
+<body>
+
+    <script src="Css1_02SelectorsTOC.js"></script>
+    <div class="container main">
+        <h1 class="mainTitle">CSS Selectors and Properties</h1>
+        <img src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image" class="md-img"/>
+        <br/>
+        <br/>
+        <p id="home">
+            In this lesson, we will talk about how to use CSS selectors and a few different CSS properties.
+        </p>
+        <h2>
+            CSS Selectors
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText01()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text01">
+                        <tr>
+                            <td>
+                                One of the keys to styling HTML documents is being able to selectively apply styles to specific elements or groups of elements. In order to do this, something called a
+                                <b>
+                                    CSS selector
+                                </b>
+                                is used.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText02()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text02">
+                        <tr>
+                            <td>
+                                A CSS selector is the part of a CSS rule set that actually selects the content you want to style.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText03()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text03">
+                        <tr>
+                            <td>
+                                There are many types of CSS selectors, and advanced selectors can get quite complicated. We will be teaching you the basics so that you can start adding your own style to your pages.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="basic_selectors" class="subPoint">
+            Basic Selectors
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText04()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text04">
+                        <tr>
+                            <td>
+                                Lets take a look at a template for basic selector:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t1" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText05()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text05">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        A style definition starts with a selector.
+                                    </li>
+                                    <li>
+                                        Following the selector is an open and a close curly brace.
+                                    </li>
+                                    <li>
+                                        Inside the curly braces is a list of key:value pairs.
+                                    </li>
+                                    <li>
+                                        As we saw in the last lesson, the key:value pairs have a colon between them, and a semi-colon after them.
+                                    </li>
+                                    <li>
+                                        The key is the name of a CSS property, and the value is the value of the property is being used.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText06()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text06">
+                        <tr>
+                            <td>
+                                Example:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t2" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText07()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text07">
+                        <tr>
+                            <td>
+                                <b>
+                                    Rules for the selector:
+                                </b>
+                                <br/>
+                                <img src="resource/images/HTMLandCSS04.png" alt="Third HTML CSS Image" class="lg-img"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText08()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text08">
+                        <tr>
+                            <td>
+                                Two more examples:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t3" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t4" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="multiple_selectors" class="subPoint">
+            Multiple Selectors
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText09()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text09">
+                        <tr>
+                            <td>
+                                If you would like to have multiple selectors have the same style definition, you can separate the selectors with commas as follows:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t5" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText10()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text10">
+                        <tr>
+                            <td>
+                                Example:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t6" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="combining_classes" class="subPoint">
+            Combining Classes
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText11()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text11">
+                        <tr>
+                            <td>
+                                Often times, you want an HTML element to have several style classes applied. That can be accomplished as follows:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t7" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t8" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="descendent_selectors" class="subPoint">
+            Descendent Selector
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText12()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text12">
+                        <tr>
+                            <td>
+                                Often times, it is useful to apply style to an element or group of elements based on their descendant relationship to some parent element in the page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText13()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text13">
+                        <tr>
+                            <td>
+                                To create a descendent selector, you first type the parent selector, followed by a space, followed by the descendent selector.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText14()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text14">
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t9" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText15()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text15">
+                        <tr>
+                            <td>
+                                In this example, any
+                                <b>
+                                    h1
+                                </b>
+                                elements that are a descendant of the element with the id of
+                                <b>
+                                    container
+                                </b>
+                                will be blue. Other
+                                <b>
+                                    h1
+                                </b>
+                                elements that are not a descendant of an element with
+                                <b>
+                                    id="container"
+                                </b>
+                                will not receive the style.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="child_selectors" class="subPoint">
+            Direct-Child Selector
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText16()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text16">
+                        <tr>
+                            <td>
+                                The direct child selector is similar to the descendent selector except that only direct children of the parent selector will receive the specified style. For the direct-child selector a greater
+                                than symbol,
+                                <hl>
+                                    &gt;
+                                </hl>
+                                , is used in place of the space from the descendent selector.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t10" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="combining_selectors" class="subPoint">
+            Combining Selectors
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText17()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text17">
+                        <tr>
+                            <td>
+                                Sometimes it is useful to combine selectors to be more specific. For example, if the
+                                <b>
+                                    fancy-header
+                                </b>
+                                class is only applicable to
+                                <b>
+                                    h1
+                                </b>
+                                elements, then it can be written as follows:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t11" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText18()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text18">
+                        <tr>
+                            <td>
+                                In the example above,
+                                <b>
+                                    h1
+                                </b>
+                                elements with
+                                <b>
+                                    class="fancy-header"
+                                </b>
+                                will receive the specified style, but other element types with
+                                <b>
+                                    class="fancy-header"
+                                </b>
+                                will not.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText19()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text19">
+                        <tr>
+                            <td>
+                                Combination selectors also allow for customization of properties based on element type. For example:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t12" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText20()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text20">
+                        <tr>
+                            <td>
+                                In this example, you can see that
+                                <b>
+                                    h1
+                                </b>
+                                and
+                                <b>
+                                    h2
+                                </b>
+                                elements will receive different styling through the use of the same class name. Combination of id selectors is not recommended since it might lose the
+                                uniqueness purpose of the id selector.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText21()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text21">
+                        <tr>
+                            <td>
+                                <h2>
+                                    MINI LAB
+                                </h2>
+                                <ul>
+                                    <li>
+                                        What is a
+                                        <b>
+                                            CSS Selector
+                                        </b>
+                                        ?
+                                    </li>
+                                    <li>
+                                        List three things that can be selectors.
+                                    </li>
+                                    <li>
+                                        How can you have multiple selectors for one style definition?
+                                    </li>
+                                    <li>
+                                        Can an element have more than one class?
+                                    </li>
+                                    <li>
+                                        What is the difference between a
+                                        <b>
+                                            Descendent Selector
+                                        </b>
+                                        and a
+                                        <b>
+                                            Direct-Child Selector
+                                        </b>
+                                        ?
+                                    </li>
+                                    <li>
+                                        How do you make a class apply only to one element?
+                                    </li>
+                                    <li>
+                                        Create a web page with a corresponding CSS file.
+                                    </li>
+                                    <li>
+                                        In the CSS file, create a class named "danger" that sets
+                                        <b>
+                                            color
+                                        </b>
+                                        to "red"
+                                    </li>
+                                    <li>
+                                        In the web page, create a paragraph using the danger class that says, "Danger Zone".
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="pseudo_classes">
+            Pseudo Classes
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText22()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text22">
+                        <tr>
+                            <td>
+                                Pseudo classes can be added to a selector to specify that a particular style should be applied only to a particular state of an element.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText23()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text23">
+                        <tr>
+                            <td>
+                                First, let us see the syntax for a pseudo class with a selector:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t13" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText24()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text24">
+                        <tr>
+                            <td>
+                                Notice the colon after the selector, followed by the pseudo-class name. There are many pseudo-classes available in CSS and some of the most commonly used deal with the anchor element.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText25()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text25">
+                        <tr>
+                            <td>
+                                Examples:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t14" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText26()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text26">
+                        <tr>
+                            <td>
+                                As you can see, pseudo-classes allow us to style the anchor element based on different states of the link. For a more complete list of available pseudo-classes, look at the
+                                <span class="green">
+                                Mozilla Developer Network
+</span>                                .
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="specificity">
+            Specificity
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText27()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text27">
+                        <tr>
+                            <td>
+                                Due to the cascading nature of style sheets, and the potential for duplicate or conflicting styles being applied to an element, there must be a set of rules that determine what styles actually get applied.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText28()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text28">
+                        <tr>
+                            <td>
+                                The process of deciding what styles get applied is referred to as
+                                <b>
+                                    specificity
+                                </b>
+                                . In general, the more specific the selector, the higher the precedence, the more likely the style will be applied.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="colors">
+            Colors
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText29()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text29">
+                        <tr>
+                            <td>
+                                How do colors work on CSS?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText30()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text30">
+                        <tr>
+                            <td>
+                                One way to reference a color is simply by using its name. For example,
+                                <b>
+                                    red
+                                </b>
+                                or
+                                <b>
+                                    blue
+                                </b>
+                                are valid colors in CSS.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText31()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text31">
+                        <tr>
+                            <td>
+                                Another way to reference a color is by using its RGB value, and this is the preferred method. As you may have guessed, RGB stands for
+                                Red/Green/Blue.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText32()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text32">
+                        <tr>
+                            <td>
+                                RGB values can be specified in CSS in several ways:
+                                <br/>
+                                <ul>
+                                    <li>
+                                        "#FFFFFF", this is white
+                                    </li>
+                                    <li>
+                                        "#F00", this is red
+                                    </li>
+                                    <li>
+                                        "rgb(200, 200, 200)", this is grayish
+                                    </li>
+                                    <li>
+                                        "rgba(0, 0, 255, 0.5)", this is a dark blue
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText33()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text33">
+                        <tr>
+                            <td>
+                                The most common method is by using a six character hexadecimal value.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText34()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text34">
+                        <tr>
+                            <td>
+                                You now know that colors can be specified using a six character hexadecimal value that represents the RGB value of a color. This implies that there are two hex characters for each color. Based on that knowledge,
+                                let us look at some example colors:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t15" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText35()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text35">
+                        <tr>
+                            <td>
+                                From the examples above, along with some knowledge of the hexadecimal number system, you can begin to see how hex color codes work. We can also see that since 00-FF represents 256 unique values, we have a total
+                                of 256 x 256 x 256 (over 16 million) color combinations.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText36()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text36">
+                        <tr>
+                            <td>
+                                Besides seeing six character hex color codes, you may also see three character hex color codes. Three character color codes are a shorthand notation that works as follows:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t16" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText37()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text37">
+                        <tr>
+                            <td>
+                                <h2>
+                                    MINI LAB 02
+                                </h2>
+                                <ul>
+                                    <li>
+                                        What is the process of deciding what styles get applied called?
+                                    </li>
+                                    <li>
+                                        What color is #00ff00?
+                                    </li>
+                                    <li>
+                                        In your stylesheet, set the DIV elements to change the background color to "#00ff00" when you hover them.
+                                    </li>
+                                    <li>
+                                        Add a paragraph with text to the div
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="common_properties">
+            Common CSS Properties and Values
+        </h2>
+        <h3 id="color" class="subPoint">
+            color
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText38()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text38">
+                        <tr>
+                            <td>
+                                The CSS
+                                <b>
+                                    color
+                                </b>
+                                property sets the foreground color of an element's text content and its decorations. It does not affect any other characteristic of the element.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t17" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="text_decoration" class="subPoint">
+            text-decoration
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText39()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text39">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    text-decoration
+                                </b>
+                                CSS property is used to set the text formatting to underline, overline, line-through, or blink.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t18" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="text_align" class="subPoint">
+            text-align
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText40()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text40">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    text-align
+                                </b>
+                                CSS property describes how inline content like text is aligned in its parent block element. text-align does not control the alignment of block elements itself, only their inline content.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t19" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="text_indent" class="subPoint">
+            text-indent
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText41()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text41">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    text-indent
+                                </b>
+                                CSS property specifies how much horizontal space should be left before the beginning of the first line of the text content of an element. Horizontal spacing is with respect to the left
+                                (or right, for right-to-left layout) edge of the containing block element's box.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t20" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="font_properties">
+            Font Properties
+        </h2>
+        <h3 id="font_family" class="subPoint">
+            font-family
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText42()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text42">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    font-family
+                                </b>
+                                CSS property allows for a prioritized list of font family names and/or generic family names to be specified for the selected element.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText43()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text43">
+                        <tr>
+                            <td>
+                                Unlike most other CSS properties, values are separated by a comma to indicate that they are alternatives. The browser will select the first font on the list that is installed on the computer or that can be downloaded
+                                using the information provided by a @font-face at-rule.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t21" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText44()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text44">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    font-family
+                                </b>
+                                CSS property allows for a prioritized list of font family names and/or generic family names to be specified for the selected element. You may be curious what the difference is between a serif font,
+                                and a sans-serif font. Serifs are the fancy edges/lines that appear on the end of characters. Serif fonts have the fancy edges, sans-serif fonts are "without" serifs.
+                                <br/>
+                                <img src="resource/images/HTMLandCSS05.png" alt="Fifth HTML CSS Image" class="lg-img"/>
+                                <br/>
+                                Monospace fonts are a bit different in that all the characters are the same width. Monospace fonts are often used in terminals to help with readability.
+                                <br/>
+                                <br/>
+                                More information on font families can be found on the MDN.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="font_style" class="subPoint">
+            font-style
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText45()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text45">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    font-style
+                                </b>
+                                CSS property allows italic or oblique faces to be selected within a font-family.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t22" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="font_size" class="subPoint">
+            font-size
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText46()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text46">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    font-size
+                                </b>
+                                CSS property specifies the size of the font – specifically the desired height of glyphs from the font. Setting the font size may, in turn, change the size of other items since it is used
+                                to compute the value of em and ex length units.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t23" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText47()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text47">
+                        <tr>
+                            <td>
+                                As you can see in the examples above, different units can be used to specify sizes in CSS. Here is a description of the units used above:
+                                <br/>
+                                <ul>
+                                    <li>
+                                        <b>
+                                            px
+                                        </b>
+                                        stands for pixels. Pixels are an absolute unit used for screen media.
+                                    </li>
+                                    <li>
+                                        <b>
+                                            em
+                                        </b>
+                                        is a relative/dynamic unit that corresponds to the current font size. If the current font size is 12px, then 1em is 12px. 2em would be 24px. 0.5 em would be 6px. If the browser font size
+                                        changes, all em values would change accordingly.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText48()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text48">
+                        <tr>
+                            <td>
+                                <b>
+                                    Here is a note regarding pixels from the MDN:
+                                </b>
+                                <br/>
+                                Note: Defining font sizes in pixel is not accessible, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger
+                                than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="font_weight" class="subPoint">
+            font-weight
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText49()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text49">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    font-weight
+                                </b>
+                                CSS property specifies the weight or boldness of the font. However, some fonts are not available in all weights; some are available only on normal and bold.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t24" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText50()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text50">
+                        <tr>
+                            <td>
+                                <h2>
+                                    MINI LAB 03
+                                </h2>
+                                <ul>
+                                    <li>
+                                        Which property sets the text color?
+                                    </li>
+                                    <li>
+                                        How do we left justify text?
+                                    </li>
+                                    <li>
+                                        How do you separate alternative font families?
+                                    </li>
+                                    <li>
+                                        What is wrong with using pixels to set the font size?
+                                    </li>
+                                    <li>
+                                        In your stylesheet, create a class named right-just with right justified text and a font size of 3em;
+                                    </li>
+                                    <li>
+                                        Set the font family of the text to "Times New Roman" or Times or Serif.
+                                    </li>
+                                    <li>
+                                        Use the new class on the paragraph in your DIV.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="background_properties">
+            Background Properties
+        </h2>
+        <h3 id="background_color" class="subPoint">
+            background-color
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText51()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text51">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    background-color
+                                </b>
+                                CSS property sets the background color of an element, either through a color value or the keyword transparent.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t25" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="background_image" class="subPoint">
+            background-image
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText52()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text52">
+                        <tr>
+                            <td>
+                                The CSS
+                                <b>
+                                    background-image
+                                </b>
+                                property sets one or several background images for an element. The images are drawn o
+                                n successive stacking context layers, with the first specified being drawn as if it is the closest to the user.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t26" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="background_repeat" class="subPoint">
+            background-repeat
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText53()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text53">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    background-repeat
+                                </b>
+                                CSS property defines how background images are repeated. A background image can be repeated along the horizontal axis, the vertical axis, both, or not repeated at all.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t27" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="list_style" class="subPoint">
+            list-style
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText54()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text54">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    list-style
+                                </b>
+                                CSS property is a shorthand property for setting list-style-type, list-style-image, and list-style-position.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t28" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="inheriting_styles">
+            Inheriting Styles
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText55()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text55">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    inherit
+                                </b>
+                                CSS-value causes the element for which it is specified to take the computed value of the property from its parent element. It is allowed on every CSS property.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t29" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText56()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text56">
+                        <tr>
+                            <td>
+                                <h2>
+                                    MINI LAB 04
+                                </h2>
+                                <ul>
+                                    <li>
+                                        How do you override a set attribute with a parent attribute?
+                                    </li>
+                                    <li>
+                                        In your CSS file, set the paragraph color to #0000ff.
+                                    </li>
+                                    <li>
+                                        On your web page, add the danger class to you DIV
+                                    </li>
+                                    <li>
+                                        Add a second paragraph to you DIV with the id set to "override".
+                                    </li>
+                                    <li>
+                                        Add some text to the second paragraph.
+                                    </li>
+                                    <li>
+                                        In your CSS file, set any paragraph with the id "override" to inherit it's color from it's parent.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="review">
+            Review
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText57()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text57">
+                        <tr>
+                            <td>
+                                What is a
+                                <b>
+                                    CSS Selector
+                                </b>
+                                ?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText58()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text58">
+                        <tr>
+                            <td>
+                                A CSS selector is the part of a CSS rule set that actually selects the content you want to style.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText59()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text59">
+                        <tr>
+                            <td>
+                                List three things that can be selectors.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText60()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text60">
+                        <tr>
+                            <td>
+                                Elements, IDs, and Classes
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText61()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text61">
+                        <tr>
+                            <td>
+                                How can you have multiple selectors for one style definition?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText62()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text62">
+                        <tr>
+                            <td>
+                                You can separate the selectors with commas.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText63()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text63">
+                        <tr>
+                            <td>
+                                Can an element have more than one class?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText64()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text64">
+                        <tr>
+                            <td>
+                                Yes
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText65()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text65">
+                        <tr>
+                            <td>
+                                What is the difference between a
+                                <b>
+                                    Descendent Selector
+                                </b>
+                                and a
+                                <b>
+                                    Direct-Child Selector
+                                </b>
+                                ?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText66()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text66">
+                        <tr>
+                            <td>
+                                The direct child selector is similar to the descendent selector except that only direct children of the parent selector will receive the specified style.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText67()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text67">
+                        <tr>
+                            <td>
+                                How do you make a class apply only to one element?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText68()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text68">
+                        <tr>
+                            <td>
+                                Append the class name to the element name with a period.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText69()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text69">
+                        <tr>
+                            <td>
+                                How do you specify to use a Pseudo Class?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText70()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text70">
+                        <tr>
+                            <td>
+                                Append the Pseudo Class name to the element name with a colon.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText71()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text71">
+                        <tr>
+                            <td>
+                                What is the process of deciding what styles get applied called?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText72()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text72">
+                        <tr>
+                            <td>
+                                Specificity
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText73()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text73">
+                        <tr>
+                            <td>
+                                What color is #00ff00?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText74()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text74">
+                        <tr>
+                            <td>
+                                Green
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText75()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text75">
+                        <tr>
+                            <td>
+                                Which property sets the text color?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText76()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text76">
+                        <tr>
+                            <td>
+                                color
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText77()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text77">
+                        <tr>
+                            <td>
+                                How do we left justify text?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText78()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text78">
+                        <tr>
+                            <td>
+                                Use the text-align property. (text-align: left;)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText79()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text79">
+                        <tr>
+                            <td>
+                                How do you separate alternative font families?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText80()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text80">
+                        <tr>
+                            <td>
+                                With commas (
+                                <i>
+                                    element { font-family: Helvetica, Arial, Sans-Serif; }
+                                </i>
+                                )
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText81()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text81">
+                        <tr>
+                            <td>
+                                What is wrong with using pixels to set the font size?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText82()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text82">
+                        <tr>
+                            <td>
+                                Defining font sizes in pixel is not accessible, because the user cannot change the font size from the browser.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText83()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text83">
+                        <tr>
+                            <td>
+                                How do you override a set attribute with a parent attribute?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText84()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text84">
+                        <tr>
+                            <td>
+                                Set the attribute to "inherit" (color: inherit;)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <a Target="blank" href="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" class="btn btn-info">
+            Further Reading and Exercises
+        </a>
+    </div>
+
+</body>
+    <script src="resource/js/Css1_02Selectors.js"></script>
+    <script src="resource/js/General.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+</html>

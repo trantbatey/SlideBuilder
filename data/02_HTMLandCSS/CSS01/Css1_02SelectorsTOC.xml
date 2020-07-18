@@ -1,0 +1,45 @@
+<file name="CSS01/Css1_02SelectorsTOC" title="CSS Properties and Selectors" home="Css1_02Selectors">
+    <li name="Css1_02Selectors#home" title="CSS Selectors and Properties"></li>
+    <nav>
+        <li name="basic_selectors" title="Basic Selectors"></li>
+        <li name="multiple_selectors" title="Multiple Selectors"></li>
+        <li name="combining_classes" title="Combining Classes"></li>
+        <li name="descendent_selectors" title="Descendent Selector"></li>
+        <li name="child_selectors" title="Direct-Child Selector"></li>
+        <li name="combining_selectors" title="Combining Selectors"></li>
+    </nav>
+    <li name="Css1_02Selectors#pseudo_classes" title="Pseudo Classes"></li>
+    <li name="Css1_02Selectors#specificity" title="Specificity"></li>
+    <li name="Css1_02Selectors#colors" title="Colors"></li>
+    <li name="Css1_02Selectors#common_properties" title="Common CSS Properties and Values"></li>
+    <nav>
+        <li name="color" title="color"></li>
+        <li name="text_decoration" title="text-decoration"></li>
+        <li name="text_align" title="text-align"></li>
+        <li name="text_indent" title="text-indent"></li>
+    </nav>
+    <li name="Css1_02Selectors#font_properties" title="Font Properties"></li>
+    <nav>
+        <li name="font_family" title="font-family"></li>
+        <li name="font_style" title="font-style"></li>
+        <li name="font_size" title="font-size"></li>
+        <li name="font_weight" title="font-weight"></li>
+    </nav>
+    <li name="Css1_02Selectors#background_properties" title="Background Properties"></li>
+    <nav>
+        <li name="background_color" title="background-color"></li>
+        <li name="background_image" title="background-image"></li>
+        <li name="background_repeat" title="background-repeat"></li>
+        <li name="list_style" title="list-style"></li>
+    </nav>
+    <li name="Css1_02Selectors#inheriting_styles" title="Inheriting Styles"></li>
+    <li name="Css1_02Selectors#review" title="Review"></li>
+    <ali url="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" label="Further Reading and Exercises"/>
+    <hr/>
+    <li name="../Html01Overview" title="HTML and CSS Overview"></li>
+    <li name="../Html02Intro" title="Introduction to HTML"></li>
+    <li name="../Html03Elements" title="HTML Elements"></li>
+    <li name="../Html04Forms" title="HTML Forms"></li>
+    <li name="Css1_01Introduction" title="CSS I"></li>
+    <li name="../CSS02/Css02Overview" title="CSS II"></li>
+</file>

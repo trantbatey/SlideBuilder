@@ -1,0 +1,492 @@
+<file name="CSS01/Css1_02Selectors" title="CSS Selectors and Properties" toc="Css1_02SelectorsTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <br/>
+    <p  id="home">In this lesson, we will talk about how to use CSS selectors and a few different CSS properties.</p>
+
+    <h2>CSS Selectors</h2>
+
+    <bullet>
+        One of the keys to styling HTML documents is being able to selectively apply styles to specific elements
+        or groups of elements. In order to do this, something called a <b>CSS selector</b> is used.
+    </bullet>
+
+    <bullet>
+        A CSS selector is the part of a CSS rule set that actually selects the content you want to style.
+    </bullet>
+
+    <bullet>
+        There are many types of CSS selectors, and advanced selectors can get quite complicated. We will be teaching
+        you the basics so that you can start adding your own style to your pages.
+    </bullet>
+
+    <h3 class="subPoint" id="basic_selectors">Basic Selectors</h3>
+
+    <bullet indent="indent-star">
+        Lets take a look at a template for basic selector:<br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <ul>
+            <li>A style definition starts with a selector. </li>
+            <li>Following the selector is an open and a close curly brace.</li>
+            <li>Inside the curly braces is a list of key:value pairs.</li>
+            <li>As we saw in the last lesson, the key:value pairs have a colon between them, and a semi-colon after them. </li>
+            <li>The key is the name of a CSS property, and the value is the value of the property is being used.</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Example:<br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Rules for the selector:</b><br/>
+        <img class="lg-img" src="resource/images/HTMLandCSS04.png" alt="Third HTML CSS Image"/>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Two more examples:<br/>
+        <text tid="t3"></text>
+        <text tid="t4"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="multiple_selectors">Multiple Selectors</h3>
+
+    <bullet indent="indent-star">
+        If you would like to have multiple selectors have the same style definition, you can separate the
+        selectors with commas as follows:<br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        Example:<br/>
+        <text tid="t6"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="combining_classes">Combining Classes</h3>
+
+    <bullet indent="indent-star">
+        Often times, you want an HTML element to have several style classes applied. That can be accomplished as
+        follows:<br/>
+        <text tid="t7"></text>
+        <text tid="t8"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="descendent_selectors">Descendent Selector</h3>
+
+    <bullet indent="indent-star">
+        Often times, it is useful to apply style to an element or group of elements based on their descendant
+        relationship to some parent element in the page.
+    </bullet>
+
+    <bullet indent="indent-star">
+        To create a descendent selector, you first type the parent selector, followed by a space, followed by the
+        descendent selector.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text tid="t9"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        In this example, any <b>h1</b> elements that are a descendant of the element with the id of <b>container</b>
+        will be blue. Other <b>h1</b> elements that are not a descendant of an element with <b>id="container"</b>
+        will not receive the style.
+    </bullet>
+
+    <h3 class="subPoint" id="child_selectors">Direct-Child Selector</h3>
+
+    <bullet indent="indent-star">
+        The direct child selector is similar to the descendent selector except that only direct children
+        of the parent selector will receive the specified style. For the direct-child selector a greater
+        than symbol, <hl>|||gt</hl>, is used in place of the space from the descendent selector.<br/>
+        <text tid="t10"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="combining_selectors">Combining Selectors</h3>
+
+    <bullet indent="indent-star">
+        Sometimes it is useful to combine selectors to be more specific. For example, if the <b>fancy-header</b>
+        class is only applicable to <b>h1</b> elements, then it can be written as follows:<br/>
+        <text tid="t11"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        In the example above, <b>h1</b> elements with <b>class="fancy-header"</b> will receive the specified style, but
+        other element types with <b>class="fancy-header"</b> will not.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Combination selectors also allow for customization of properties based on element type. For example:<br/>
+        <text tid="t12"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        In this example, you can see that <b>h1</b> and <b>h2</b> elements will receive different styling through
+        the use of the same class name. Combination of id selectors is not recommended since it might lose the
+        uniqueness purpose of the id selector.
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB</h2>
+        <ul>
+            <li>What is a <b>CSS Selector</b>?</li>
+            <li>List three things that can be selectors.</li>
+            <li>How can you have multiple selectors for one style definition?</li>
+            <li>Can an element have more than one class?</li>
+            <li>What is the difference between a <b>Descendent Selector</b> and a <b>Direct-Child Selector</b>?</li>
+            <li>How do you make a class apply only to one element?</li>
+            <li>Create a web page with a corresponding CSS file.</li>
+            <li>In the CSS file, create a class named "danger" that sets <b>color</b> to "red"</li>
+            <li>In the web page, create a paragraph using the danger class that says, "Danger Zone".</li>
+        </ul>
+    </bullet>
+
+    <h2 id="pseudo_classes">Pseudo Classes</h2>
+
+    <bullet>
+        Pseudo classes can be added to a selector to specify that a particular style should be applied only to a
+        particular state of an element.
+    </bullet>
+
+    <bullet>
+        First, let us see the syntax for a pseudo class with a selector:<br/>
+        <text tid="t13"></text>
+    </bullet>
+
+    <bullet>
+        Notice the colon after the selector, followed by the pseudo-class name. There are many pseudo-classes
+        available in CSS and some of the most commonly used deal with the anchor element.
+    </bullet>
+
+    <bullet>
+        Examples:<br/>
+        <text tid="t14"></text>
+    </bullet>
+
+    <bullet>
+        As you can see, pseudo-classes allow us to style the anchor element based on different states of
+        the link. For a more complete list of available pseudo-classes, look at the
+        <span class="green">Mozilla Developer Network</span>.
+    </bullet>
+
+    <h2 id="specificity">Specificity</h2>
+
+    <bullet>
+        Due to the cascading nature of style sheets, and the potential for duplicate or conflicting styles being
+        applied to an element, there must be a set of rules that determine what styles actually get applied.
+    </bullet>
+
+    <bullet>
+        The process of deciding what styles get applied is referred to as <b>specificity</b>. In general, the more
+        specific the selector, the higher the precedence, the more likely the style will be applied.
+    </bullet>
+
+    <h2 id="colors">Colors</h2>
+
+    <bullet>
+        How do colors work on CSS?
+    </bullet>
+
+    <bullet>
+        One way to reference a color is simply by using its name. For example, <b>red</b> or <b>blue</b> are valid
+        colors in CSS.
+    </bullet>
+
+    <bullet>
+        Another way to reference a color is by using its RGB value, and this is the preferred method. As you may have
+        guessed, RGB stands for Red/Green/Blue.
+    </bullet>
+
+    <bullet>
+        RGB values can be specified in CSS in several ways:<br/>
+        <ul>
+            <li>"#FFFFFF", this is white</li>
+            <li>"#F00", this is red</li>
+            <li>"rgb(200, 200, 200)", this is grayish</li>
+            <li>"rgba(0, 0, 255, 0.5)", this is a dark blue</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        The most common method is by using a six character hexadecimal value.
+    </bullet>
+
+    <bullet>
+        You now know that colors can be specified using a six character hexadecimal value that represents the RGB
+        value of a color. This implies that there are two hex characters for each color. Based on that knowledge,
+        let us look at some example colors:<br/>
+        <text tid="t15"></text>
+    </bullet>
+
+    <bullet>
+        From the examples above, along with some knowledge of the hexadecimal number system, you can begin to see
+        how hex color codes work. We can also see that since 00-FF represents 256 unique values, we have a total
+        of 256 x 256 x 256 (over 16 million) color combinations.
+    </bullet>
+
+    <bullet>
+        Besides seeing six character hex color codes, you may also see three character hex color codes. Three
+        character color codes are a shorthand notation that works as follows:<br/>
+        <text tid="t16"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB 02</h2>
+        <ul>
+            <li>What is the process of deciding what styles get applied called?</li>
+            <li>What color is #00ff00?</li>
+            <li>In your stylesheet, set the DIV elements to change the background color to "#00ff00" when you hover them.</li>
+            <li>Add a paragraph with text to the div</li>
+        </ul>
+    </bullet>
+
+    <h2 id="common_properties">Common CSS Properties and Values</h2>
+
+    <h3 class="subPoint" id="color">color</h3>
+
+    <bullet indent="indent-star">
+        The CSS <b>color</b> property sets the foreground color of an element's text content and its decorations.
+        It does not affect any other characteristic of the element.<br/>
+        <text tid="t17"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="text_decoration">text-decoration</h3>
+
+    <bullet indent="indent-star">
+        The <b>text-decoration</b> CSS property is used to set the text formatting to underline, overline,
+        line-through, or blink.<br/>
+        <text tid="t18"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="text_align">text-align</h3>
+
+    <bullet indent="indent-star">
+        The <b>text-align</b> CSS property describes how inline content like text is aligned in its parent block
+        element. text-align does not control the alignment of block elements itself, only their inline content.<br/>
+        <text tid="t19"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="text_indent">text-indent</h3>
+
+    <bullet indent="indent-star">
+        The <b>text-indent</b> CSS property specifies how much horizontal space should be left before the beginning
+        of the first line of the text content of an element. Horizontal spacing is with respect to the left
+        (or right, for right-to-left layout) edge of the containing block element's box. <br/>
+        <text tid="t20"></text>
+    </bullet>
+
+    <h2 id="font_properties">Font Properties</h2>
+
+    <h3 class="subPoint" id="font_family">font-family</h3>
+
+    <bullet indent="indent-star">
+        The <b>font-family</b> CSS property allows for a prioritized list of font family names and/or generic family
+        names to be specified for the selected element.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Unlike most other CSS properties, values are separated by a comma to indicate that they are alternatives.
+        The browser will select the first font on the list that is installed on the computer or that can be downloaded
+        using the information provided by a @font-face at-rule.<br/>
+        <text tid="t21"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        The <b>font-family</b> CSS property allows for a prioritized list of font family names and/or generic family
+        names to be specified for the selected element. You may be curious what the difference is between a serif font,
+        and a sans-serif font. Serifs are the fancy edges/lines that appear on the end of characters. Serif fonts have
+        the fancy edges, sans-serif fonts are "without" serifs. <br/>
+        <img class="lg-img" src="resource/images/HTMLandCSS05.png" alt="Fifth HTML CSS Image"/><br/>
+        Monospace fonts are a bit different in that all the characters are the same width. Monospace fonts are often
+        used in terminals to help with readability. <br/>
+        <br/>
+        More information on font families can be found on the MDN.
+    </bullet>
+
+    <h3 class="subPoint" id="font_style">font-style</h3>
+
+    <bullet indent="indent-star">
+        The <b>font-style</b> CSS property allows italic or oblique faces to be selected within a font-family.<br/>
+        <text tid="t22"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="font_size">font-size</h3>
+
+    <bullet indent="indent-star">
+        The <b>font-size</b> CSS property specifies the size of the font – specifically the desired height of
+        glyphs from the font. Setting the font size may, in turn, change the size of other items since it is used
+        to compute the value of em and ex length units.<br/>
+        <text tid="t23"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        As you can see in the examples above, different units can be used to specify sizes in CSS. Here is a
+        description of the units used above:<br/>
+        <ul>
+            <li><b>px</b> stands for pixels. Pixels are an absolute unit used for screen media.</li>
+            <li><b>em</b> is a relative/dynamic unit that corresponds to the current font size. If the current font
+                size is 12px, then 1em is 12px. 2em would be 24px. 0.5 em would be 6px. If the browser font size
+                changes, all em values would change accordingly.</li>
+        </ul>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <b>Here is a note regarding pixels from the MDN:</b><br/>
+        Note: Defining font sizes in pixel is not accessible, because the user cannot change the font size
+        from the browser. (For example, users with limited vision may wish to set the font size much larger
+        than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to
+        create an inclusive design.
+    </bullet>
+
+    <h3 class="subPoint" id="font_weight">font-weight</h3>
+
+    <bullet indent="indent-star">
+        The <b>font-weight</b> CSS property specifies the weight or boldness of the font. However, some fonts are
+        not available in all weights; some are available only on normal and bold.<br/>
+        <text tid="t24"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB 03</h2>
+        <ul>
+            <li>Which property sets the text color?</li>
+            <li>How do we left justify text?</li>
+            <li>How do you separate alternative font families?</li>
+            <li>What is wrong with using pixels to set the font size?</li>
+            <li>In your stylesheet, create a class named right-just with right justified text and a font size of 3em;</li>
+            <li>Set the font family of the text to "Times New Roman" or Times or Serif.</li>
+            <li>Use the new class on the paragraph in your DIV.</li>
+        </ul>
+    </bullet>
+
+    <h2 id="background_properties">Background Properties</h2>
+
+    <h3 class="subPoint" id="background_color">background-color</h3>
+
+    <bullet indent="indent-star">
+        The <b>background-color</b> CSS property sets the background color of an element, either through a color
+        value or the keyword transparent.<br/>
+        <text tid="t25"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="background_image">background-image</h3>
+
+    <bullet indent="indent-star">
+        The CSS <b>background-image</b> property sets one or several background images for an element. The images are
+        drawn on successive stacking context layers, with the first specified being drawn as if it is the closest
+        to the user.<br/>
+        <text tid="t26"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="background_repeat">background-repeat</h3>
+
+    <bullet indent="indent-star">
+        The <b>background-repeat</b> CSS property defines how background images are repeated. A background image
+        can be repeated along the horizontal axis, the vertical axis, both, or not repeated at all.<br/>
+        <text tid="t27"></text>
+    </bullet>
+
+    <h3 class="subPoint" id="list_style">list-style</h3>
+
+    <bullet indent="indent-star">
+        The <b>list-style</b> CSS property is a shorthand property for setting list-style-type, list-style-image,
+        and list-style-position.<br/>
+        <text tid="t28"></text>
+    </bullet>
+
+    <h2 id="inheriting_styles">Inheriting Styles</h2>
+
+    <bullet>
+        The <b>inherit</b> CSS-value causes the element for which it is specified to take the computed
+        value of the property from its parent element. It is allowed on every CSS property.<br/>
+        <text tid="t29"></text>
+    </bullet>
+
+    <bullet>
+        <h2>MINI LAB 04</h2>
+        <ul>
+            <li>How do you override a set attribute with a parent attribute?</li>
+            <li>In your CSS file, set the paragraph color to #0000ff.</li>
+            <li>On your web page, add the danger class to you DIV</li>
+            <li>Add a second paragraph to you DIV with the id set to "override".</li>
+            <li>Add some text to the second paragraph.</li>
+            <li>In your CSS file, set any paragraph with the id "override" to inherit it's color from it's parent.</li>
+        </ul>
+    </bullet>
+
+    <h2 id="review">Review</h2>
+
+    <bullet>What is a <b>CSS Selector</b>?</bullet>
+
+    <bullet indent="indent-star">
+        A CSS selector is the part of a CSS rule set that actually selects the content you want to style.
+    </bullet>
+
+    <bullet>List three things that can be selectors.</bullet>
+
+    <bullet indent="indent-star">Elements, IDs, and Classes</bullet>
+
+    <bullet>How can you have multiple selectors for one style definition?</bullet>
+
+    <bullet indent="indent-star">You can separate the selectors with commas.</bullet>
+
+    <bullet>Can an element have more than one class?</bullet>
+
+    <bullet indent="indent-star">Yes</bullet>
+
+    <bullet>What is the difference between a <b>Descendent Selector</b> and a <b>Direct-Child Selector</b>?</bullet>
+
+    <bullet indent="indent-star">
+        The direct child selector is similar to the descendent selector except that only direct children of the parent
+        selector will receive the specified style.
+    </bullet>
+
+    <bullet>How do you make a class apply only to one element?</bullet>
+
+    <bullet indent="indent-star">Append the class name to the element name with a period.</bullet>
+
+    <bullet>How do you specify to use a Pseudo Class?</bullet>
+
+    <bullet indent="indent-star">Append the Pseudo Class name to the element name with a colon.</bullet>
+
+    <bullet>What is the process of deciding what styles get applied called?</bullet>
+
+    <bullet indent="indent-star">Specificity</bullet>
+
+    <bullet>What color is #00ff00?</bullet>
+
+    <bullet indent="indent-star">Green</bullet>
+
+    <bullet>Which property sets the text color?</bullet>
+
+    <bullet indent="indent-star">color</bullet>
+
+    <bullet>How do we left justify text?</bullet>
+
+    <bullet indent="indent-star">Use the text-align property. (text-align: left;)</bullet>
+
+    <bullet>How do you separate alternative font families?</bullet>
+
+    <bullet indent="indent-star">With commas (<i>element { font-family: Helvetica, Arial, Sans-Serif; }</i>)</bullet>
+
+    <bullet>What is wrong with using pixels to set the font size?</bullet>
+
+    <bullet indent="indent-star">
+        Defining font sizes in pixel is not accessible, because the user cannot change the font size from the browser.
+    </bullet>
+
+    <bullet>How do you override a set attribute with a parent attribute?</bullet>
+
+    <bullet indent="indent-star">Set the attribute to "inherit" (color: inherit;)</bullet>
+
+    <br/>
+    <a href="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" class="btn btn-info" Target="blank">
+        Further Reading and Exercises</a>
+</file>

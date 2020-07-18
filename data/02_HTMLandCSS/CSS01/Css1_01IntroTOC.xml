@@ -1,4 +1,4 @@
-<file name="Css1IntroTOC" title="CSS I" home="Css1_01Introduction">
+<file name="CSS01/Css1_01IntroTOC" title="CSS I" home="Css1_01Introduction">
     <li name="Css1_01Introduction#css_overview" title="CSS Overview"></li>
     <li name="Css1_01Introduction#introduction" title="Introduction"></li>
     <li name="Css1_01Introduction#attribute" title="Element Style Attribute"></li>
@@ -13,5 +13,5 @@
     <li name="../Html03Elements" title="HTML Elements"></li>
     <li name="../Html04Forms" title="HTML Forms"></li>
     <li name="Css1_01Introduction" title="CSS I"></li>
-    <li name="Css02Overview" title="CSS II"></li>
+    <li name="../CSS02/Css02Overview" title="CSS II"></li>
 </file>

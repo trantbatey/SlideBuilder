@@ -7,11 +7,6 @@
     <li name="Css1_01Introduction#comments" title="Comments"></li>
     <li name="Css1_01Introduction#review" title="Review"></li>
     <ali url="https://java.codeup.com/html-css/css-i/introduction/#exercises" label="Intro to CSS Exercises"/>
-    <hr/>
-    <li name="../Html01Overview" title="HTML and CSS Overview"></li>
-    <li name="../Html02Intro" title="Introduction to HTML"></li>
-    <li name="../Html03Elements" title="HTML Elements"></li>
-    <li name="../Html04Forms" title="HTML Forms"></li>
-    <li name="Css1_01Introduction" title="CSS I"></li>
-    <li name="../CSS02/Css02Overview" title="CSS II"></li>
+    <include path="" filename="CSS01/Css1TOC.xml"/>
+    <include path="../" filename="HtmlTOC.xml"/>
 </file>

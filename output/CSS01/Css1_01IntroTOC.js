@@ -41,9 +41,37 @@ document.write(`
                 <a href="https://java.codeup.com/html-css/css-i/introduction/#exercises" target="_blank">Intro to CSS Exercises</a>
             </li>
             </ali>
-            <hr>
-            </hr>
+            <hr>            <li>
+                <a href="./Css1_01Introduction.html" title="Introduction to CSS">
+                    Introduction to CSS
+                </a>
+            </li>
             <li>
+                <a href="./Css1_02Selectors.html" title="Selectors and Properties">
+                    Selectors and Properties
+                </a>
+            </li>
+            <li>
+                <a href="./Css1_03BoxModel.html" title="Box Model">
+                    Box Model
+                </a>
+            </li>
+            <li>
+                <a href="./Css1_04Positioning.html" title="Positioning">
+                    Positioning
+                </a>
+            </li>
+            <li>
+                <a href="./Css1_05FlexboxFundamentals.html" title="Flexbox Fundamentals">
+                    Flexbox Fundamentals
+                </a>
+            </li>
+            <li>
+                <a href="./Css1_06FlexboxInPractice.html" title="Flexbox In Practice">
+                    Flexbox In Practice
+                </a>
+            </li>
+            <hr>            <li>
                 <a href="./../Html01Overview.html" title="HTML and CSS Overview">
                     HTML and CSS Overview
                 </a>
@@ -64,7 +92,7 @@ document.write(`
                 </a>
             </li>
             <li>
-                <a href="./Css1_01Introduction.html" title="CSS I">
+                <a href="./../CSS01/Css1_01Introduction.html" title="CSS I">
                     CSS I
                 </a>
             </li>

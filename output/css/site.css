@@ -2,6 +2,15 @@
 this file is named "site.css" and is in a directory named "css"
 */
 
+#text-style {
+	font-family: "Courier New", Monospace;
+	font-style: italic;
+	font-size:  3em;
+	font-weight: bolder;
+	text-decoration: underline line-through;
+	width: 30em;
+}
+
 #basic_selectors, .fancy-header {
     font-weight: bolder;
     text-decoration: underline;
@@ -19,6 +28,11 @@ div:hover {
     text-align: right;
     font-size: 3em;
     font-family: "Times New Roman", Times, Serif;
+}
+
+.limit-size {
+	max-height: 5em;
+	max-width: 10em;
 }
 
 p {

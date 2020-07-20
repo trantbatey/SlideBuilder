@@ -19,12 +19,31 @@ public class TOCHandler extends XMLHandler {
 
     private String name;
     private String navName = "";
+    private String includePath = "";
+    private boolean includeMode = false;
+
+    public String getIncludePath() {
+        return includePath;
+    }
+
+    public void setIncludePath(String includePath) {
+        this.includePath = includePath;
+    }
+
+    public boolean isIncludeMode() {
+        return includeMode;
+    }
+
+    public void setIncludeMode(boolean includeMode) {
+        this.includeMode = includeMode;
+    }
 
     @Override
     public void startElement(StartElement startElement) throws IOException {
         Map<String, String> attributes = convertAttributesToMap(startElement);
         String qName = startElement.getName().getLocalPart();
         if (qName.equalsIgnoreCase("file")) {
+            if (includeMode) return;
             String name = attributes.remove("name");
             try {
                 pw = new PrintWriter(new FileOutputStream("output/" + name + ".js"));
@@ -40,7 +59,7 @@ public class TOCHandler extends XMLHandler {
             indention = "            ";
             write(output);
         } else if (qName.equalsIgnoreCase("li")) {
-            name = attributes.remove("name");
+            name = includePath + attributes.remove("name");
             String title = attributes.remove("title");
             String url = "";
             if (navName.length() != 0) {
@@ -79,6 +98,15 @@ public class TOCHandler extends XMLHandler {
             navName = name;
             indention += "        ";
             write(output);
+        } else if (qName.equalsIgnoreCase("include")) {
+            write(indention + "<hr>");
+            String includeFilename = attributes.remove("filename");
+            String includePath = attributes.remove("path");
+            XMLHandler XMLHandler = new TOCHandler();
+            ((TOCHandler) XMLHandler).setIncludePath(includePath);
+            ((TOCHandler) XMLHandler).setIncludeMode(true);
+            XMLHandler.indention = indention;
+            XMLHandler.parseXMLFile(XMLHandler, "data/02_HTMLandCSS/" + includeFilename);
         } else {
             openSimpleElement(qName, attributes);
         }
@@ -100,12 +128,16 @@ public class TOCHandler extends XMLHandler {
             write(output);
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("ul")) {
             write(output);
+        } else if (endElement.getName().getLocalPart().equalsIgnoreCase("include")) {
+            // nothing to do
         } else if (endElement.getName().getLocalPart().equalsIgnoreCase("file")) {
-            output = new StringBuilder("        </ul>\n");
-            output.append("    </div>\n");
-            output.append("`);\n");
-            write(output);
-            pw.close();
+            if (!includeMode) {
+                output = new StringBuilder("        </ul>\n");
+                output.append("    </div>\n");
+                output.append("`);\n");
+                write(output);
+                pw.close();
+            }
         } else {
             closeSimpleElement(endElement.getName().getLocalPart());
         }

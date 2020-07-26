@@ -1,0 +1,34 @@
+<file name="CSS01/Css1_03BoxModel" title="CSS Box Model and Div/Span" toc="Css1_03BoxModelTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <h1>This is a template for the Box Model Presentation</h1>
+
+    <h2 id="content_area">Content Area Width and Height</h2>
+
+    <h3 id="content_width" class="subTitle">Width</h3>
+
+    <h3 id="content_height" class="subTitle">Height</h3>
+
+    <h2 id="padding">Padding</h2>
+
+    <h2 id="border">Border</h2>
+
+    <h2 id="margin">Margin</h2>
+
+    <h2 id="overall_size">Overall Size</h2>
+
+    <h2 id="divs_spans">DIVs and Spans</h2>
+
+    <h3 id="divs" class="subTitle">Div</h3>
+
+    <h3 id="spans" class="subTitle">Span</h3>
+
+    <h2 id="review">Review</h2>
+
+    <br/>
+    <a href="https://java.codeup.com/html-css/css-i/box-model/#exercises" class="btn btn-info" Target="blank">
+        Exercises</a>
+</file>

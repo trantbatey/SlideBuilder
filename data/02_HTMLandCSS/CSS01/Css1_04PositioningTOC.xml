@@ -1,0 +1,25 @@
+<file name="CSS01/Css1_04PositioningTOC" title="CSS Floats and Positioning" home="Css1_04Positioning">
+    <li name="Css1_04Positioning" title="Positioning"></li>
+    <li name="Css1_04Positioning#floating_elements" title="Floating Elements"></li>
+    <nav>
+        <li name="template" title="Template as-is with No Floats"></li>
+        <li name="b1_left" title="Box 1 Float Left"></li>
+        <li name="b2_left" title="Box 2 Float Left"></li>
+        <li name="b1_b2_left" title="Box 1 and Box 2 Float Left"></li>
+        <li name="b1_left_b2_right" title="Box 1 Float Left and Box 2 Float Right"></li>
+        <li name="b1_left_b2_right_pc_left" title="Box 1 Float Left and Box 2 Float Right, Paragraph Clear Left"></li>
+        <li name="b1_right_b2_left_pc_right" title="Box 1 Float Right and Box 2 Float Left, Paragraph Clear Right"></li>
+        <li name="b1_right_b2_left_pc_both" title="Box 1 Float Right and Box 2 Float Left, Paragraph Clear Both"></li>
+    </nav>
+    <li name="Css1_04Positioning#positioning_elements" title="Positioning Elements"></li>
+    <nav>
+        <li name="top_left_bottom_right" title="Top / Left / Bottom / Right"></li>
+        <li name="relative_positioning" title="Relative Positioning"></li>
+        <li name="Absolute_positioning" title="Absolute Positioning"></li>
+        <li name="fixed_positioning" title="Fixed Positioning"></li>
+    </nav>
+    <li name="Css1_04Positioning#review" title="Review"></li>
+    <ali url="https://java.codeup.com/html-css/css-i/positioning/#exercises" label="Positioning Exercises"/>
+    <include path="" filename="CSS01/Css1TOC.xml"/>
+    <include path="../" filename="HtmlTOC.xml"/>
+</file>

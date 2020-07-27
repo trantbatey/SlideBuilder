@@ -71,7 +71,7 @@ document.write(`
                 </a>
             </li>
             <li>
-                <a href="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" target="_blank">Box Model Exercises</a>
+                <a href="https://java.codeup.com/html-css/css-i/box-model/#exercises" target="_blank">Box Model Exercises</a>
             </li>
             </ali>
             <hr>            <li>

@@ -1,0 +1,455 @@
+<file name="CSS01/Css1_04Positioning" title="Positioning" toc="Css1_04PositioningTOC">
+    <img class="md-img" src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image"/>
+    <img class="md-img" src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image"/>
+    <br/>
+
+    <h1>CSS Floats and Positioning</h1>
+
+    <bullet>
+        Normally things in a web page show up in the order that the appear in the text.
+    </bullet>
+
+    <bullet>
+        But CSS has several ways to change the <i>order</i> or <i>flow</i> of how things are displayed on the page.
+    </bullet>
+
+    <bullet>We are going to practice moving blocks around on the web page.</bullet>
+
+    <h2 id="floating_elements">Floating Elements</h2>
+
+    <bullet indent="indent-star">
+        CSS <hl>float</hl> provides the ability to have an element break free from the normal document flow and
+        shift to the left or right as far as possible.
+    </bullet>
+
+    <bullet indent="indent-star">Once shifted, text and other inline elements can flow around it.</bullet>
+
+    <bullet indent="indent-star">
+        The amount an element can float will be determined by the size of its container and also by other floated
+        elements in the container.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Floating Elements is a complex topic. To research more about it, look at the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">MDN</a>.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Here is a template we will be using to experiment with floating elements.
+        <br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="template" class="subTitle">Template as-is with No Floats</h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_left" class="subTitle">Box 1 Float Left</h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b2_left" class="subTitle">Box 2 Float Left</h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: left;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_b2_left" class="subTitle">Box 1 and Box 2 Float Left</h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: left;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_left_b2_right" class="subTitle">Box 1 Float Left and Box 2 Float Right</h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: right;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_left_b2_right_pc_left" class="subTitle">
+            Box 1 Float Left and Box 2 Float Right, Paragraph Clear Left
+        </h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: right;
+        </text>
+        <text>
+            clear: left;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_right_b2_left_pc_right" class="subTitle">
+            Box 1 Float Right and Box 2 Float Left, Paragraph Clear Right
+        </h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: right;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            clear: right;
+        </text>
+    </bullet>
+
+    <bullet indent="indent-star">
+        <h3 id="b1_right_b2_left_pc_both" class="subTitle">Box 1 Float Right and Box 2 Float Left, Paragraph Clear
+            Both
+        </h3>
+        <text>
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: right;
+        </text>
+        <text>
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: left;
+        </text>
+        <text>
+            clear: both;
+        </text>
+    </bullet>
+
+    <h2 id="positioning_elements">Positioning Elements</h2>
+
+    <bullet indent="indent-star">
+        In addition to floating elements, you can position them using various options.
+    </bullet>
+
+    <bullet indent="indent-star">
+        The default positioning for elements is referred to as <b>static</b>. This just means that the element will
+        be rendered in order with the normal flow of the document.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Elements can have the position attribute set to something other than static. In these cases, a few other
+        properties become applicable; <b>top</b>, <b>left</b>, <b>bottom</b>, and <b>right</b>.
+    </bullet>
+
+    <h3 id="top_left_bottom_right" class="subTitle">Top / Left / Bottom / Right</h3>
+
+    <bullet indent="indent-star">
+        The top, left, bottom, and right properties can be assigned values to describe how far away from the
+        corresponding position the box for the target element will be displayed.
+    </bullet>
+
+    <bullet indent="indent-star">
+        For the positioning demonstration, we will use the code template below:
+        <br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <h3 id="relative_positioning" class="subTitle">Relative Positioning</h3>
+
+    <bullet indent="indent-star">
+        With Relative Positioning, the element will move a given distance from it's static placements.
+        <br/>
+        <text>
+            position: relative;
+            top: 1em;
+            right: 1em;
+        </text>
+    </bullet>
+
+    <h3 id="Absolute_positioning" class="subTitle">Absolute Positioning</h3>
+
+    <bullet>
+        Absolute Positioning has two meanings depending on context. If the containing element has relative positioning
+        or fixed positioning set, the child element using absolute positioning will be positioned in relation to the
+        containers edge. However, if the containing element is not using position setting, the child element using
+        absolute positioning will be positioned in relation to the web page's edge.
+    </bullet>
+
+    <bullet indent="indent-star">
+        With Absolute Positioning, You can specify the distance from the elements container.
+        <br/>
+        <text>
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        </text>
+    </bullet>
+
+    <h3 id="fixed_positioning" class="subTitle">Fixed Positioning</h3>
+
+    <bullet indent="indent-star">
+        Have you ever seen page elements that do not move even when the page is scrolled? These elements have
+        <i>position:fixed</i>
+        applied, which causes them to be positioned relative to the browser window.
+        <br/>
+        <text>
+            position: fixed;
+            top: 1em;
+            right: 1em;
+        </text>
+    </bullet>
+
+    <h2 id="layout_properties">Helpful Layout Properties</h2>
+
+    <bullet>
+        Now we will talk about some other properties that are helpful in laying out web pages.
+    </bullet>
+
+    <h3>The <b>Display</b> attribute.</h3>
+
+    <bullet indent="indent-star">
+        The <b>display</b> attribute has options like <i>inline</i> and <i>inline-block</i> that can help control the
+        layout of block-level elements that usually take up multiple lines.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Compare these options:
+        <text tid="t3"></text>
+    </bullet>
+
+    <h3>The <b>line-height</b> attribute.</h3>
+
+    <bullet indent="indent-star">
+        The <b>line-height</b> property specifies the height of a line.<br/>
+        <b>Note:</b> Negative values are not allowed.
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text tid="t4"></text>
+    </bullet>
+
+    <h3>The <b>z-index</b> attribute.</h3>
+
+    <bullet indent="indent-star">
+        The z-index property specifies the stack order of an element.<br/>
+
+        An element with greater stack order is always in front of an element with a lower stack order.<br/>
+
+        <b>Note:</b> z-index only works on positioned elements (position: absolute, position: relative,
+        position: fixed, or position: sticky).
+    </bullet>
+
+    <bullet indent="indent-star">
+        Demo:<br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <h3>The <b>calc()</b> function.</h3>
+
+    <bullet indent="indent-star">
+        The <b>calc()</b> function performs a calculation to be used as the property value.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Demo:<br/>
+        <text tid="t6"></text>
+    </bullet>
+
+    <h3>CSS <b>custom properties</b> and the <b>var()</b> function</h3>
+
+    <bullet indent="indent-star">
+        CSS allows you to create custom properties which you can evaluate using the var() function.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Demo:<br/>
+        <text tid="t7"></text>
+    </bullet>
+
+    <h2 id="review">Review</h2>
+
+    <bullet>
+        What does float allow us to do?
+    </bullet>
+
+    <bullet indent="indent-star">
+        CSS <b><i>float</i></b> provides the ability to have an element break free from the normal document flow and shift to the
+        left or right.
+    </bullet>
+
+    <bullet>
+        Does floating an element affect other elements in the container?
+    </bullet>
+
+    <bullet indent="indent-star">
+        Yes. Once shifted, text and other inline elements can flow around it.
+    </bullet>
+
+    <bullet>
+        What controls the amount an element can float?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The amount an element can float will be determined by the size of its container and also by other
+        floated elements in the container
+    </bullet>
+
+    <bullet>
+        What properties become active when the position is set to something other than static?
+    </bullet>
+
+    <bullet indent="indent-star">
+        top , left , bottom , and right
+    </bullet>
+
+    <bullet>
+        List three position settings.
+    </bullet>
+
+    <bullet indent="indent-star">
+        Relative, Absolute, and Fixed
+    </bullet>
+
+    <bullet>
+        What is <b>Relative</b> position relative to?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The elements static position.
+    </bullet>
+
+    <bullet>
+        When an element uses absolute positioning, and the containing element is using relative positioning, what does
+        the child element position in relation to?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The containing element's edge.
+    </bullet>
+
+    <bullet>
+        What is <b>Fixed</b> position a fixed distance from?
+    </bullet>
+
+    <bullet indent="indent-star">
+        The browsers edge.
+    </bullet>
+
+    <bullet>
+        How can you get a block-level element to display inline?
+    </bullet>
+
+    <bullet indent="indent-star">
+        <text>display: inline;</text>
+        <text>display: inline-block;</text>
+    </bullet>
+
+    <bullet>
+        Which attribute can change the height of a line?
+    </bullet>
+
+    <bullet indent="indent-star">
+        line-height
+    </bullet>
+
+    <bullet>
+        When elements positions cause them to stack on top of each other, which attribute specifies the stack order
+        of the elements?
+    </bullet>
+
+    <bullet indent="indent-star">
+        z-index
+    </bullet>
+
+    <bullet>
+        What function can help you calculate the necessary size of an element?
+    </bullet>
+
+    <bullet indent="indent-star">
+        calc()
+    </bullet>
+
+    <bullet>
+        What function returns the value of a custom property?
+    </bullet>
+
+    <bullet indent="indent-star">
+        var()
+    </bullet>
+
+    <br/>
+    <a href="https://java.codeup.com/html-css/css-i/positioning/#exercises" class="btn btn-info" Target="blank">
+        Exercises
+    </a>
+</file>

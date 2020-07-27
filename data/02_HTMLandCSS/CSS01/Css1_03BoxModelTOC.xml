@@ -15,7 +15,7 @@
         <li name="spans" title="Span"></li>
     </nav>
     <li name="Css1_03BoxModel#review" title="Review"></li>
-    <ali url="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" label="Box Model Exercises"/>
+    <ali url="https://java.codeup.com/html-css/css-i/box-model/#exercises" label="Box Model Exercises"/>
     <include path="" filename="CSS01/Css1TOC.xml"/>
     <include path="../" filename="HtmlTOC.xml"/>
 </file>

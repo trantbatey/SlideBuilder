@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/general.css">
+</head>
+<body>
+
+    <script src="Css1_04PositioningTOC.js"></script>
+    <div class="container main">
+        <h1 class="mainTitle">Positioning</h1>
+        <img src="resource/images/HTMLandCSS01.jpg" alt="First HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image" class="md-img"/>
+        <br/>
+        <h1>
+            CSS Floats and Positioning
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText01()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text01">
+                        <tr>
+                            <td>
+                                Normally things in a web page show up in the order that the appear in the text.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText02()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text02">
+                        <tr>
+                            <td>
+                                But CSS has several ways to change the
+                                <i>
+                                    order
+                                </i>
+                                or
+                                <i>
+                                    flow
+                                </i>
+                                of how things are displayed on the page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText03()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text03">
+                        <tr>
+                            <td>
+                                We are going to practice moving blocks around on the web page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="floating_elements">
+            Floating Elements
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText04()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text04">
+                        <tr>
+                            <td>
+                                CSS
+                                <hl>
+                                    float
+                                </hl>
+                                provides the ability to have an element break free from the normal document flow and shift to the left or right as far as possible.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText05()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text05">
+                        <tr>
+                            <td>
+                                Once shifted, text and other inline elements can flow around it.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText06()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text06">
+                        <tr>
+                            <td>
+                                The amount an element can float will be determined by the size of its container and also by other floated elements in the container.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText07()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text07">
+                        <tr>
+                            <td>
+                                Floating Elements is a complex topic. To research more about it, look at the
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">
+                                    MDN
+                                </a>
+                                .
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText08()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text08">
+                        <tr>
+                            <td>
+                                Here is a template we will be using to experiment with floating elements.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t1" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText09()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text09">
+                        <tr>
+                            <td>
+                                <h3 id="template" class="subTitle">
+                                    Template as-is with No Floats
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText10()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text10">
+                        <tr>
+                            <td>
+                                <h3 id="b1_left" class="subTitle">
+                                    Box 1 Float Left
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText11()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text11">
+                        <tr>
+                            <td>
+                                <h3 id="b2_left" class="subTitle">
+                                    Box 2 Float Left
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText12()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text12">
+                        <tr>
+                            <td>
+                                <h3 id="b1_b2_left" class="subTitle">
+                                    Box 1 and Box 2 Float Left
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText13()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text13">
+                        <tr>
+                            <td>
+                                <h3 id="b1_left_b2_right" class="subTitle">
+                                    Box 1 Float Left and Box 2 Float Right
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: right;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText14()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text14">
+                        <tr>
+                            <td>
+                                <h3 id="b1_left_b2_right_pc_left" class="subTitle">
+                                    Box 1 Float Left and Box 2 Float Right, Paragraph Clear Left
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: right;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                clear: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText15()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text15">
+                        <tr>
+                            <td>
+                                <h3 id="b1_right_b2_left_pc_right" class="subTitle">
+                                    Box 1 Float Right and Box 2 Float Left, Paragraph Clear Right
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: right;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                clear: right;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText16()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text16">
+                        <tr>
+                            <td>
+                                <h3 id="b1_right_b2_left_pc_both" class="subTitle">
+                                    Box 1 Float Right and Box 2 Float Left, Paragraph Clear Both
+                                </h3>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #77AF00; /* greenish */<br>
+                                                height: 100px;<br>
+                                                width: 100px;<br>
+                                                margin: 10px;<br>
+                                                float: right;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                background-color: #1969B2; /* blueish */<br>
+                                                height: 150px;<br>
+                                                width: 150px;<br>
+                                                margin: 10px;<br>
+                                                float: left;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                clear: both;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="positioning_elements">
+            Positioning Elements
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText17()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text17">
+                        <tr>
+                            <td>
+                                In addition to floating elements, you can position them using various options.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText18()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text18">
+                        <tr>
+                            <td>
+                                The default positioning for elements is referred to as
+                                <b>
+                                    static
+                                </b>
+                                . This just means that the element will be rendered in order with the normal flow of the document.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText19()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text19">
+                        <tr>
+                            <td>
+                                Elements can have the position attribute set to something other than static. In these cases, a few other properties become applicable;
+                                <b>
+                                    top
+                                </b>
+                                ,
+                                <b>
+                                    left
+                                </b>
+                                ,
+                                <b>
+                                    bottom
+                                </b>
+                                , and
+                                <b>
+                                    right
+                                </b>
+                                .
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="top_left_bottom_right" class="subTitle">
+            Top / Left / Bottom / Right
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText20()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text20">
+                        <tr>
+                            <td>
+                                The top, left, bottom, and right properties can be assigned values to describe how far away from the corresponding position the box for the target element will be displayed.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText21()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text21">
+                        <tr>
+                            <td>
+                                For the positioning demonstration, we will use the code template below:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t2" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="relative_positioning" class="subTitle">
+            Relative Positioning
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText22()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text22">
+                        <tr>
+                            <td>
+                                With Relative Positioning, the element will move a given distance from it's static placements.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                position: relative;<br>
+                                                top: 1em;<br>
+                                                right: 1em;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="Absolute_positioning" class="subTitle">
+            Absolute Positioning
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText23()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text23">
+                        <tr>
+                            <td>
+                                Absolute Positioning has two meanings depending on context. If the containing element has relative positioning or fixed positioning set, the child element using absolute positioning will be positioned in relation to the
+                                containers edge. However, if the containing element is not using position setting, the child element using absolute positioning will be positioned in relation to the web page's edge.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText24()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text24">
+                        <tr>
+                            <td>
+                                With Absolute Positioning, You can specify the distance from the elements container.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                position: absolute;<br>
+                                                top: 10px;<br>
+                                                right: 10px;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3 id="fixed_positioning" class="subTitle">
+            Fixed Positioning
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText25()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text25">
+                        <tr>
+                            <td>
+                                Have you ever seen page elements that do not move even when the page is scrolled? These elements have
+                                <i>
+                                    position:fixed
+                                </i>
+                                applied, which causes them to be positioned relative to the browser window.
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                position: fixed;<br>
+                                                top: 1em;<br>
+                                                right: 1em;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="layout_properties">
+            Helpful Layout Properties
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText26()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text26">
+                        <tr>
+                            <td>
+                                Now we will talk about some other properties that are helpful in laying out web pages.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            The
+            <b>
+                Display
+            </b>
+            attribute.
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText27()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text27">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    display
+                                </b>
+                                attribute has options like
+                                <i>
+                                    inline
+                                </i>
+                                and
+                                <i>
+                                    inline-block
+                                </i>
+                                that can help control the layout of block-level elements that usually take up multiple lines.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText28()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text28">
+                        <tr>
+                            <td>
+                                Compare these options:
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t3" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            The
+            <b>
+                line-height
+            </b>
+            attribute.
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText29()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text29">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    line-height
+                                </b>
+                                property specifies the height of a line.
+                                <br/>
+                                <b>
+                                    Note:
+                                </b>
+                                Negative values are not allowed.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText30()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text30">
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t4" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            The
+            <b>
+                z-index
+            </b>
+            attribute.
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText31()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text31">
+                        <tr>
+                            <td>
+                                The z-index property specifies the stack order of an element.
+                                <br/>
+                                An element with greater stack order is always in front of an element with a lower stack order.
+                                <br/>
+                                <b>
+                                    Note:
+                                </b>
+                                z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky).
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText32()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text32">
+                        <tr>
+                            <td>
+                                Demo:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t5" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            The
+            <b>
+                calc()
+            </b>
+            function.
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText33()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text33">
+                        <tr>
+                            <td>
+                                The
+                                <b>
+                                    calc()
+                                </b>
+                                function performs a calculation to be used as the property value.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText34()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text34">
+                        <tr>
+                            <td>
+                                Demo:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t6" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h3>
+            CSS
+            <b>
+                custom properties
+            </b>
+            and the
+            <b>
+                var()
+            </b>
+            function
+        </h3>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText35()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text35">
+                        <tr>
+                            <td>
+                                CSS allows you to create custom properties which you can evaluate using the var() function.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText36()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text36">
+                        <tr>
+                            <td>
+                                Demo:
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t7" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="review">
+            Review
+        </h2>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText37()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text37">
+                        <tr>
+                            <td>
+                                What does float allow us to do?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText38()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text38">
+                        <tr>
+                            <td>
+                                CSS
+                                <b>
+                                    <i>
+                                        float
+                                    </i>
+                                </b>
+                                provides the ability to have an element break free from the normal document flow and shift to the left or right.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText39()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text39">
+                        <tr>
+                            <td>
+                                Does floating an element affect other elements in the container?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText40()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text40">
+                        <tr>
+                            <td>
+                                Yes. Once shifted, text and other inline elements can flow around it.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText41()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text41">
+                        <tr>
+                            <td>
+                                What controls the amount an element can float?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText42()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text42">
+                        <tr>
+                            <td>
+                                The amount an element can float will be determined by the size of its container and also by other floated elements in the container
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText43()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text43">
+                        <tr>
+                            <td>
+                                What properties become active when the position is set to something other than static?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText44()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text44">
+                        <tr>
+                            <td>
+                                top , left , bottom , and right
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText45()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text45">
+                        <tr>
+                            <td>
+                                List three position settings.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText46()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text46">
+                        <tr>
+                            <td>
+                                Relative, Absolute, and Fixed
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText47()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text47">
+                        <tr>
+                            <td>
+                                What is
+                                <b>
+                                    Relative
+                                </b>
+                                position relative to?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText48()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text48">
+                        <tr>
+                            <td>
+                                The elements static position.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText49()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text49">
+                        <tr>
+                            <td>
+                                When an element uses absolute positioning, and the containing element is using relative positioning, what does the child element position in relation to?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText50()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text50">
+                        <tr>
+                            <td>
+                                The containing element's edge.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText51()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text51">
+                        <tr>
+                            <td>
+                                What is
+                                <b>
+                                    Fixed
+                                </b>
+                                position a fixed distance from?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText52()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text52">
+                        <tr>
+                            <td>
+                                The browsers edge.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText53()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text53">
+                        <tr>
+                            <td>
+                                How can you get a block-level element to display inline?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText54()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text54">
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                display: inline;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                display: inline-block;<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText55()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text55">
+                        <tr>
+                            <td>
+                                Which attribute can change the height of a line?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText56()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text56">
+                        <tr>
+                            <td>
+                                line-height
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText57()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text57">
+                        <tr>
+                            <td>
+                                When elements positions cause them to stack on top of each other, which attribute specifies the stack order of the elements?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText58()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text58">
+                        <tr>
+                            <td>
+                                z-index
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText59()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text59">
+                        <tr>
+                            <td>
+                                What function can help you calculate the necessary size of an element?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText60()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text60">
+                        <tr>
+                            <td>
+                                calc()
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText61()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text61">
+                        <tr>
+                            <td>
+                                What function returns the value of a custom property?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText62()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text62">
+                        <tr>
+                            <td>
+                                var()
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <a Target="blank" href="https://java.codeup.com/html-css/css-i/positioning/#exercises" class="btn btn-info">
+            Exercises
+        </a>
+    </div>
+
+</body>
+    <script src="resource/js/Css1_04Positioning.js"></script>
+    <script src="resource/js/General.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+</html>

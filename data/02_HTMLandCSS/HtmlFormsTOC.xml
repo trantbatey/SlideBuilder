@@ -23,11 +23,5 @@
     <li name="Html04Forms#labels" title="Labels"></li>
     <li name="Html04Forms#review" title="HTML Forms Review"></li>
     <ali url="https://java.codeup.com/html-css/forms/#exercises" label="HTML Forms Exercises"/>
-    <hr/>
-    <li name="Html01Overview" title="HTML and CSS Overview"></li>
-    <li name="Html04Forms" title="Introduction to HTML"></li>
-    <li name="Html04Forms" title="HTML Elements"></li>
-    <li name="Html04Forms" title="HTML Forms"></li>
-    <li name="CSS01/Css1_01Introduction" title="CSS I"></li>
-    <li name="CSS02/Css02Overview" title="CSS II"></li>
+    <include path="" filename="HtmlTOC.xml"/>
 </file>

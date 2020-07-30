@@ -1,0 +1,16 @@
+<file name="CSS02/Css2_01MediaQueriesTOC" title="Media Queries" home="Css2_01MediaQueries">
+    <li name="Css2_01MediaQueries" title="Overview"></li>
+    <li name="Css2_01MediaQueries#media_queries" title="Media Queries"></li>
+    <li name="Css2_01MediaQueries#responsive_web_design" title="Responsive Web Design"></li>
+    <li name="Css2_01MediaQueries#viewport" title="Viewport"></li>
+    <li name="Css2_01MediaQueries#mini_lab_01" title="Mini Lab 01"></li>
+    <li name="Css2_01MediaQueries#media_rule" title="The @media rule"></li>
+    <li name="Css2_01MediaQueries#breakpoints" title="Breakpoints"></li>
+    <li name="Css2_01MediaQueries#mobile_first_approach" title="Mobile First Approach"></li>
+    <li name="Css2_01MediaQueries#mini_lab_02" title="Mini Lab 02"></li>
+    <li name="Css2_01MediaQueries#review" title="Review"></li>
+    <ali url="https://java.codeup.com/html-css/css-ii/media-queries/#further-reading"
+         label="Further Reading and Exercises"/>
+    <include path="" filename="CSS02/Css2TOC.xml"/>
+    <include path="../" filename="HtmlTOC.xml"/>
+</file>

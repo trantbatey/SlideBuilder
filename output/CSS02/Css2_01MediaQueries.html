@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="resource/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/css/general.css">
+</head>
+<body>
+
+    <script src="Css2_01MediaQueriesTOC.js"></script>
+    <div class="container main">
+        <h1 class="mainTitle">Media Queries</h1>
+        <img src="resource/images/HTMLandCSS02.jpg" alt="First HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS02.jpg" alt="Second HTML CSS Image" class="md-img"/>
+        <img src="resource/images/HTMLandCSS03.jpg" alt="Third HTML CSS Image" class="md-img"/>
+        <br/>
+        <br/>
+        <h1 style="font-family: Times; font-size: 1.3em">
+            CSS II
+        </h1>
+        In this section, we will be covering how to use CSS to create responsive layouts. We will cover how to do this with vanilla CSS, then talk about the Bootstrap Framework.
+        <br/>
+        <br/>
+        As we go through this section, the following definitions will be useful:
+        <br/>
+        <ul>
+            <li>
+                <b>
+                    fixed layout:
+                </b>
+                the layout is specified in hardcoded pixel values
+            </li>
+            <li>
+                <b>
+                    fluid layout:
+                </b>
+                the layout is specified in percentages, but does not change based on screen size
+            </li>
+            <li>
+                <b>
+                    responsive layout:
+                </b>
+                the layout uses media queries to change based on screen size
+            </li>
+        </ul>
+        <br/>
+        <h1 id="media_queries">
+            Media Queries
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText01()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text01">
+                        <tr>
+                            <td>
+                                What are Media Queries?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText02()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text02">
+                        <tr>
+                            <td>
+                                Media queries are a feature of
+                                <b>
+                                    CSS3
+                                </b>
+                                allowing content rendering to adapt to different conditions such as screen resolution.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText03()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text03">
+                        <tr>
+                            <td>
+                                What is CSS3?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText04()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text04">
+                        <tr>
+                            <td>
+                                CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or
+                                animations, as well as new layouts like multi-columns, flexible box or grid layouts.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText05()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text05">
+                        <tr>
+                            <td>
+                                What are Media Queries primarily used to do?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText06()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text06">
+                        <tr>
+                            <td>
+                                Media Queries are primarily used to accomplish
+                                <b>
+                                    Responsive Web Design
+                                </b>
+                                .
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h1 id="responsive_web_design">
+            Responsive Web Design
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText07()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text07">
+                        <tr>
+                            <td>
+                                What is Responsive Web Design?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText08()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text08">
+                        <tr>
+                            <td>
+                                Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText09()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text09">
+                        <tr>
+                            <td>
+                                More Information and Demo:
+                                <br/>
+                                Responsive Web Design - Media Queries
+                                <br/>
+                                <a Target="blank" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">
+                                    https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+                                </a>
+                                <br/>
+                                Take note of the meta tag named
+                                <b>
+                                    "viewport"
+                                </b>
+                                !
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h1 id="viewport">
+            Viewport
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText10()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text10">
+                        <tr>
+                            <td>
+                                What is The Viewport?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText11()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text11">
+                        <tr>
+                            <td>
+                                The viewport is the user's visible area of a web page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText12()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text12">
+                        <tr>
+                            <td>
+                                HTML5 introduced a method to let web designers take control over the viewport, through the &lt;meta> tag.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText13()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text13">
+                        <tr>
+                            <td>
+                                <b>
+                                    EXAMPLE:
+                                </b>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText14()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text14">
+                        <tr>
+                            <td>
+                                Where is the viewport meta tag placed?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText15()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text15">
+                        <tr>
+                            <td>
+                                In the html file, in the &lt;head> section.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText16()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text16">
+                        <tr>
+                            <td>
+                                What are the viewport options?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText17()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text17">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+                                    </li>
+                                    <li>
+                                        The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText18()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text18">
+                        <tr>
+                            <td>
+                                For other options:
+                                <a Target="blank" href="https://responsivedesign.is/develop/responsive-html/viewport-meta-element/">
+                                    https://responsivedesign.is/develop/responsive-html/viewport-meta-element/
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h2 id="mini_lab_01">
+            MINI LAB 01
+        </h2>
+        <ul>
+            <li>
+                What are Media Queries?
+            </li>
+            <li>
+                What is CSS3?
+            </li>
+            <li>
+                What are Media Queries primarily used to do?
+            </li>
+            <li>
+                What is Responsive Web Design?
+            </li>
+            <li>
+                What is The Viewport?
+            </li>
+            <li>
+                Where is the viewport meta tag placed?
+            </li>
+            <li>
+                Which viewport options will we be using?
+            </li>
+        </ul>
+        <br/>
+        <h1 id="media_rule">
+            The @media rule
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText19()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text19">
+                        <tr>
+                            <td>
+                                Once the viewport is set, how is the Media Query invoked?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText20()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text20">
+                        <tr>
+                            <td>
+                                Media queries are invoke by the
+                                <b>
+                                    @media
+                                </b>
+                                rule in the CSS file.
+                                <br/>
+                                The @media rule is used in media queries to apply different styles for different media types/devices.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText21()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text21">
+                        <tr>
+                            <td>
+                                <b>
+                                    EXAMPLE:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t1" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText22()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text22">
+                        <tr>
+                            <td>
+                                <b>
+                                    CSS Syntax:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t2" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText23()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text23">
+                        <tr>
+                            <td>
+                                What are the options for mediatypes and mediafeatures?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText24()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text24">
+                        <tr>
+                            <td>
+                                More information on mediatypes and mediafeatures:
+                                <a Target="blank" href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">
+                                    https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h1 id="breakpoints">
+            Breakpoints
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText25()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text25">
+                        <tr>
+                            <td>
+                                What are Breakpoints?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText26()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text26">
+                        <tr>
+                            <td>
+                                CSS breakpoints are points where the website content responds according to the device width, allowing you to show the best possible layout to the user. They are also called media query breakpoints, as they are
+                                used with media query.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText27()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text27">
+                        <tr>
+                            <td>
+                                <img src="resource/images/css-breakpoints-layouts-01.jpg" alt="Third HTML CSS Image" class="lg-img"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText28()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text28">
+                        <tr>
+                            <td>
+                                They are called breakpoints because traditionally major layout elements are broken and repositioned at these widths. Although this did not always happen, the name stuck.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText29()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text29">
+                        <tr>
+                            <td>
+                                The breakpoints are set by the mediafeature in the @media rule.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText30()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text30">
+                        <tr>
+                            <td>
+                                <b>
+                                    EXAMPLES:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                @media screen and (min-width:576px) { /* ... */ }<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                In this rule, a breakpoint is set at the width of 576px. Any time the screen width drops below 576px, this rule would no longer apply.
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="null" class="horizontal-scroll">
+                                                @media screen and (min-width:960px) and (max-width:1200px) { /* ... */ }<br>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                This rule applies to any width greater than 960px and less than 1200px.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText31()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text31">
+                        <tr>
+                            <td>
+                                <b>
+                                    Some common breakpoints:
+                                </b>
+                                <br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span id="t3" class="horizontal-scroll">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <h1 id="mobile_first_approach">
+            Mobile First Approach
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText32()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text32">
+                        <tr>
+                            <td>
+                                What is Mobile First Approach?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText33()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text33">
+                        <tr>
+                            <td>
+                                A mobile first approach to writing CSS means writing your default styling for a mobile device, then using media queries to change the layout based on larger devices. This approach works well because you will
+                                always support mobile and can build up from there. Working larger first usually introduces complications trying to break a design down to fit.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <h2 id="mini_lab_02">
+            MINI LAB 02
+        </h2>
+        <ul>
+            <li>
+                What are the four mediatypes?
+            </li>
+            <li>
+                What are two mediafeatures?
+            </li>
+            <li>
+                What are Breakpoint?
+            </li>
+            <li>
+                What is Mobile First Approach?
+            </li>
+            <li>
+                Style the html code below so that the narrow div displays at page widths 600px or less and the wide div displays at page widths 601px and above.
+                <br/>
+                <table>
+                    <tr>
+                        <td>
+                            <span id="t4" class="horizontal-scroll">
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+        <br/>
+        <h1 id="review">
+            Review
+        </h1>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText34()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text34">
+                        <tr>
+                            <td>
+                                What are Media Queries?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText35()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text35">
+                        <tr>
+                            <td>
+                                Media queries are a feature of
+                                <b>
+                                    CSS3
+                                </b>
+                                allowing content rendering to adapt to different conditions such as screen resolution.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText36()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text36">
+                        <tr>
+                            <td>
+                                What is CSS3?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText37()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text37">
+                        <tr>
+                            <td>
+                                CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText38()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text38">
+                        <tr>
+                            <td>
+                                What are Media Queries primarily used to do?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText39()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text39">
+                        <tr>
+                            <td>
+                                Media Queries are primarily used to accomplish Responsive Web Design.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText40()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text40">
+                        <tr>
+                            <td>
+                                What is Responsive Web Design?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText41()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text41">
+                        <tr>
+                            <td>
+                                Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText42()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text42">
+                        <tr>
+                            <td>
+                                What is The Viewport?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText43()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text43">
+                        <tr>
+                            <td>
+                                The viewport is the user's visible area of a web page.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText44()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text44">
+                        <tr>
+                            <td>
+                                Where is the viewport meta tag placed?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText45()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text45">
+                        <tr>
+                            <td>
+                                In the html file, in the &lt;head> section.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText46()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text46">
+                        <tr>
+                            <td>
+                                Which viewport options will we be using?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText47()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text47">
+                        <tr>
+                            <td>
+                                width=device-width and initial-scale=1.0
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText48()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text48">
+                        <tr>
+                            <td>
+                                What are the four mediatypes?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText49()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text49">
+                        <tr>
+                            <td>
+                                all, print, screen, speech
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText50()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text50">
+                        <tr>
+                            <td>
+                                What are two mediafeatures?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText51()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text51">
+                        <tr>
+                            <td>
+                                min-width, max-width
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText52()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text52">
+                        <tr>
+                            <td>
+                                What are Breakpoints?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText53()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text53">
+                        <tr>
+                            <td>
+                                CSS breakpoints are points where the website content responds according to the device width, allowing you to show the best possible layout to the user.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star null">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText54()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text54">
+                        <tr>
+                            <td>
+                                Why is the Mobile First Approach a good choice?
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="slide_table">
+            <tr>
+                <td class="bullet-star indent-star">
+                    <button type="button" class="btn btn-info"
+                                onclick="showText55()">
+                        <span class="glyphicon glyphicon-next"></span>
+                        <strong class="star">*</strong>
+                    </button>
+                </td>
+                <td class="bullet-subpoint">
+                    <table id="text55">
+                        <tr>
+                            <td>
+                                Because scaling down a larger design introduces complications trying to break a design down to fit.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <a Target="blank" href="https://java.codeup.com/html-css/css-i/selectors-and-properties/#further-reading" class="btn btn-info">
+            Further Reading and Exercises
+        </a>
+    </div>
+
+</body>
+    <script src="resource/js/Css2_01MediaQueries.js"></script>
+    <script src="resource/js/General.js"></script>
+    <script src="resource/js/bootstrap.min.js"></script>
+</html>

@@ -766,12 +766,12 @@
                                     <tr>
                                         <td>
                                             <span id="null" class="horizontal-scroll">
-                                                @media screen and (min-width:576px) { /* ... */ }<br>
+                                                @media screen and (max-width:576px) { /* ... */ }<br>
                                             </span>
                                         </td>
                                     </tr>
                                 </table>
-                                In this rule, a breakpoint is set at the width of 576px. Any time the screen width drops below 576px, this rule would no longer apply.
+                                In this rule, a breakpoint is set at the width of 576px. Any time the screen width goes above 576px, this rule would no longer apply.
                                 <table>
                                     <tr>
                                         <td>
@@ -781,7 +781,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                                This rule applies to any width greater than 960px and less than 1200px.
+                                This rule applies to any width greater than 960px and less than or equal to 1200px.
                             </td>
                         </tr>
                     </table>

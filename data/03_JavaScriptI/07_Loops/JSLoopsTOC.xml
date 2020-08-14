@@ -1,0 +1,13 @@
+<file name="JSLoopsTOC" title="JavaScript Loops TOC" home="JavaScriptLoops">
+    <li name="JavaScriptLoops" title="JavaScript Loops"></li>
+    <nav>
+        <li name="while" title="While Loops"></li>
+        <li name="do" title="Do While"></li>
+        <li name="for" title="For Loop"></li>
+        <li name="break_continue" title="Break and Continue"></li>
+        <li name="break" title="Break"></li>
+        <li name="continue" title="Continue"></li>
+        <li name="review" title="For-Each Loop"></li>
+    </nav>
+    <ali url="https://java.codeup.com/javascript-i/arrays/#exercises" label="Loop Exercises"/>
+</file>

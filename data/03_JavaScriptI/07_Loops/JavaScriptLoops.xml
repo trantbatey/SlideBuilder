@@ -1,0 +1,258 @@
+<file name="JavaScriptLoops" title="JavaScript Loops" toc="JSLoopsTOC">
+    <img class="md-img" src="resource/images/while_loop.png" alt="First Array Image"/>
+    <img class="md-img" src="resource/images/do_while_loop.jpeg" alt="Second Array Image"/>
+    <img class="md-img" src="resource/images/for_loop.png" alt="Third Array Image"/>
+    <br/><br/>
+
+    <h2>JavaScript Loops</h2>
+    <br/>
+
+    In this lesson, we will look at different language constructs that allow us to execute code repeatedly, that is,
+    zero or more times.
+    <br/><br/>
+
+    <h2 id="while">While Loops</h2>
+    <bullet>
+        A <b>while</b> loop is a basic looping construct that will execute a code block as long as a certain condition
+        is true.
+    </bullet>
+    <bullet>
+        <b>Syntax:</b> <br/>
+        <text>
+            while (/*condition*/) {
+            |||+// body
+            }
+        </text>
+        <img class="md-img" src="resource/images/while.png" alt="JS While Loop diagram"/>
+    </bullet>
+    <bullet>
+        <b>Example:</b> <br/>
+        <text>
+            var i = 0;
+            while (i |||lt 10) {
+            console.log('while loop iteration #' + i);
+            |||+i++;
+            }
+        </text>
+    </bullet>
+    <bullet>
+        <b>Don't let this happen to you:</b> <br/>
+        <text>
+            var i = 10;
+            while (i |||lt 10) {
+            console.log('while loop iteration #' + i);
+            |||+i++;
+            }
+        </text>
+    </bullet>
+    <bullet>
+        In the second example, the condition i |||lt 10 is never true, so the code in the while loop never gets
+        executed. Well, what if we wanted the code in the while loop to get executed at least one time regardless of
+        whether the condition is met? That brings us to the do-while loop.
+    </bullet>
+
+
+    <h2 id="do">Do While</h2>
+    <bullet>
+        A <b>do-while</b> loop is only different from a <b>while</b> in that the condition is evaluated at the
+        end of the loop instead of the beginning.
+    </bullet>
+    <bullet>
+        <b>Syntax:</b> <br/>
+        <text>
+            do {
+            |||+//body
+            } while(/*condition*/);
+        </text>
+        <img class="md-img" src="resource/images/do_while.png" alt="JS do While Loop diagram"/>
+    </bullet>
+    <bullet>
+        <b>Example:</b> <br/>
+        <text>
+            var i = 10;
+            do {
+            |||+console.log('while loop iteration #' + i);
+            |||+i++;
+            } while (i |||lt 10);
+        </text>
+    </bullet>
+    <bullet>
+        In this example, the code in the <b>do</b> block will get executed once before the <b>while</b> condition is
+        checked. The condition is then checked to decide if the loop should continue. For the above example,
+        the <b>do</b> block will only get executed once.
+    </bullet>
+
+
+    <h2 id="for">For Loop</h2>
+    <bullet>
+        A <b>for</b> loop is a robust looping mechanism available in many programming languages. JavaScript's
+        implementation syntax matches that of many other languages.
+    </bullet>
+
+    <bullet>
+        <b>Syntax:</b> <br/>
+        <text>
+            for (/*initialization*/; /*condition*/; /*increment*/) {
+            |||+// body
+            }
+        </text>
+        <img class="md-img" src="resource/images/for-loop02.png" alt="JS for Loop diagram"/>
+    </bullet>
+    <bullet>
+        <b>Example:</b> <br/>
+        <text>
+            for (var i = 0; i |||lt 10; i++) {
+            |||+console.log('for loop iteration #' + i);
+            }
+        </text>
+    </bullet>
+    <bullet>
+        A <b>for</b> loop takes 3 expressions separated by semicolons.
+    </bullet>
+    <bullet>
+        The first expression is called once before the first loop iteration starts and allows for initialization of
+        loop variables. In the example, a variable <b>i</b> is created with an initial value of <b>0</b>.
+    </bullet>
+    <bullet>
+        The second expression is a condition that will decide if the loop should start/continue. It is called before
+        each loop iteration. In the example, the loop will run as long as <b>i</b> is less than the number <b>10</b>.
+    </bullet>
+    <bullet>
+        The third expression allows for code that should be executed at the end of each loop iteration. Most often,
+        the incrementing of loop counters takes place here.
+    </bullet>
+    <bullet>
+        The first and third expressions in the for loop are optional. The same example with the first and third loop
+        expressions omitted would look like this: <br/>
+        <text>
+            var i = 0;
+            // DONT DO THIS
+            for (; i |||lt 10;) {
+            |||+console.log('for loop iteration #' + i);
+            |||+i++;
+            }
+        </text>
+    </bullet>
+    <bullet>
+        Although uncommonly used, it should also be noted that additional initializations or increments can be
+        provided as part of the first or third parameters by using a comma to separate them. <br/>
+        <text>
+            for (var i = 0, j = 9; i |||lt 10; i++, j--) {
+            |||+console.log('for loop iteration #' + i + ', j = ' + j);
+            }
+        </text>
+    </bullet>
+    <bullet>
+        In general, we will use for loops when we know ahead of time how many times the loop needs to run, and while
+        or do-while loops when we cannot know how many times the loop needs to run.
+    </bullet>
+
+
+    <h2 id="break_continue">Break and Continue</h2>
+    <bullet>
+        There are two special keywords that can be used as part of loops. These are <b>break</b> and <b>continue</b>.
+        We already used break as part of a switch statement, but let's see how it works with a loop.
+    </bullet>
+
+
+    <h2 id="break">Break</h2>
+    <bullet>
+        Sometimes, a condition independent of the loop condition will occur that gives reason to exit the loop.
+        The <b>break</b> keyword allows you to exit the loop at any time. Code execution in the loop will immediately
+        be halted and the loop will not continue.
+    </bullet>
+    <bullet>
+        <b>Example:</b> <br/>
+        <text>
+            var numberToStopAt = 5; <br/>
+
+            for (var i = 1; i |||lt 100; i++) { <br/>
+
+            |||+console.log('Loop counter is: ' + i); <br/>
+
+                if (i === numberToStopAt) {
+            |||+|||+console.log('We have reached the stopping point: break!');
+            |||+|||+// use the break keyword to exit from the while loop
+            |||+|||+break;
+            |||+|||+// nothing after the break will get processed
+            |||+|||+console.log('You will never see this line.');
+            |||+}
+            }
+        </text>
+    </bullet>
+    <bullet>
+        Although a <b>for</b> loop was used as an example, break works the same way with a while loop.
+    </bullet>
+
+
+    <h2 id="continue">Continue</h2>
+    <bullet>
+        Besides breaking out of a loop, sometimes conditions occur that give reason to skip to the next loop iteration
+        without completing the entire loop code block. The <b>continue</b> keyword provides this functionality.
+    </bullet>
+    <bullet>
+        <b>Example:</b> <br/>
+        <text>
+            'use strict';<br/>
+
+            for (var i = 1; i |||lt 100; i++) { <br/>
+
+            |||+if (i % 2 !== 0) {
+            |||+|||+// number isn't even
+            |||+|||+// odd numbers aren't as cool
+            |||+|||+// skip the rest of the loop and continue with the next iteration
+            |||+|||+continue;
+            |||+} <br/>
+
+            |||+console.log('Here is a lovely even number: ' + i);
+            }
+        </text>
+    </bullet>
+    <bullet>
+        <b>Tricky Example:</b> <br/>
+        <text>
+            var i = 0;
+            // REALLY DONT DO THIS!
+            for (; i |||lt 10;) {
+            |||+console.log('for loop iteration #' + i);
+            |||+continue;
+            |||+i++;
+            }
+        </text>
+    </bullet>
+
+    <h1 id="review">Review</h1>
+
+    <bullet>What is a While Loop?</bullet>
+    <bullet indent="indent-star">
+        A basic looping construct that will execute a code block as long as a certain condition is true.
+    </bullet>
+
+    <bullet>What is a Do While Loop?</bullet>
+    <bullet indent="indent-star">
+        A <b>do-while</b> loop is only different from a while in that the condition is evaluated at the end of the
+        loop instead of the beginning. So a <b>do-while</b> loop will always execute the body of the loop at least
+        once.
+    </bullet>
+
+    <bullet>What is a For Loop?</bullet>
+    <bullet indent="indent-star">
+        A for loop is a loop that executes for a pre-set number of times. It can be written to behave differently,
+        but it's core purpose is to execute a set number of times.
+    </bullet>
+
+    <bullet>What is the <b>break</b> statement used to do?</bullet>
+    <bullet indent="indent-star">
+        The <b>break</b> keyword allows you to exit the loop at any time.
+    </bullet>
+
+    <bullet>What is a <b>continue</b> statement used to do?</bullet>
+    <bullet indent="indent-star">
+        The <b>continue</b> keyword allows you to skip to the next loop iteration without completing the entire
+        loop code block.
+    </bullet>
+
+
+    <a href="https://java.codeup.com/javascript-i/loops/#exercises"
+       target="blank" class="btn btn-info" >Exercise</a>
+</file>

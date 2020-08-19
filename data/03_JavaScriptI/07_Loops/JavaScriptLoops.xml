@@ -30,7 +30,7 @@
         <text>
             var i = 0;
             while (i |||lt 10) {
-            console.log('while loop iteration #' + i);
+            |||+console.log('while loop iteration #' + i);
             |||+i++;
             }
         </text>
@@ -40,7 +40,7 @@
         <text>
             var i = 10;
             while (i |||lt 10) {
-            console.log('while loop iteration #' + i);
+            |||+console.log('while loop iteration #' + i);
             |||+i++;
             }
         </text>
@@ -49,6 +49,9 @@
         In the second example, the condition i |||lt 10 is never true, so the code in the while loop never gets
         executed. Well, what if we wanted the code in the while loop to get executed at least one time regardless of
         whether the condition is met? That brings us to the do-while loop.
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a While-Loop to count from 1 to 20 by 2's.
     </bullet>
 
 
@@ -80,6 +83,9 @@
         In this example, the code in the <b>do</b> block will get executed once before the <b>while</b> condition is
         checked. The condition is then checked to decide if the loop should continue. For the above example,
         the <b>do</b> block will only get executed once.
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a Do-While loop to count from 1 to 10.
     </bullet>
 
 
@@ -146,6 +152,40 @@
         In general, we will use for loops when we know ahead of time how many times the loop needs to run, and while
         or do-while loops when we cannot know how many times the loop needs to run.
     </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a For-While loop to count down from 10 to 1.
+    </bullet>
+    <bullet>
+        <b>Nested For Loops</b> <br/>
+        <text>
+            for (var i = 0; i |||lt 10; i++) {
+            |||+console.log('loop iteration #' + i + ' of i');
+            |||+for (var j = 0; j |||lt 5; j++) {
+            |||+|||+console.log('\tloop iteration #' + j + ' of j');
+            |||+}
+            }
+        </text>
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a nested for loop counting 1 to 5 by 10 to 20.
+    </bullet>
+    <bullet>
+        <b>Returning output from a for loop</b> <br/>
+        <text>
+            let output = ''
+            for (var i = 0; i |||lt 10; i++) {
+            |||+output += 'loop iteration #' + i + ' of i\n';
+            |||+for (var j = 0; j |||lt 5; j++) {
+            |||+|||+output += '\tloop iteration #' + j + ' of j\n';
+            |||+}
+            }
+            console.log(output)
+        </text>
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Make a copy of your previous nested loop, modify the copy to use an output string
+        rather that a console.log inside the loops.
+    </bullet>
 
 
     <h2 id="break_continue">Break and Continue</h2>
@@ -170,7 +210,7 @@
 
             |||+console.log('Loop counter is: ' + i); <br/>
 
-                if (i === numberToStopAt) {
+            |||+if (i === numberToStopAt) {
             |||+|||+console.log('We have reached the stopping point: break!');
             |||+|||+// use the break keyword to exit from the while loop
             |||+|||+break;
@@ -182,6 +222,9 @@
     </bullet>
     <bullet>
         Although a <b>for</b> loop was used as an example, break works the same way with a while loop.
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a For-Loop that counts form 1 to 10 and breaks out at 7.
     </bullet>
 
 
@@ -219,6 +262,10 @@
             |||+i++;
             }
         </text>
+    </bullet>
+    <bullet>
+        <b>MINI Lab:</b> Write a for loop to count from 1 to 10. Inside the loop console.log out each number
+        except 7. If the number is 7, continue the loop, do not print 7.
     </bullet>
 
     <h1 id="review">Review</h1>

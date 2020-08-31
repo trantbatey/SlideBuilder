@@ -1,0 +1,10 @@
+<file name="JQuerySelectorsTOC" title="JQuery Selectors TOC" home="JQuerySelectors">
+    <li name="JQuerySelectors" title="JQuery Selectors"></li>
+    <li name="JQuerySelectors#id" title="ID Selector"></li>
+    <li name="JQuerySelectors#class" title="Class Selector"></li>
+    <li name="JQuerySelectors#element" title="Element Selector"></li>
+    <li name="JQuerySelectors#multiple" title="Multiple Selector"></li>
+    <li name="JQuerySelectors#all" title="The All Selector"></li>
+    <li name="JQuerySelectors#review" title="Review"></li>
+    <ali url="https://java.codeup.com/jquery/selectors/#further-reading" label="Further Reading and Exercises"/>
+</file>

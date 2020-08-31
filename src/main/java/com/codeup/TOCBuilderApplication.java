@@ -18,6 +18,6 @@ public class TOCBuilderApplication {
 
     public static void main(String[] args) {
         XMLHandler XMLHandler = new TOCHandler();
-        XMLHandler.parseXMLFile(XMLHandler, "data/03_JavaScriptI/10_BomDom/BomDomTOC.xml");
+        XMLHandler.parseXMLFile(XMLHandler, "data/04_JQuery/02_Selectors/JQuerySelectorsTOC.xml");
     }
 }

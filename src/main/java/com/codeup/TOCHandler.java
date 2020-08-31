@@ -106,7 +106,7 @@ public class TOCHandler extends XMLHandler {
             ((TOCHandler) XMLHandler).setIncludePath(includePath);
             ((TOCHandler) XMLHandler).setIncludeMode(true);
             XMLHandler.indention = indention;
-            XMLHandler.parseXMLFile(XMLHandler, "data/02_HTMLandCSS/" + includeFilename);
+            XMLHandler.parseXMLFile(XMLHandler, "data/04_JQuery/02_Selectors/" + includeFilename);
         } else {
             openSimpleElement(qName, attributes);
         }

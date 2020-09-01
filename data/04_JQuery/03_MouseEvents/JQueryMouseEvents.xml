@@ -1,0 +1,210 @@
+<file name="JQueryMouseEvents" title="JQuery Mouse Events" toc="JQueryMouseEventsTOC">
+    <img class="md-img" src="resource/images/JQuery01.png" alt="First J Query Image"/>
+    <img class="md-img" src="resource/images/JQuery02.jpeg" alt="Second J Query Image"/>
+    <img class="md-img" src="resource/images/JQuery03.jpeg" alt="Third J Query Image"/>
+    <br/><br/>
+    <h1 style="margin-left: 2em;">Mouse Events</h1>
+    jQuery makes working with different types of events across browsers very simple. We can act on events
+    like a user clicking a mouse, hovering over an element, or bringing areas in and out of focus.
+
+    <bullet>
+        In this lesson we will cover the different types of mouse events, listed below, as well as how to use
+        jQuery to listen for those events. <br/>
+        <ul>
+            <li>
+                <bullet>
+                    <b>.click()</b>: Bind an event handler to the "click" JavaScript event or trigger that event
+                    on an element.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.dblclick()</b>: Bind an event handler to the "dblclick" JavaScript event or trigger that
+                    event on an element.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.hover()</b>: Bind two handlers to the matched elements, to be executed when the mouse
+                    pointer enters and leaves the elements.
+                </bullet>
+            </li>
+        </ul>
+    </bullet>
+
+    <div id="handlers"></div>
+    <h2 class="subTitle">Event Handler Functions</h2>
+
+    <bullet>
+        It is worth reviewing event handler functions here before we discuss how to attach them with jQuery.
+        Recall that: <br/>
+        <ul>
+            <li>
+                <bullet>
+                    an event listener, or event handler function is a callback function that is called
+                    when an event happens
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    the handler function is passed the event object when it is called
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    the event object contains details about the event that occurred, as well as methods
+                    for modifying the event, for example, <hl>preventDefault</hl>
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    the event object can be omitted from the function definition if it is not used
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    we can attach an anonymous function or a named function as a callback function
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    any anonymous function can be refactored to be a named function
+                </bullet>
+            </li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        Expanding further on the last two points, the following code blocks are functionally equivalent: <br/>
+        <text tid="t1"></text>
+        <text tid="t2"></text>
+    </bullet>
+
+    <div id="click"></div>
+    <h2>.click()</h2>
+
+    <bullet>
+        The syntax for using <hl>.click()</hl> is: <br/>
+        <text>$( selector ).click( handler )</text>
+    </bullet>
+
+    <bullet>
+        Let's take a look at adding event listeners using jQuery. First we will start with some basic HTML: <br/>
+        <text tid="t3"></text>
+    </bullet>
+
+    <bullet>
+        Then we will use jQuery to attach an event listener that runs when our h1 with the id of codeup is clicked: <br/>
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b> Clicking on the h1 will now show an alert box.
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Copy the code from the demo.
+            Add a paragraph with id 'p1' that says, "It's good to see you."
+            Add click event method using the id selector to change the paragraph background color to yellow.
+        </ul>
+    </bullet>
+
+    <div id="dblclick"></div>
+    <h2>.dnlclick()</h2>
+
+    <bullet>
+        The usage of .dblclick() is the same as .click(), but, as the name implies, the event will be triggered
+        when the element is double clicked.
+    </bullet>
+
+    <bullet>
+        We could update our click example to use double clicks as follows: <br/>
+        <text tid="t5"></text>
+        <text tid="t6"></text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b> Clicking on the h1 will now do nothing, but double clicking will show an alert box:
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Change the previous lab to use the .cblclick() method.
+        </ul>
+    </bullet>
+
+    <div id="hover"></div>
+    <h2>.hover()</h2>
+
+    <bullet>
+        The <b>.hover</b> event handler combines two other event handlers: <b>mouseenter</b> and <b>mouseleave</b>.
+        So <b>.hover</b> will take in two different callback functions that will be called when the mouse enters
+        the element, and when the mouse leaves the element.
+    </bullet>
+
+    <bullet>
+        The syntax for using <hl>.click()</hl> is: <br/>
+        <text>$( selector ).hover( handlerIn, handlerOut)</text>
+
+        This is the same as attaching both handlers separately <br/>
+        <text>
+            $( selector ).mouseenter(handlerIn)
+            $( selector ).mouseleave(handlerOut);
+        </text>
+    </bullet>
+
+    <bullet>
+        We could use the .hover() event handler to change the background color of our h1 when the mouse is over
+        it using this code: <br/>
+        <text tid="t7"></text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b>
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Copy the code from the demo.
+            Use .hover() to change the text size.
+        </ul>
+    </bullet>
+
+    <div id="review"></div>
+    <h2>Review</h2>
+
+    <bullet>What is an event listener, or event handler?</bullet>
+    <bullet indent="indent-star">
+        an event listener, or event handler function is a callback function that is called when an event happens
+    </bullet>
+
+    <bullet>What is passed to an event listener?</bullet>
+    <bullet indent="indent-star">the event object</bullet>
+
+    <bullet>What deos the event object contain?</bullet>
+    <bullet indent="indent-star">
+        the event object contains details about the event that occurred, as well as methods for modifying the
+        event, for example, <hl>preventDefault</hl>
+    </bullet>
+
+    <bullet>Can the event object can be omitted from the function definition?</bullet>
+    <bullet indent="indent-star">
+        the event object can be omitted from the function definition if it is not used
+    </bullet>
+
+    <bullet>Does the .click() button require a button to work, or can you click on any element?</bullet>
+    <bullet indent="indent-star">You can click on any element</bullet>
+
+    <bullet>Aside from double clicking, hoe does .dblclick() differ from .click()?</bullet>
+    <bullet indent="indent-star">They work the same.</bullet>
+
+    <bullet>How is hover different from .click() and .dblclick()?</bullet>
+    <bullet indent="indent-star">.hover() has two events listeners.</bullet>
+
+    <a href="https://java.codeup.com/jquery/events/mouse-events/#further-reading" class="btn btn-info" Target="blank">
+        Further Reading and Exercises</a>
+</file>

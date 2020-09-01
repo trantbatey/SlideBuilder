@@ -18,6 +18,6 @@ public class TOCBuilderApplication {
 
     public static void main(String[] args) {
         XMLHandler XMLHandler = new TOCHandler();
-        XMLHandler.parseXMLFile(XMLHandler, "data/04_JQuery/02_Selectors/JQuerySelectorsTOC.xml");
+        XMLHandler.parseXMLFile(XMLHandler, "data/04_JQuery/04_KeyboardEvents/JQueryKeyboardEventsTOC.xml");
     }
 }

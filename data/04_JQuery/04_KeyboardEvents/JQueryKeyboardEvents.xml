@@ -1,0 +1,165 @@
+<file name="JQueryKeyboardEvents" title="JQuery Keyboard Events" toc="JQueryKeyboardEventsTOC">
+    <img class="md-img" src="resource/images/JQuery01.png" alt="First J Query Image"/>
+    <img class="md-img" src="resource/images/JQuery02.jpeg" alt="Second J Query Image"/>
+    <img class="md-img" src="resource/images/JQuery03.jpeg" alt="Third J Query Image"/>
+    <br/><br/>
+    <h1 style="margin-left: 2em;">Keyboard Events</h1>
+    jQuery events include keyboard events like a key being pressed or when a key is up or down.
+
+    <bullet>
+        In this lesson we will be learning about these jQuery methods: <br/>
+        <ul>
+            <li>
+                <bullet>
+                    <b>.keydown()</b>: Bind an event handler to the "keydown" JavaScript event or trigger that
+                    event on an element.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.keypress()</b>: Bind an event handler to the "keypress" JavaScript event or trigger that
+                    event on an element.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.keyup()</b>: Bind an event handler to the "keyup" JavaScript event or trigger that
+                    event on an element.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.on()</b>: allows us to listen for any arbitrary event.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <b>.off()</b>: removes event listeners.
+                </bullet>
+            </li>
+        </ul>
+    </bullet>
+
+    <div id="keydown"></div>
+    <h2>.keydown()</h2>
+
+    <bullet>
+        The syntax for using <hl>.keydown()</hl> is: <br/>
+        <text>$( selector ).keydown( handler )</text>
+    </bullet>
+
+    <bullet>
+        We can use the .keydown() event handler in the same way we do a click. <br/>
+        <text tid="t1"></text>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b>
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Copy the code from the demo and run it.
+        </ul>
+    </bullet>
+
+    <div id="keypress"></div>
+    <h2>.keypress()</h2>
+
+    <bullet>
+        Keypress is the same as keydown, with one small exception: modifier keys (shift, control, escape, etc)
+        being pressed will trigger the <hl>keydown</hl> event, but will not trigger <hl>keypress</hl> events.
+    </bullet>
+
+    <div id="keyup"></div>
+    <h2>.keyup()</h2>
+
+    <bullet>
+        The <hl>keyup</hl> event is very similar to the <hl>keydown</hl> event, except <hl>keyup</hl> will trigger
+        an event when a key is released.
+    </bullet>
+
+    <bullet>
+        The syntax for using <hl>.keyup()</hl> is: <br/>
+        <text>$( selector ).keyup( handler(eventObject) )</text>
+    </bullet>
+
+    <bullet>
+        Simply changing out the .keydown() method with the .keyup() method alters the behavior: <br/>
+        <text tid="t3"></text>
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b>
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Copy the code from the demo and run it.
+        </ul>
+    </bullet>
+
+    <div id="on"></div>
+    <h2>.on()</h2>
+
+    <bullet>
+        All the jQuery events we have covered so far can also be listened to using the <hl>.on()</hl> method.
+        This method takes the event listener type and a callback function.
+    </bullet>
+
+    <bullet>
+        To use a keyboard event, like keydown the syntax would be:: <br/>
+        <text>.on('keydown', function() {});</text>
+    </bullet>
+
+    <bullet>
+        We can use any of the events we have covered thus far as the first argument to <hl>.on</hl>.
+    </bullet>
+
+    <div id="off"></div>
+    <h2>.off()</h2>
+
+    <bullet>
+        The <hl>.off</hl> method removes event listeners from a specified element or elements. We can use it to
+        remove event listeners for a specific event or all the event listeners.
+    </bullet>
+
+    <bullet>
+        Remove any handlers for the <hl>.click()</hl> event from all elements with the class <hl>clickable</hl>
+        <text>$('.clickable').off('click');</text>
+    </bullet>
+
+    <bullet>
+        Remove all event handlers from all paragraph tags
+        <text>$('p').off();</text>
+    </bullet>
+
+    <bullet>
+        <b>Demo:</b> Turn off a KeyDown listener
+    </bullet>
+
+    <bullet>
+        <b>Mini Lab:</b>
+        <ul>
+            Copy the code from the demo.
+            Create a .click() listener.
+            Inside the listener, turn it off.
+        </ul>
+    </bullet>
+
+    <div id="review"></div>
+    <h2>Review</h2>
+
+    <bullet>What is the difference between keydown and keypress?</bullet>
+    <bullet indent="indent-star">
+        modifier keys (shift, control, escape, etc) being pressed will trigger the keydown event, but will not
+        trigger keypress events.
+    </bullet>
+
+    <a href="https://java.codeup.com/jquery/events/keyboard-events/#further-reading" class="btn btn-info" Target="blank">
+        Further Reading and Exercises</a>
+</file>

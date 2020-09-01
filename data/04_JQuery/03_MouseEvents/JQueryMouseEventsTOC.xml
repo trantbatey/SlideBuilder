@@ -1,0 +1,9 @@
+<file name="JQueryMouseEventsTOC" title="JQuery Mouse Events TOC" home="JQueryMouseEvents">
+    <li name="JQueryMouseEvents" title="JQuery MouseEvents"></li>
+    <li name="JQueryMouseEvents#handlers" title="Event Handler Functions"></li>
+    <li name="JQueryMouseEvents#class" title=".click()"></li>
+    <li name="JQueryMouseEvents#dblclick" title=".dblclick()"></li>
+    <li name="JQueryMouseEvents#hover" title=".hover"></li>
+    <li name="JQueryMouseEvents#review" title="Review"></li>
+    <ali url="https://java.codeup.com/jquery/events/mouse-events/#further-reading" label="Further Reading and Exercises"/>
+</file>

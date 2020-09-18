@@ -14,10 +14,10 @@
             "select * from user where username = ' " + username + " ' ";
         </text>
         The user enters:
-        <text>jayesh'; delete from user where id='1</text>
+        <text>tbatey'; delete from user where id='1</text>
         So the final query run against your database is:<br/>
         <text>
-            select * from user where username = 'jayesh'; delete from user where id='1’;
+            select * from user where username = 'tbatey'; delete from user where id='1’;
         </text>
     </bullet>
     <bullet>

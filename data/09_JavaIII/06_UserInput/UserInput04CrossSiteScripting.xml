@@ -12,22 +12,26 @@
         Consider a search results page:
         <br/>
         <text>
-            |||+h1>Product Search Results|||+/h1|||-
-            |||+h2|||-Showing Results for ${searchTerm}|||+/h2|||- |||+%--|||+-- note this line --%|||-
-            |||+c:forEach var="product" items="${searchResults}"|||-
-            |||_|||+h3|||-
-            |||_|||_${product.name}
-            |||_|||_|||+small|||-${product.price}|||+/small|||-
-            |||_|||+/h3|||-
-            |||+/c:forEach|||-
+            |||lth1>Product Search Results|||lt/h1|||gt
+            |||lth2|||gtShowing Results for ${searchTerm}|||lt/h2|||gt |||lt%-- note this line --%|||gt
+            |||ltc:forEach var="product" items="${searchResults}"|||gt
+            |||+|||lth3|||gt
+            |||+|||+${product.name}
+            |||+|||+|||ltsmall|||gt${product.price}|||lt/small|||gt
+            |||+|||lt/h3|||gt
+            |||lt/c:forEach|||gt
         </text>
     </bullet>
     <bullet>
         What if a user searches for
-        <text>"|||+script|||-alert('xss!')|||+/script|||-"?</text>
+        <text>"|||ltscript|||gtalert(\'xss!\')|||lt/script|||gt"?</text>
     </bullet>
     <bullet>
         <strong>Demo by creating a user</strong>
+    </bullet>
+    <bullet>
+        <strong>Demo this new user: </strong><br/>
+        <text>|||ltscript>document.body.style.backgroundColor=\'red\'|||lt/script></text>
     </bullet>
     <bullet>
         A more dedicated, determined, and malicious individual could write some JavaScript that does much worse
@@ -49,14 +53,14 @@
     <bullet>
         The example can be fixed like this:
         <text>
-            |||+h1|||-Product Search Results|||+/h1|||-
-            |||+h2|||-Showing Results for |||+c:out value="${searchTerm}"/|||-|||+/h2|||-
-            |||+c:forEach var="product" items="${searchResults}"|||-
-            |||_|||+h3|||-
-            |||_|||_|||+c:out value="${product.name}"/|||-
-            |||_|||_|||+small|||-|||+c:out value="${product.price}"/|||-|||+/small|||-
-            |||_|||+/h3|||-
-            |||+/c:forEach|||-
+            |||lth1|||gtProduct Search Results|||lt/h1|||gt
+            |||lth2|||gtShowing Results for |||ltc:out value="${searchTerm}"/|||gt|||lt/h2|||gt
+            |||ltc:forEach var="product" items="${searchResults}"|||gt
+            |||+|||lth3|||gt
+            |||+|||+|||ltc:out value="${product.name}"/|||gt
+            |||+|||+|||ltsmall|||gt|||ltc:out value="${product.price}"/|||gt|||lt/small|||gt
+            |||+|||lt/h3|||gt
+            |||lt/c:forEach|||gt
         </text>
     </bullet>
     <bullet>

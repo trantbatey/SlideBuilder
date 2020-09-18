@@ -1,0 +1,331 @@
+<file name="JQueryAjax" title="JQuery Ajax" toc="JQueryAjaxTOC">
+    <img class="md-img" src="resource/images/Ajax01.jpg" alt="First J Query Image"/>
+    <img class="md-img" src="resource/images/Ajax02.jpg" alt="Second J Query Image"/>
+    <img class="md-img" src="resource/images/Ajax03.png" alt="Third J Query Image"/>
+    <br/><br/>
+    <h1 style="margin-left: 2em;">Ajax</h1>
+    <br/>
+    Ajax stands for Asynchronous JavaScript and XML. Ajax was originally intended to work with XML
+    coming back from the server, but this does not mean you must serve up XML for the requests. JSON notation
+    has been widely adopted for sending and retrieving data for Ajax requests.
+
+    <bullet>
+        <b>From Wikipedia</b>
+        <i>Ajax is a group of interrelated Web development techniques used on the client-side to create
+        asynchronous web applications. With Ajax, web applications can send data to and retrieve from
+        a server asynchronously (in the background) without interfering with the display and behavior
+        of the existing page. Data can be retrieved using the XMLHttpRequest object. Despite the name,
+        the use of XML is not required (JSON is often used in the AJAJ variant), and the requests do
+        not need to be asynchronous.</i>
+    </bullet>
+
+    <div id="json"></div>
+    <h1>JavaScript Object Notation (JSON)</h1>
+
+    <bullet>
+        JavaScript Object Notation (JSON) is a data-interchange format that is easy for humans to read and write.
+        It is widely used in cloud based services and web application programming interfaces (APIs).
+    </bullet>
+
+    <bullet>
+        Object literal and array literal notations were discussed in their respective sections. These same
+        notations are used in JSON.<br/>
+        <text>
+            // empty object in json form
+            {} <br/>
+
+            // empty array in json form
+            []
+        </text>
+    </bullet>
+
+    <bullet>
+        Object properties in JSON must be double-quoted strings, and properties are separated by a commas. <br/>
+        <text tid="t1"></text>
+    </bullet>
+
+    <bullet>
+        The value of a property can be one of the following: <br/>
+        <ul>
+            <li><bullet>A quoted string</bullet></li>
+            <li><bullet>A number</bullet></li>
+            <li><bullet>An object</bullet></li>
+            <li><bullet>true or false</bullet></li>
+            <li><bullet>null</bullet></li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        <b>Example:</b> of using all of the data types.<br/>
+        <text tid="t2"></text>
+    </bullet>
+
+    <bullet>
+        You can find the <a href="http://json.org/"> <span class="green">formal specification for JSON here.</span></a>
+    </bullet>
+
+    <div id="ajax_request"></div>
+    <h2>Ajax Request</h2>
+
+    <bullet>
+        Ajax is a way to communicate with a server, sending or retrieving data, without refreshing the
+        current webpage. Once the request is done we can alter the DOM with the requested information
+        or result.
+    </bullet>
+
+    <bullet>
+        In this lesson we will learn how to use jQuery to send Ajax requests, and how to work with
+        information returned from Ajax requests.
+    </bullet>
+
+    <div id="basic_request"></div>
+    <h2>Basic Request</h2>
+
+    <bullet>
+        The syntax to perform an Ajax request in plain JavaScript can be rather challenging. To save ourselves
+        from that complexity, we will be using jQuery to issue Ajax requests.
+    </bullet>
+
+    <bullet>
+        The simplest way to issue an Ajax request is the following: <br/>
+        <text>$.ajax("/some-url")</text>
+    </bullet>
+
+    <bullet>
+        This will issue a <b>GET</b> request to your server, asking for the file stored at <b>/some-url</b>.
+    </bullet>
+
+    <bullet>
+        What if we needed to use a <b>POST</b> request instead? Or if we wanted to pass some additional data
+        with the request? For these purposes, and others, <hl>$.ajax()</hl> accepts a JavaScript object of additional
+        options as a second argument.
+    </bullet>
+
+    <div id="id"></div>
+    <h2 class="ajax_options">Ajax Options</h2>
+
+    <bullet>
+        The easiest way to manipulate the Ajax options is to pass a JavaScript object like the following: <br/>
+        <text tid="t3"></text>
+    </bullet>
+
+    <bullet>
+        The Ajax options object has numerous parameters and values it can use. Some of the most common
+        options are: <br/>
+        <ul>
+            <li>
+                <bullet>
+                    <hl>type</hl> — The type of HTTP request to send to the server. Can be <hl>"GET"</hl>,
+                    <hl>"POST"</hl>, <hl>"PUT"</hl>, or <hl>"DELETE"</hl>. The default is <hl>"GET"</hl>.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <hl>data</hl> — Data to be included with the request. Typically this will be
+                    a JavaScript object. If the request type is <hl>GET</hl> the data will be encoded
+                    into the URL being requested. Otherwise, it is included with the request behind the scenes.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <hl>dataType</hl> — The type of data we expect the server to send back from our request.
+                    Common options are <hl>"json"</hl>, <hl>"xml"</hl>, <hl>"html"</hl>, or <hl>"text"</hl>.
+                    By default, jQuery will try to guess this value based on the response content.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <hl>url</hl> — Rather than passing the request URL as a string to <hl>$.ajax()</hl> you
+                    can just pass a JavaScript object on its own and include the <hl>url</hl> option to
+                    specify where to send the request. We will see an example of this further on.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <hl>username</hl> and <hl>password</hl> — If a server requires a username and password
+                    you can specify it using these parameters.
+                </bullet>
+            </li>
+            <li>
+                <bullet>
+                    <hl>headers</hl> — an object of whose key value pairs represent custom HTTP headers to
+                    send along with the request.
+                </bullet>
+            </li>
+        </ul>
+    </bullet>
+
+    <div id="handling_responses">Handling Responses</div>
+
+    <bullet>Now that we can send requests to the server, how do we handle the data that comes back?</bullet>
+
+    <bullet>
+        It is important to be aware that Ajax requests are done asynchronously. This means that even
+        though the request is fired off when we call <b>$.ajax()</b>, JavaScript does not sit and wait
+        for the response to come back. The server could reply in a fraction of a second, or it
+        could reply in half a minute! <br/>
+        <text tid="t4"></text>
+    </bullet>
+
+    <bullet>
+        A function that we create to be called when some process completes is called a <i>callback function</i>.
+        The primary way to attach a callback to your Ajax request is to tack <hl>.done()</hl> to the end
+        of your request and pass your callback to it.
+    </bullet>
+
+    <bullet>
+        <b>Example:</b> <br/>
+        <text tid="t5"></text>
+    </bullet>
+
+    <bullet>
+        <hl>.done()</hl> is a method that accepts a callback function as an argument. jQuery will then
+        call that function once the Ajax request has come back successfully. The callback function,
+        when called, will be passed 3 arguments: <br/>
+        <ul>
+            <li><hl>data</hl>: the body of the response from the server</li>
+            <li><hl>status</hl>: a string indicating the status of the request</li>
+            <li><hl>jqXhr</hl>: a jQuery object that represents the Ajax request</li>
+        </ul>
+    </bullet>
+
+    <bullet>
+        jQuery tries to guess what the data type sent by the server is; if jQuery thinks the server returned a
+        JSON object, the argument will be an object. If jQuery thinks it was text, the argument will be a
+        string. You can force a particular data type with the <hl>dataType</hl> option.
+    </bullet>
+
+    <bullet>
+        Remember that we can omit any parameters that we are not going to use from a function. Commonly,
+        we will only need the <hl>data</hl> parameter.
+    </bullet>
+
+    <bullet>
+        There are three different methods you can use to specify callback functions for an Ajax request. They are:
+    </bullet>
+
+    <ul>
+        <li><bullet><hl>.done</hl> — Takes in a function that is called when the request completes successfully.</bullet></li>
+        <li><bullet><hl>.fail</hl> — Takes in a function that is called when a request completed with an error (e.g. the server sent back a 404).</bullet></li>
+        <li><bullet><hl>.always</hl> — Takes in a function that is called for both failed and successful requests.</bullet></li>
+    </ul>
+
+    <bullet>
+        The function passed to <hl>.fail</hl> will be called with 3 arguments:
+    </bullet>
+
+    <ul>
+        <li><bullet><hl>jqXhr</hl> — a jQuery object that represents the Ajax request</bullet></li>
+        <li><bullet><hl>status</hl> — a string representing the status of the request</bullet></li>
+        <li><bullet><hl>error</hl> — an object that represents the error that occurred, if any</bullet></li>
+    </ul>
+
+    <bullet>
+        The callback function attached with <hl>.always</hl> will be called with the same arguments
+        the were passed to either the <hl>.done</hl> callback, or the <hl>.fail</hl> callback, depending
+        on whether the request was successful or not.
+    </bullet>
+
+    <bullet>
+        <b>Example: </b> <br/>
+        <text tid="t6"></text>
+    </bullet>
+
+    <bullet>
+        If for whatever reason you need to break your callbacks apart, or if the syntax is feeling too dense,
+        you can assign your Ajax request to a variable and then attach callbacks to that variable. Our above
+        example could be rewritten as: <br/>
+        <text tid="t7"></text>
+    </bullet>
+
+    <bullet>
+        Remember that any anonymous function can be replaced with a named function, and as our code starts
+        to get more complex, it usually makes sense to do so. Here is a small example using named functions
+        with comments that contain examples of what the function might be used for: <br/>
+        <text tid="t8"></text>
+    </bullet>
+
+    <div id="get_post"></div>
+    <h2>Get and Post Shorthand</h2>
+
+    <bullet>
+        jQuery includes a couple of shortcuts for relatively simple requests. Often, we simply want to
+        send either a <b>GET</b> or <b>POST</b> request with some simple parameters.
+    </bullet>
+
+    <bullet>
+        For example, if you wanted to send a <hl>GET</hl> request to <hl>/users</hl> with the parameters
+        <hl>limit: 10</hl> and <hl>offset: 20</hl> you can use the <hl>.get</hl> method like so: <br/>
+        <text tid="t9"></text>
+    </bullet>
+
+    <bullet>
+        The first argument is the URL we are requesting, like before. The second argument is whatever data we
+        want to send. The above example would be the same as: <br/>
+        <text tid="t10"></text>
+    </bullet>
+
+    <bullet>
+        Both examples are identical, it is just a matter of which syntax you find most comfortable. The same
+        is true of <hl>$.post()</hl>. If we wanted to send a <hl>POST</hl> request to <hl>/address/save</hl>
+        with the data of <hl>first_name: George</hl>, <hl>last_name: Weathers</hl>, <hl>city: Denver</hl>,
+        <hl>state: CO</hl> we could do: <br/>
+        <text tid="t11"></text>
+    </bullet>
+
+
+    <div id="demo"></div>
+    <h2>DEMO and LAB</h2>
+
+    <bullet>
+        Create this html file: <br/>
+        <text tid="t12"></text>
+    </bullet>
+
+    <bullet>
+        Create this json file in data/colors.json: <br/>
+        <text tid="t13"></text>
+    </bullet>
+
+    <bullet>
+        Add an ajax call to the url, and send the result to the console log. <br/>
+    </bullet>
+
+    <div id="review"></div>
+    <h2>Review</h2>
+
+    <bullet>What was Ajax originally intended to bring back from the server?</bullet>
+    <bullet indent="indent-star"><text>XML</text></bullet>
+
+    <bullet>Can Ajax update a single element without updating the rest of the page?</bullet>
+    <bullet indent="indent-star">Yes</bullet>
+
+    <bullet>What is an implication of Ajax being asynchronous?</bullet>
+    <bullet indent="indent-star">
+        That once one operation starts another operation it does not wait for the second operation to complete.
+    </bullet>
+
+    <bullet>What parameter determines the request type?</bullet>
+    <bullet indent="indent-star">type</bullet>
+
+    <bullet>What parameter receives the data?</bullet>
+    <bullet indent="indent-star">data (The first parameter)</bullet>
+
+    <bullet>What are 4 common types of return data?</bullet>
+    <bullet indent="indent-star">"json", "xml", "html", or "text".</bullet>
+
+    <bullet>What parameter can be used to select the data source?</bullet>
+    <bullet indent="indent-star">The url.</bullet>
+
+    <bullet>What method handles successful request?</bullet>
+    <bullet indent="indent-star">.done()</bullet>
+
+    <bullet>What method handles failed request?</bullet>
+    <bullet indent="indent-star">.fail()</bullet>
+
+    <bullet>What method is invoked regradless of success or failure?</bullet>
+    <bullet indent="indent-star">.always()</bullet>
+
+    <a href="https://java.codeup.com/jquery/ajax/requests-and-responses/#further-reading"
+       class="btn btn-info" Target="blank">Further Reading and Exercises</a>
+</file>

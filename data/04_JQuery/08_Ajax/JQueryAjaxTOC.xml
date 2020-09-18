@@ -1,0 +1,13 @@
+<file name="JQueryAjaxTOC" title="JQuery Ajax TOC" home="JQueryAjax">
+    <li name="JQueryAjax" title="JQuery Ajax"></li>
+    <li name="JQueryAjax#json" title="JavaScript Object Notation (JSON)"></li>
+    <li name="JQueryAjax#ajax_request" title="Ajax Request"></li>
+    <li name="JQueryAjax#basic_request" title="Basic Request"></li>
+    <li name="JQueryAjax#ajax_options" title="Ajax Options"></li>
+    <li name="JQueryAjax#handling_responses" title="Handling Responses"></li>
+    <li name="JQueryAjax#get_post" title="Get and Post Shorthand"></li>
+    <li name="JQueryAjax#demo" title="demo"></li>
+    <li name="JQueryAjax#review" title="Review"></li>
+    <ali url="https://java.codeup.com/jquery/ajax/requests-and-responses/#further-reading"
+         label="Further Reading and Exercises"/>
+</file>
